@@ -1,0 +1,13 @@
+- if friend.errors.present?
+  ul#error_explanation
+    - friend.errors.full_messages.each do |message|
+      li= message
+
+= form_with model: @friend, local: true do |f|
+    .form-group
+        = f.label :name
+        = f.text_field :name, class: 'form-control',id: 'friend_name'
+    .form-group
+        = f.label :description
+        = f.text_area :description, rows: 5,class: 'form-control', id: 'friend_description'
+    = f.submit nil, class: 'btn btn-primary'
