@@ -15,14 +15,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # GET /resource/edit
-  # def edit
+  #def edit
   #   super
-  # end
+  #end
 
   # PUT /resource
-  # def update
+  #def update
   #   super
-  # end
+  #end
 
   # DELETE /resource
   # def destroy
@@ -57,11 +57,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # The path used after sign up.
   def after_sign_up_path_for(resource)
-    "/user/#{current_user.id}"
+    "/users/#{current_user.id}"
   end
 
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+
 end

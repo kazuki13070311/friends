@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   root to: "home#home"
-  resources :users, :only => [:index,:new,:edit]
+  resources :users, :only => [:index,:new,:edit,:update]
   resources :friends
   
   devise_for :users, :controllers => {
@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   }
 
   devise_scope :user do
-    get "user/:id", :to => "users#show"
+    get "users/:id", :to => "users#show"
     get "signup", :to => "users/registrations#new"
     get "login", :to => "users/sessions#new"
     get "logout", :to => "users/sessions#destroy"
