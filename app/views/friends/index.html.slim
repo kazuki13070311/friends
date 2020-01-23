@@ -6,12 +6,14 @@ h1 フレンド募集一覧
 table.table.table-hover
     thead.thead-default
         tr
+            th= User.human_attribute_name(:user)
             th= Friend.human_attribute_name(:name)
             th= Friend.human_attribute_name(:description)
             th= Friend.human_attribute_name(:created_at)
     tbody
         - @friends.each do |friend|
             tr
+                td= link_to friend.id,friend
                 td= link_to friend.name, friend
                 td= friend.description
                 td= friend.created_at

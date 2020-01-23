@@ -8,7 +8,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(id: params[:id])
+    #@user = User.find_by(id: params[:id])
+    @user = User.find(params[:id])
+    @friends = @user.friends
   end
 
   def edit

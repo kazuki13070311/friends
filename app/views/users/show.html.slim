@@ -4,4 +4,13 @@ h1 マイページ
     p = @user.name
     p = @user.email
 
+
+.body
+    - @user.friends.each do |friend|
+        hr
+            p 
+                |募集内容：
+                = link_to friend.id, friend_path(friend.id) 
+            
+
 = link_to '編集',edit_user_registration_path,class: 'btn btn-primary mr-3'

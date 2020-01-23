@@ -2,11 +2,15 @@ h1 フレンド募集内容の詳細
 
 .nav.justify-content-end
     = link_to '一覧',friends_path,class: 'nav-link'
+
 table.table.table-hover
     tbody
         tr
+            th= User.human_attribute_name(:name)
+            td= link_to @user.name,@user
+        tr
             th= Friend.human_attribute_name(:id)
-            td= @friend.id
+            td= link_to @friend.id,edit_friend_path
         tr
             th= Friend.human_attribute_name(:name)
             td= @friend.name

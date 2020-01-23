@@ -1,12 +1,17 @@
 class ApplicationController < ActionController::Base
   #protect_from_forgery with: :exception
 
+  before_action :set_current_user,only:[:create]
   before_action :configure_permitted_parameters, if: :devise_controller?
   #bifore_action :authenticate_user!
   #ログイン後のリダイレクト先
   def after_sing_in_path_for(resource)
     friends_path
     #"/user/#{current_user.id}"
+  end
+
+  def set_current_user
+    @current_user = User.find(session[:user_id]) if session[:user_id]
   end
 
   protected
