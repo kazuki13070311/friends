@@ -10,7 +10,7 @@ table.table.table-hover
             td= link_to @user.name,@user
         tr
             th= Friend.human_attribute_name(:id)
-            td= link_to @friend.id,edit_friend_path
+            td= @friend.id
         tr
             th= Friend.human_attribute_name(:name)
             td= @friend.name

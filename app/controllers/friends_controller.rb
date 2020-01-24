@@ -1,6 +1,9 @@
 class FriendsController < ApplicationController
   def index
-    @friends = Friend.all
+    #@q = current_user.friends.ransack(params[:q])
+    #@friends = @q.result(distinct: true).page(params[:page])
+    @friends = Friend.all.page(params[:page]).per(20)
+    @user = User.all
   end
 
   def show

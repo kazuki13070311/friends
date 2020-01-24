@@ -3,17 +3,18 @@ h1 フレンド募集一覧
 = link_to '新規登録', new_friend_path, class: 'btn btn-primary'
 
 .mb-3
+  = paginate @friends
+  = page_entries_info @friends
+
 table.table.table-hover
     thead.thead-default
         tr
-            th= User.human_attribute_name(:user)
             th= Friend.human_attribute_name(:name)
             th= Friend.human_attribute_name(:description)
             th= Friend.human_attribute_name(:created_at)
     tbody
         - @friends.each do |friend|
             tr
-                td= link_to friend.id,friend
                 td= link_to friend.name, friend
                 td= friend.description
                 td= friend.created_at

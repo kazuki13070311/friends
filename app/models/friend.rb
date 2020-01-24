@@ -4,11 +4,11 @@ class Friend < ApplicationRecord
     validate :validate_name_not_including_comma
     
     belongs_to :user
-    #has_many :friends
+    #has_many :friend
 
-    def user
-      return User.find_by(id: self.user_id)
-    end
+    #def user
+      #return User.find_by(id: self.user_id)
+    #end
 
     private
 
