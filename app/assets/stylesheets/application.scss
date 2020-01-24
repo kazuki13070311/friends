@@ -1,11 +1,61 @@
 @import "bootstrap";
 
-/* universal */
+/* homeレイアウト */
 
 .jumbotron-extend{
     position: relative;
-    height: 100vh;
+    height: 70vh;
     min-height: 300px;
+    background: image-url('destiny2-2.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.jumbotron-container{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.site-name{
+    margin-bottom: 40px;
+    font-family: 'Playfair Display',serif;
+    color: #fff;
+}
+
+.site-introduction{
+    color: #fff;
+}
+
+.btn-black{
+    border-radius: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Avenir',serif;
+}
+
+.btn-black:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+
+.contents {
+    max-width: 990px;
+    margin: 0 auto;
+}
+.content-primary,
+.content-secondary {
+    padding-left: 0;
+    padding-right: 0;
+}
+.content-primary {
+    float: left;
+    width: 52.08%;
+    height: 70vh;
     background: image-url('destiny2-1.jpg') no-repeat center center;
     background-size: cover;
+}
+.content-secondary {
+    float: right;
+    width: 37.92%;
 }
