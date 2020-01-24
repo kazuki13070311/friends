@@ -1,9 +1,10 @@
-.home.container
-    .web_title
+.jumbotron.jumbotron-extend
+    .container-fluid
         h1.logo Friends
         p FriendsはDestiny2専用のサイトです。
 
     .homebtn
-    - unless current_user
-        p = link_to "新規登録",new_user_registration_path,class: "btn btn-lg btn-primary"
-        p = link_to "ログイン",new_user_session_path,class: "btn btn-lg btn-primary"
+        .container-fluid
+            - unless current_user
+                p = link_to "新規登録",new_user_registration_path,class: "btn btn-lg btn-primary"
+                p = link_to "ログイン",new_user_session_path,class: "btn btn-lg btn-primary"
