@@ -3,13 +3,14 @@
         h1.site-name Friends
         p.site-introduction FriendsはDestiny2専用のサイトです。
         - unless current_user
-            p = link_to "新規登録",new_user_registration_path,class: "btn btn-black"
-            p = link_to "ログイン",new_user_session_path,class: "btn btn-black"
+            p = link_to "新規登録",new_user_registration_path,class: "btn btn-lg"
+            p = link_to "ログイン",new_user_session_path,class: "btn btn-lg"
 
-.container-fluid.contents
+//.container-fluid.contents
     .content-primary
     .content-secondary
         h4 ここではフレンドを募集できます。
         |巷で有名な某ゲームを快適に遊ぶためにぜひFriendsをご活用ください！ 
         |Destiny2最高
         |めっちゃ面白いよね！
+

@@ -11,26 +11,13 @@ html
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
 
-    //!-- Optional JavaScript -->
-    //!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    //script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"
-    //script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"
-    //script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"
-
   body
-    .app-title.navbar.navbar-expand-md.navbar-light.bg-light
-      .navbar-brand = link_to "FRIENDS",root_path,class:"navbar-brand logo"
+    = render 'layouts/header'
+    
+  .container
+    - if flash.notice.present?
+      .alert.alert-success= flash.notice
+    = yield
 
-      ul.navbar-nav.ml-auto
-        li= link_to "フレンド募集",friends_path,class: 'post',class: 'btn'
-        - if user_signed_in?
-          li= link_to "マイページ","/users/#{current_user.id}",class:'post',class:'btn'
-          li= link_to "ログアウト", destroy_user_session_path, method: "delete",class: 'btn'
-        - else
-          li= link_to "ログイン",new_user_session_path, class: 'post',class: 'btn'
-          li= link_to "新規登録",new_user_registration_path, class: 'post',class: 'btn'
-        end
-    .container
-      - if flash.notice.present?
-        .alert.alert-success= flash.notice
-      = yield
+  .container
+      = render 'layouts/footer'
