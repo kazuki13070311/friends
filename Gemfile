@@ -16,6 +16,7 @@ gem 'devise-i18n-views'
 gem 'pry-rails'
 gem 'pry-byebug'
 gem 'kaminari'
+gem 'ransack'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
