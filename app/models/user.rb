@@ -12,4 +12,6 @@ class User < ApplicationRecord
   def friends
     return Friend.where(user_id: self.id)
   end
+
+  mount_uploader :image, ImageUploader
 end

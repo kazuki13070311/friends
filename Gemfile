@@ -17,7 +17,8 @@ gem 'pry-rails'
 gem 'pry-byebug'
 gem 'kaminari'
 gem 'ransack'
-
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
