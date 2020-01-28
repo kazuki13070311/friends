@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_20_131010) do
+ActiveRecord::Schema.define(version: 2020_01_28_120716) do
 
   create_table "friends", force: :cascade do |t|
     t.string "name", limit: 30, null: false
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2020_01_20_131010) do
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.text "profile"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

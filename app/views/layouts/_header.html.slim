@@ -1,9 +1,10 @@
 .app-title.navbar.navbar-expand-md.navbar-light.bg-light
-      .navbar-brand = link_to "FRIENDS",root_path,class:"navbar-brand logo"
+      .navbar-brand = link_to "Guardians",root_path,class:"navbar-brand logo"
 
       ul.navbar-nav.ml-auto
         li= link_to "フレンド募集",friends_path,class: 'post',class: 'btn'
         - if user_signed_in?
+          li= link_to "ホーム画面",root_path,class:'post',class:'btn'
           li= link_to "マイページ","/users/#{current_user.id}",class:'post',class:'btn'
           li= link_to "ログアウト", destroy_user_session_path, method: "delete",class: 'btn'
         - else
