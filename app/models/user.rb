@@ -8,10 +8,10 @@ class User < ApplicationRecord
   validates :profile, length: { maximum: 400 }
 
   has_many :friends
+  
+  mount_uploader :image, ImageUploader
 
   def friends
     return Friend.where(user_id: self.id)
   end
-
-  mount_uploader :image, ImageUploader
 end

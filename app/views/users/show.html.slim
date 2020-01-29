@@ -1,11 +1,11 @@
 h1 マイページ
 
 .container
-    img src= "@user.image" class = "icon_image"
     p = @user.name
     p = @user.email
     p = @user.profile
-
+    p = image_tag @user.image_url(:thumb)
+    //img src= "@user.image" class = "icon_image"
 
 .body
     - @user.friends.each do |friend|
@@ -16,5 +16,3 @@ h1 マイページ
             
 
 = link_to '編集',edit_user_registration_path,class: 'btn btn-primary mr-3'
-
-//img src= "@user.image" class = "icon_image"//
