@@ -21,10 +21,21 @@ h2
     br
     = f.text_area :profile, autofocus: true
 
-  .field
+  //.field
     = f.label :プロフィール画像
     br
     = f.file_field :image
+
+  .field
+    - if @user.image?
+      = image_tag @user.image.url
+    - else
+      = image_tag "/assets/default.jpg", :size => '100x100'
+    end
+    .button
+      .btn.btn-outline-secondary.rounded-pill
+        = f.file_field :image, accept: 'image/jpeg,image/gif,image/png'
+
 
   .field
     = f.label :password
