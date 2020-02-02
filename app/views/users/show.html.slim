@@ -1,27 +1,16 @@
 h1 マイページ
 
-.field
+.thumbnail
     - if @user.image?
-      = image_tag @user.image.url
+        = image_tag @user.image.url
     - else
-      = image_tag "/assets/default.jpg", :size => '100x100'
+        = image_tag "/assets/default.jpg"
     end
 
 .container
     p = @user.name
     p = @user.email
     p = @user.profile
-
-//if @user.image.present?
-    = image_tag @user.image_url,user_path(user),:size => "50x50"
-//else
-    = image_tag("default.png",user_path(user), :size => "50x50")
-//end
-
-    //p = image_tag @user.image_url(:thumb)
-
-    //= image_tag @user.image_url
-    //= image_tag @user.default_url
 
 .body
     - @user.friends.each do |friend|

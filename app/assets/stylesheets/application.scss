@@ -6,12 +6,13 @@
     font-family: 'Playfair Display',serif;
 }
 
+
 .jumbotron-extend{
     position: relative;
     height: 100vh;
     width: 100%;
     min-height: 300px;
-    background: image-url('destiny2-2.jpg') no-repeat center center;
+    background: image-url('destiny2-2.jpg')no-repeat center center;
     background-size: cover;
 }
 
@@ -54,6 +55,7 @@
     padding-left: 0;
     padding-right: 0;
 }
+
 .content-primary {
     float: left;
     width: 52.08%;
@@ -72,9 +74,13 @@
 }
 
 /* マイページ */
-.icon_image{
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-    object-fit: cover;
+.thumbnail{
+    margin: auto;
+    position: relative;
+}
+
+.thumbnail img{
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
 }
