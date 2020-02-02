@@ -3,6 +3,17 @@ h2
 = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
   = render "devise/shared/error_messages", resource: resource
   .field
+    - if @user.image?
+      = image_tag @user.image.url
+    - else
+      = image_tag "/assets/default.jpg", :size => '100x100'
+    end
+    .button
+      .btn.btn-outline-secondary.rounded-pill
+        = f.file_field :image, accept: 'image/jpeg,image/gif,image/png'
+
+  
+  .field
     = f.label :name
     br
     = f.text_field :name, autofocus: true
@@ -25,17 +36,6 @@ h2
     = f.label :プロフィール画像
     br
     = f.file_field :image
-
-  .field
-    - if @user.image?
-      = image_tag @user.image.url
-    - else
-      = image_tag "/assets/default.jpg", :size => '100x100'
-    end
-    .button
-      .btn.btn-outline-secondary.rounded-pill
-        = f.file_field :image, accept: 'image/jpeg,image/gif,image/png'
-
 
   .field
     = f.label :password

@@ -8,6 +8,8 @@ class User < ApplicationRecord
   validates :profile, length: { maximum: 400 }
 
   has_many :friends
+  #追加1
+  has_one_attached :image
   
   mount_uploader :image, ImageUploader
 
