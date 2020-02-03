@@ -6,6 +6,9 @@ h1 フレンド募集内容の詳細
 table.table.table-hover
     tbody
         tr
+            th= Friend.human_attribute_name(:model)
+            td= @friend.model
+        tr
             th= User.human_attribute_name(:name)
             td= link_to @user.name,@user
         tr

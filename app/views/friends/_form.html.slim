@@ -5,6 +5,11 @@
 
 = form_with model: @friend, local: true do |f|
     .form-group.row
+        = f.label :model, class:'col-md-3 col-form-label'
+    .col-md-1
+        = f.select :model,[['PS4','PS4'],['PS3','PS3'],['PC','PC'],['XboxOne','XboxOne']] 
+    br
+    .form-group.row
         = f.label :募集内容, class:'col-md-3 col-form-label'
     .col-md-1
         = f.select :name,[['フレンド募集','フレンド募集'],['クランメンバー募集','クランメンバー募集'],['クラン入隊希望','クラン入隊希望']] 

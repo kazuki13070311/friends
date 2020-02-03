@@ -18,6 +18,7 @@ ja:
         password_confirmation: パスワード(確認)
         description: 詳細
         image: 画像
+        model: 機種
         created_at: 登録日時
         updated_at: 更新日時
   date:
