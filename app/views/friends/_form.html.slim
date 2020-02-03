@@ -4,10 +4,12 @@
       li= message
 
 = form_with model: @friend, local: true do |f|
+    .form-group.row
+        = f.label :募集内容, class:'col-md-3 col-form-label'
+    .col-md-1
+        = f.select :name,[['フレンド募集','フレンド募集'],['クランメンバー募集','クランメンバー募集'],['クラン入隊希望','クラン入隊希望']] 
+    br
     .form-group
-        = f.label :name
-        = f.text_field :name, class: 'form-control',id: 'friend_name'
-    .form-group
-        = f.label :description
+        = f.label :詳細
         = f.text_area :description, rows: 5,class: 'form-control', id: 'friend_description'
     = f.submit nil, class: 'btn btn-primary'

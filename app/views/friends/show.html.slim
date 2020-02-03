@@ -9,10 +9,7 @@ table.table.table-hover
             th= User.human_attribute_name(:name)
             td= link_to @user.name,@user
         tr
-            th= Friend.human_attribute_name(:id)
-            td= @friend.id
-        tr
-            th= Friend.human_attribute_name(:name)
+            th= Friend.human_attribute_name(:募集内容)
             td= @friend.name
         tr
             th= Friend.human_attribute_name(:description)

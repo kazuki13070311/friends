@@ -11,12 +11,12 @@ ja:
     attributes:
       friend:
         id: ID
-        name: 名前
+        name: 募集内容
         admin: 管理者権限
         email: メールアドレス
-        password: パズワード
+        password: パスワード
         password_confirmation: パスワード(確認)
-        description: 募集条件
+        description: 詳細
         image: 画像
         created_at: 登録日時
         updated_at: 更新日時
