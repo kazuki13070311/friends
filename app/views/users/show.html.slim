@@ -10,7 +10,13 @@ h1 マイページ
 .container
     p = @user.name
     p = @user.email
-    p = @user.profile
+    p 
+        |プロフィール
+        br
+        = @user.profile
+    p 
+        |キルレ → 
+        = @user.strength
 
 .body
     - @user.friends.each do |friend|

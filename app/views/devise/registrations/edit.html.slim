@@ -28,14 +28,14 @@ h2
       = resource.unconfirmed_email
 
   .field
-    = f.label :profile
+    = f.label :プロフィール
     br
     = f.text_area :profile, autofocus: true
 
-  //.field
-    = f.label :プロフィール画像
+  .field
+    = f.label :キルレ
     br
-    = f.file_field :image
+    = f.text_field :strength, autofocus: true
 
   .field
     = f.label :password

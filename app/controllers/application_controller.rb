@@ -24,6 +24,6 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :image]) # 新規登録時(sign_up時)にnameというキーのパラメーターを追加で許可する
     
     # account_updateのときに、name,email,profile,imageをストロングパラメータに追加する
-    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :email, :profile,:image,:kd])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :email, :profile,:image,:strength])
   end
 end
