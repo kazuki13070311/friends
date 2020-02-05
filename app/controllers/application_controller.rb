@@ -25,5 +25,6 @@ class ApplicationController < ActionController::Base
     
     # account_updateのときに、指定した名前をストロングパラメータに追加する
     devise_parameter_sanitizer.permit(:account_update, keys: [:name, :email, :profile,:image,:strength,:clan,:psnid])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:sex, :level, :lightlevel, :model, :voice, :style,:timezone])
   end
 end

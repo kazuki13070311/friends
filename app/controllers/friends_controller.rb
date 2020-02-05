@@ -1,7 +1,8 @@
 class FriendsController < ApplicationController
   def index
     @friends = Friend.all.page(params[:page]).per(10)
-    @user = User.all
+    #@user = User.all
+    @user = User.find(current_user.id).image
     @q = @friends.ransack(params[:q])
     @friends = @q.result(distinct: true)
   end

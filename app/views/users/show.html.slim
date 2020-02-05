@@ -14,17 +14,47 @@ h1 マイページ
         br
         = @user.psnid
     p = @user.email
+
+    p 
+        |性別
+        br
+        = @user.sex
     p 
         |プロフィール
         br
         = @user.profile
     p 
-        |キルレ → 
+        |キルレ
+        br
         = @user.strength
     p 
         |クラン名
         br
         = @user.clan
+    p 
+        |レベル
+        br
+        = @user.level
+    p 
+        |光レベル
+        br
+        = @user.lightlevel
+    p 
+        |機種
+        br
+        = @user.model
+    p 
+        |ボイスチャット
+        br
+        = @user.voice
+    p 
+        |プレイスタイル
+        br
+        = @user.style
+    p 
+        |プレイ時間帯
+        br
+        = @user.timezone
 
 .body
     - @user.friends.each do |friend|

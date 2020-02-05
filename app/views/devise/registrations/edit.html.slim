@@ -28,6 +28,11 @@
         = resource.unconfirmed_email
 
   .form-group.row
+    = f.label :性別, class:'col-md-3 col-form-label'
+  .col-md-1
+    = f.select :sex,[['男性','男性'],['女性','女性']]
+
+  .form-group.row
     .col-md-10.col-form-label
       = f.label :プロフィール
       br
@@ -50,6 +55,41 @@
       = f.label :クラン
       br
       = f.text_field :clan, autofocus: true
+
+  .form-group.row
+    .col-md-3.col-form-label
+      = f.label :レベル
+      br
+      = f.text_field :level, autofocus: true
+
+  .form-group.row
+    .col-md-3.col-form-label
+      = f.label :光レベル
+      br
+      = f.text_field :lightlevel, autofocus: true
+
+  .form-group.row
+    = f.label :機種, class:'col-md-3 col-form-label'
+  .col-md-1
+    = f.select :model,[['PS4','PS4'],['PS3','PS3'],['PC','PC'],['XboxOne','XboxOne']] 
+
+  .form-group.row
+    = f.label :ボイスチャット, class:'col-md-3 col-form-label'
+  .col-md-1
+    = f.select :voice,[['あり','あり'],['なし','なし']]
+
+  .form-group.row
+    .col-md-3.col-form-label
+      = f.label :プレイスタイル
+      br
+      = f.text_field :style, autofocus: true
+
+  .form-group.row
+    .col-md-3.col-form-label
+      = f.label :プレイ時間帯
+      br
+      = f.text_field :timezone, autofocus: true
+
 
   .form-group.row
     .col-md-5.col-form-label
