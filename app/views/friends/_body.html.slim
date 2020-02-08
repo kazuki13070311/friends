@@ -1,17 +1,21 @@
-- @friends.includes(:user).each do |friend|
-    .media
-        - if friend.user.image?
-            = image_tag friend.user.image.url,size: '100x100'
-        - else
-            = image_tag "/assets/default.jpg",size: '100x100'
-        .media-body
-            h5 = link_to friend.name, friend
-            br
-                = friend.description
-                = I18n.l(friend.updated_at, format: :long)
+.flexbox
+    - @friends.includes(:user).each do |friend|
+        .media.bg-info.m-3
+            - if friend.user.image?
+                = image_tag friend.user.image.url,size: '100x100'
+            - else
+                = image_tag "/assets/default.jpg",size: '100x100'
+            .media-body
+                .h5 
+                    = link_to friend.name, friend
+                .h6 
+                    = friend.description
+                .h8 
+                    |投稿日：
+                    = I18n.l(friend.updated_at, format: :long)
 
-                = link_to '編集',edit_friend_path(friend),class: 'btn btn-primary'
-                = link_to '削除',friend,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'
+            //= link_to '編集',edit_friend_path(friend),class: 'btn btn-primary'
+            //= link_to '削除',friend,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'
 
                                                 
                                     

@@ -14,10 +14,10 @@ html
   body
     = render 'layouts/header'
     
-  .container
+  .container.bg-warning
     - if flash.notice.present?
       .alert.alert-success= flash.notice
     = yield
 
-  .container
+  .container-field.bg-light
       = render 'layouts/footer'
