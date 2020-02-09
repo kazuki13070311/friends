@@ -19,6 +19,8 @@ gem 'kaminari'
 gem 'ransack'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'rack-mini-profiler', require: false
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
