@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -60,19 +62,18 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  #ログイン機能「認証メール等の実装時に必要なコード」
+  # ログイン機能「認証メール等の実装時に必要なコード」
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
-  #mail setting
+  # mail setting
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address => "smtp.gmail.com",
-    :port => 587,
-    :user_name => "kazuki13070311@gmail.com",
-    :password => "Kazu0311",
-    :authentication => :plain,
-    :enable_starttls_auto => true
+    address: 'smtp.gmail.com',
+    port: 587,
+    user_name: 'kazuki13070311@gmail.com',
+    password: 'Kazu0311',
+    authentication: :plain,
+    enable_starttls_auto: true
   }
-
 end

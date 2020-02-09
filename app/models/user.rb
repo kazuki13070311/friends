@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -9,10 +11,10 @@ class User < ApplicationRecord
 
   has_many :friends
   has_one_attached :image
-  
+
   mount_uploader :image, ImageUploader
 
   def friends
-    return Friend.where(user_id: self.id)
+    Friend.where(user_id: id)
   end
 end

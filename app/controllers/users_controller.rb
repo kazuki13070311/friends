@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   def home
-    #@user = User.all
+    # @user = User.all
   end
 
   def index
@@ -20,7 +22,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
 
     if @user.update(user_params)
-      redirect_to root_path,notice: "プロフィールを更新しました。"
+      redirect_to root_path, notice: 'プロフィールを更新しました。'
     else
       render :edit
     end
@@ -35,5 +37,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :profile, :image, :kd)
   end
-
 end

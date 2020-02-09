@@ -10,19 +10,19 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  #def create
-    #User.create(image: 'default.png')
-  #end
+  # def create
+  # User.create(image: 'default.png')
+  # end
 
   # GET /resource/edit
-  #def edit
+  # def edit
   #   super
-  #end
+  # end
 
   # PUT /resource
-  #def update
+  # def update
   #   super
-  #end
+  # end
 
   # DELETE /resource
   # def destroy
@@ -38,7 +38,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  
   protected
 
   # If you have extra params to permit, append them to the sanitizer.
@@ -52,11 +51,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   # The path used after sign up.
-  def after_sign_up_path_for(resource)
+  def after_sign_up_path_for(_resource)
     "/users/#{current_user.id}"
   end
 
-  def after_update_path_for(resource)
+  def after_update_path_for(_resource)
     user_path(id: current_user.id)
   end
 
@@ -64,5 +63,4 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
-
 end

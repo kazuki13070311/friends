@@ -1,5 +1,7 @@
-if Rails.env.development?
-    require 'rack-mini-profiler'
+# frozen_string_literal: true
 
-    Rack::MiniProfilerRails.initialize!(Rails.application)
+if Rails.env.development?
+  require 'rack-mini-profiler'
+
+  Rack::MiniProfilerRails.initialize!(Rails.application)
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'boot'
 
 require 'rails/all'
@@ -16,10 +18,10 @@ module Friends
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
-    #日本語対応の翻訳コード
+    # 日本語対応の翻訳コード
     config.i18n.default_locale = :ja
 
-    #タイムゾーンを日本時間にするコード
+    # タイムゾーンを日本時間にするコード
     config.time_zone = 'Asia/Tokyo'
   end
 end

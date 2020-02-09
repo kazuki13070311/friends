@@ -1,18 +1,20 @@
+# frozen_string_literal: true
+
 class Friend < ApplicationRecord
-    validates :name, presence: true
-    validates :name, length: {maximum: 30}
-    validate :validate_name_not_including_comma
-    
-    belongs_to :user
-    #has_many :friend
+  validates :name, presence: true
+  validates :name, length: { maximum: 30 }
+  validate :validate_name_not_including_comma
 
-    #def user
-      #return User.find_by(id: self.user_id)
-    #end
+  belongs_to :user
+  # has_many :friend
 
-    private
+  # def user
+  # return User.find_by(id: self.user_id)
+  # end
 
-    def validate_name_not_including_comma
-      errors.add(:name,'にカンマを含めることはできません') if name&.include?(',')    
-    end
+  private
+
+  def validate_name_not_including_comma
+    errors.add(:name, 'にカンマを含めることはできません') if name&.include?(',')
+  end
 end
