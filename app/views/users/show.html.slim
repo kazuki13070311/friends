@@ -58,7 +58,7 @@ h1 マイページ
 
 .body
     h1 募集履歴
-    - @user.friends.each do |friend|
+    - @user.friends.includes(:user).each do |friend|
         .media.bg-info.m-3
             - if friend.user.image?
                 = image_tag friend.user.image.url,size: '100x100'
