@@ -3,8 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
+# slim導入
 gem 'slim-rails'
 gem 'html2slim'
+
+# Bootstrap4の導入
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 
@@ -13,13 +16,26 @@ gem 'devise'
 gem 'devise-bootstrap-views'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+
+# Debugger
 gem 'pry-rails'
 gem 'pry-byebug'
+
+# ページネーション
 gem 'kaminari'
+
+# 検索機能
 gem 'ransack'
+
+#画像アップロード
 gem 'carrierwave'
 gem 'mini_magick'
+
+# 速度解析
 gem 'rack-mini-profiler', require: false
+
+# コードチェック
+gem 'rubocop','~> 0.79.0',require: false
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
