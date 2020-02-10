@@ -3,9 +3,9 @@
   = render "devise/shared/error_messages", resource: resource
   .thumbnail
     - if @user.image?
-      = image_tag @user.image.url
+      = image_tag @user.image.url,class: "mb-2"
     - else
-      = image_tag "/assets/default.jpg", :size => '100x100'
+      = image_tag "/assets/default.jpg",class: "mb-2",:size => '100x100'
     end
     .button
       .btn.btn-default.btn-outline-secondary

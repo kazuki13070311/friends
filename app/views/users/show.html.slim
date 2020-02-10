@@ -1,60 +1,54 @@
-h1 マイページ
+h1.text-center
+    | マイページ
 
-.thumbnail
+.thumbnail.mb-3
     - if @user.image?
         = image_tag @user.image.url,class: "d-block mx-auto"
     - else
         = image_tag "/assets/default.jpg",class: "d-block mx-auto"
     end
 
-.container.text-center
-    p = @user.name
-    p 
-        |PSNID
-        br
-        = @user.psnid
-    p = @user.email
-
-    p 
-        |性別
-        br
-        = @user.sex
-    p 
-        |プロフィール
-        br
-        = @user.profile
-    p 
-        |キルレ
-        br
-        = @user.strength
-    p 
-        |クラン名
-        br
-        = @user.clan
-    p 
-        |レベル
-        br
-        = @user.level
-    p 
-        |光レベル
-        br
-        = @user.lightlevel
-    p 
-        |機種
-        br
-        = @user.model
-    p 
-        |ボイスチャット
-        br
-        = @user.voice
-    p 
-        |プレイスタイル
-        br
-        = @user.style
-    p 
-        |プレイ時間帯
-        br
-        = @user.timezone
+.container
+    .row
+        .col-md-10.offset-md-1
+            table.table.input-table
+                tbody
+                    tr
+                        th= "名前"
+                        td= @user.name
+                    tr
+                        th= "PSNID"
+                        td= @user.psnid
+                    tr
+                        th= "性別"
+                        td= @user.sex
+                    tr
+                        th= "プロフィール"
+                        td= @user.profile 
+                    tr
+                        th= "キルレ"
+                        td= @user.strength
+                    tr
+                        th= "クラン名"
+                        td= @user.clan
+                    tr
+                        th= "レベル"
+                        td= @user.level
+                    tr
+                        th= "光レベル"
+                        td= @user.lightlevel
+                    tr
+                        th= "機種"
+                        td= @user.model
+                    tr
+                        th= "ボイスチャット"
+                        td= @user.voice
+                    tr
+                        th= "プレイスタイル"
+                        td= @user.style
+                    tr
+                        th= "プレイ時間"
+                        td= @user.timezone
 
 .body
     h1 募集履歴
@@ -72,13 +66,5 @@ h1 マイページ
                 .h8 
                     |投稿日：
                     = I18n.l(friend.updated_at, format: :long)
-
-//.body
-    - @user.friends.each do |friend|
-        hr
-            p 
-                |募集内容：
-                = link_to friend.name, friend_path(friend.id) 
-            
 
 = link_to '編集',edit_user_registration_path,class: 'btn btn-primary mr-3'

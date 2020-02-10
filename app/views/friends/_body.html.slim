@@ -1,13 +1,13 @@
 .flexbox
     - @friends.includes(:user).each do |friend|
-        .media.bg-info.m-3
+        .media.bg-info.my-3.rounded
             - if friend.user.image?
-                = image_tag friend.user.image.url,size: '100x100'
+                = image_tag friend.user.image.url,class: 'm-2',size: '75x75'
             - else
-                = image_tag "/assets/default.jpg",size: '100x100'
+                = image_tag "/assets/default.jpg",class: 'm-2',size: '75x75'
             .media-body
                 .h5 
-                    = link_to friend.name, friend
+                    = link_to friend.name, friend,class: 'badge badge-pill badge-primary'
                 .h6 
                     = friend.description
                 .h8 
