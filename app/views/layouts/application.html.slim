@@ -14,7 +14,7 @@ html
   body
     = render 'layouts/header'
     
-  .container.bg-warning
+  .container-field
     - if flash.notice.present?
       .alert.alert-success= flash.notice
     = yield

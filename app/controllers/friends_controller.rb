@@ -3,10 +3,10 @@
 class FriendsController < ApplicationController
   def index
     @friends = Friend.all.page(params[:page]).per(10)
-    # @user = User.all
-    @user = User.find(current_user.id).image
+    @user = User.all
     @q = @friends.ransack(params[:q])
     @friends = @q.result(distinct: true)
+    #@user = User.find(current_user.id).image
   end
 
   def show
@@ -36,6 +36,7 @@ class FriendsController < ApplicationController
 
   def create
     @friend = Friend.new(friend_params)
+    @user = User.find(current_user.id).image
     @friend.user_id = current_user.id
 
     if @friend.save
