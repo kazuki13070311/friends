@@ -1,6 +1,6 @@
 .flexbox
     - @friends.includes(:user).each do |friend|
-        .media.bg-info.my-3.rounded
+        .media.my-3.rounded.bg-white
             - if friend.user.image?
                 = image_tag friend.user.image.url,class: 'm-2',size: '75x75'
             - else

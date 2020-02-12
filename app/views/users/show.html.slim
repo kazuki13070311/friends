@@ -9,8 +9,9 @@ h1.text-center
     end
 
 .container
-    .row
+   .row
         .col-md-10.offset-md-1
+            = link_to '編集',edit_user_registration_path,class: 'btn btn-primary mr-3 float-right'
             table.table.input-table
                 tbody
                     tr
@@ -51,20 +52,20 @@ h1.text-center
                         td= @user.timezone
 
 .body
-    h1 募集履歴
+    h1.text-center
+        |募集履歴
+
     - @user.friends.includes(:user).each do |friend|
-        .media.bg-info.m-3
+        .media.bg-white.m-3.rounded
             - if friend.user.image?
-                = image_tag friend.user.image.url,size: '100x100'
+                = image_tag friend.user.image.url,class: 'm-2',size: '75x75'
             - else
-                = image_tag "/assets/default.jpg",size: '100x100'
+                = image_tag "/assets/default.jpg",class: 'm-2',size: '75x75'
             .media-body
                 .h5 
                     = link_to friend.name, friend
-                .h6 
+                .h6.mr-1 
                     = friend.description
-                .h8 
+                .h8.mr-2
                     |投稿日：
                     = I18n.l(friend.updated_at, format: :long)
-
-= link_to '編集',edit_user_registration_path,class: 'btn btn-primary mr-3'

@@ -12,7 +12,7 @@ h2
     br
     = f.email_field :email, autofocus: true, autocomplete: "email"
 
-  .thumbnail
+  .thumbnail-image
     = f.label :プロフィール画像
     = image_tag @user.image.thumb.url if @user.image?
     br
