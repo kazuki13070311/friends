@@ -54,7 +54,8 @@ h1.text-center
 .body
     h1.text-center
         |募集履歴
-
+        
+.col-md-10.offset-md-1
     - @user.friends.includes(:user).each do |friend|
         .media.bg-white.m-3.rounded
             - if friend.user.image?

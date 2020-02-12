@@ -1,18 +1,21 @@
-h1 募集一覧
+h1.text-center
+    |募集一覧
 
-= search_form_for @q,class: 'mb-5' do |f|
-    .form.group.row
-        = f.label :name, class: 'col-sm-2 col-form-label'
-        .col-sm-5
-            = f.search_field :name_cont, class: 'form-control'
-    .form-group
-        = f.submit class: 'btn btn-outline-primary'
+.col-md-10.offset-md-1
+    = search_form_for @q,class: 'mb-5' do |f|
+        .form.group.row
+            = f.label :name, class: 'col-sm-2 col-form-label'
+            .col-sm-5
+                = f.search_field :name_cont, class: 'form-control'
+        .form-group
+            = f.submit class: 'btn btn-outline-primary'
 
-= link_to '新規登録', new_friend_path, class: 'btn btn-primary mb-3'
+    = link_to '新規登録', new_friend_path, class: 'btn btn-primary mb-3'
 
 .mb-3
-    = paginate @friends
-    = page_entries_info @friends
+    .col-md-10.offset-md-1
+        = paginate @friends
+        = page_entries_info @friends
 
-
-= render 'friends/body'
+.col-md-10.offset-md-1
+    = render 'friends/body'

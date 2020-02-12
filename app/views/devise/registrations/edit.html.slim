@@ -11,14 +11,19 @@
       .btn.btn-default.btn-outline-secondary.mt-2
         = f.file_field :image, accept: 'image/jpeg,image/gif,image/png'
 
+
+
+
+
+
   .form-group.row.mt-3
-    .col-md-3.offset-md-1
+    .col-md-8.offset-md-2
       = f.label :name
       br
       = f.text_field :name, autofocus: true,class: 'form-control'
   
   .form-group.row
-    .col-md-3.col-form-label.offset-md-1
+    .col-md-8.offset-md-2
       = f.label :email
       br
       = f.email_field :email, autofocus: true, autocomplete: "email",class: 'form-control'
@@ -28,74 +33,74 @@
         = resource.unconfirmed_email
 
   .form-group.row
-    .col-md-3.col-form-label.offset-md-1
+    .col-md-8.offset-md-2
       = f.label :性別
       br
       = f.select :sex,[['男性','男性'],['女性','女性']]
 
   .form-group.row
-    .col-md-7.col-form-label.offset-md-1
+    .col-md-8.offset-md-2
       = f.label :プロフィール
       br
       = f.text_area :profile, autofocus: true,rows: 5,class: 'form-control'
 
   .form-group.row
-    .col-md-3.col-form-label.offset-md-1
+    .col-md-8.offset-md-2
       = f.label :ゲームアカウント名
       br
       = f.text_field :psnid, autofocus: true,class: 'form-control'
 
   .form-group.row
-    .col-md-3.col-form-label.offset-md-1
+    .col-md-8.offset-md-2
       = f.label :キルレ
       br
       = f.text_field :strength, autofocus: true,class: 'form-control'
 
   .form-group.row
-    .col-md-3.col-form-label.offset-md-1
+    .col-md-8.offset-md-2
       = f.label :クラン
       br
       = f.text_field :clan, autofocus: true,class: 'form-control'
 
   .form-group.row
-    .col-md-3.col-form-label.offset-md-1
+    .col-md-8.offset-md-2
       = f.label :レベル
       br
       = f.text_field :level, autofocus: true,class: 'form-control'
 
   .form-group.row
-    .col-md-3.col-form-label.offset-md-1
+    .col-md-8.offset-md-2
       = f.label :光レベル
       br
       = f.text_field :lightlevel, autofocus: true,class: 'form-control'
 
   .form-group.row
-    .col-md-3.col-form-label.offset-md-1
+    .col-md-8.offset-md-2
       = f.label :機種
       br
       = f.select :model,[['PS4','PS4'],['PS3','PS3'],['PC','PC'],['XboxOne','XboxOne']],class: 'form-control'
 
   .form-group.row
-    .col-md-8.col-form-label.offset-md-1
+    .col-md-8.offset-md-2
       = f.label :ボイスチャット
       br
       = f.select :voice,[['あり','あり'],['なし','なし']],class: 'form-control'
 
   .form-group.row
-    .col-md-3.col-form-label.offset-md-1
+    .col-md-8.offset-md-2
       = f.label :プレイスタイル
       br
       = f.text_field :style, autofocus: true,class: 'form-control'
 
   .form-group.row
-    .col-md-3.col-form-label.offset-md-1
+    .col-md-8.offset-md-2
       = f.label :プレイ時間帯
       br
       = f.text_field :timezone, autofocus: true,class: 'form-control'
 
 
   .form-group.row
-    .col-md-5.col-form-label.offset-md-1
+    .col-md-8.offset-md-2
       = f.label :変更したいパスワード
       br
       = f.password_field :password, autocomplete: "new-password",class: 'form-control'
@@ -107,26 +112,26 @@
           |  文字以上
   
   .form-group.row
-    .col-md-3.col-form-label.offset-md-1
+    .col-md-8.offset-md-2
       = f.label :password_confirmation
       br
-      = f.password_field :password_confirmation, autocomplete: "new-password"
+      = f.password_field :password_confirmation, autocomplete: "new-password",class: 'form-control'
   
   .form-group.row
-    .col-md-8.col-form-label.offset-md-1
+    .col-md-8.offset-md-2
       = f.label :current_password
       br
-      = f.password_field :current_password, autocomplete: "current-password"
+      = f.password_field :current_password, autocomplete: "current-password",class: 'form-control'
       br
       | (プロフィールを変更するには現在のパスワードを入力してください)
 
   .form-group.row
-    .col-md-3.col-form-label.offset-md-1
+    .col-md-8.offset-md-2
       .action
-        = f.submit "プロフィール更新",class: 'btn btn-outline-primary'
+        = f.submit "プロフィール更新",class: 'btn btn-outline-primary btn-block'
 
-.form-group.row
-    .col-md-6.col-form-label.offset-md-1
+.form-group.row.mt-5
+    .col-md-8.offset-md-2
       h3
         | アカウントを削除する
       p
