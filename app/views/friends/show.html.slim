@@ -1,28 +1,32 @@
-h1 募集内容の詳細
+h1.text-center
+    |募集内容の詳細
 
 .nav.justify-content-end
     = link_to '一覧',friends_path,class: 'nav-link'
 
-table.table.table-hover
-    tbody
-        tr
-            th= Friend.human_attribute_name(:model)
-            td= @friend.model
-        tr
-            th= User.human_attribute_name(:name)
-            td= link_to @user.name,@user
-        tr
-            th= Friend.human_attribute_name(:募集内容)
-            td= @friend.name
-        tr
-            th= Friend.human_attribute_name(:description)
-            td= simple_format(h(@friend.description),{},sanitize: false,wrapper_tag: "div")
-        tr
-            th= Friend.human_attribute_name(:created_at)
-            td= @friend.created_at
-        tr
-            th= Friend.human_attribute_name(:updated_at)
-            td= @friend.updated_at
-
-= link_to '編集',edit_friend_path,class: 'btn btn-primary mr-3'
-= link_to '削除',@friend,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'
+.col-md-10.offset-md-1
+    table.table.table-hover
+        tbody
+            tr
+                th= Friend.human_attribute_name(:model)
+                td= @friend.model
+            tr
+                th= User.human_attribute_name(:name)
+                td= link_to @user.name,@user
+            tr
+                th= Friend.human_attribute_name(:募集内容)
+                td= @friend.name
+            tr
+                th= Friend.human_attribute_name(:description)
+                td= simple_format(h(@friend.description),{},sanitize: false,wrapper_tag: "div")
+            tr
+                th= Friend.human_attribute_name(:created_at)
+                td= @friend.created_at
+            tr
+                th= Friend.human_attribute_name(:updated_at)
+                td= @friend.updated_at
+    - if user_signed_in?
+        = link_to '編集',edit_friend_path,class: 'btn btn-primary mr-3'
+        = link_to '削除',@friend,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'
+    - else
+    end

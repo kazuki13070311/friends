@@ -12,7 +12,8 @@ html
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
 
   body
-    = render 'layouts/header'
+    .sticky-top
+      = render 'layouts/header'
     
   .container.bg-light
     - if flash.notice.present?

@@ -4,10 +4,10 @@ h1.text-center
 .col-md-10.offset-md-1
     = search_form_for @q,class: 'mb-5' do |f|
         .form.group.row
-            = f.label :name, class: 'col-sm-2 col-form-label'
-            .col-sm-5
+            = f.label :募集検索, class: 'col-sm-2 col-form-label'
+            .col-sm-8
                 = f.search_field :name_cont, class: 'form-control'
-        .form-group
+        .form.group
             = f.submit class: 'btn btn-outline-primary'
 
     = link_to '新規登録', new_friend_path, class: 'btn btn-primary mb-3'
