@@ -18,7 +18,7 @@ h1.text-center
                         th= "名前"
                         td= @user.name
                     tr
-                        th= "PSNID"
+                        th= "ゲーム内ID名"
                         td= @user.psnid
                     tr
                         th= "性別"
@@ -27,8 +27,8 @@ h1.text-center
                         th= "プロフィール"
                         td= @user.profile 
                     tr
-                        th= "キルレ"
-                        td= @user.strength
+                        th= "機種"
+                        td= @user.model
                     tr
                         th= "クラン名"
                         td= @user.clan
@@ -39,8 +39,8 @@ h1.text-center
                         th= "光レベル"
                         td= @user.lightlevel
                     tr
-                        th= "機種"
-                        td= @user.model
+                        th= "キルレ"
+                        td= @user.strength
                     tr
                         th= "ボイスチャット"
                         td= @user.voice
@@ -54,14 +54,14 @@ h1.text-center
 .body
     h1.text-center
         |募集履歴
-        
+
 .col-md-10.offset-md-1
     - @user.friends.includes(:user).each do |friend|
         .media.bg-white.m-3.rounded
             - if friend.user.image?
-                = image_tag friend.user.image.url,class: 'm-2',size: '75x75'
+                = image_tag friend.user.image.url,class: 'm-4',size: '75x75'
             - else
-                = image_tag "/assets/default.jpg",class: 'm-2',size: '75x75'
+                = image_tag "/assets/default.jpg",class: 'm-4',size: '75x75'
             .media-body
                 .h5 
                     = link_to friend.name, friend

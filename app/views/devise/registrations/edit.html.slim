@@ -24,6 +24,12 @@
   
   .form-group.row
     .col-md-8.offset-md-2
+      = f.label :"ゲーム内ID名"
+      br
+      = f.text_field :psnid, autofocus: true,class: 'form-control'
+
+  .form-group.row
+    .col-md-8.offset-md-2
       = f.label :email
       br
       = f.email_field :email, autofocus: true, autocomplete: "email",class: 'form-control'
@@ -46,19 +52,13 @@
 
   .form-group.row
     .col-md-8.offset-md-2
-      = f.label :ゲームアカウント名
+      = f.label :機種
       br
-      = f.text_field :psnid, autofocus: true,class: 'form-control'
+      = f.select :model,[['PS4','PS4'],['PS3','PS3'],['PC','PC'],['XboxOne','XboxOne']],class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
-      = f.label :キルレ
-      br
-      = f.text_field :strength, autofocus: true,class: 'form-control'
-
-  .form-group.row
-    .col-md-8.offset-md-2
-      = f.label :クラン
+      = f.label :所属クラン
       br
       = f.text_field :clan, autofocus: true,class: 'form-control'
 
@@ -76,9 +76,9 @@
 
   .form-group.row
     .col-md-8.offset-md-2
-      = f.label :機種
+      = f.label :キルレ
       br
-      = f.select :model,[['PS4','PS4'],['PS3','PS3'],['PC','PC'],['XboxOne','XboxOne']],class: 'form-control'
+      = f.text_field :strength, autofocus: true,class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
@@ -90,7 +90,7 @@
     .col-md-8.offset-md-2
       = f.label :プレイスタイル
       br
-      = f.text_field :style, autofocus: true,class: 'form-control'
+      = f.select :style,[['エンジョイ勢(PvP & PvE 派)','エンジョイ勢(PvP & PvE 派)'],['ガチ勢(PvP & PvE 派)','ガチ勢(PvP & PvE 派)'],['エンジョイ勢(PvE 派)','エンジョイ勢(PvE 派)'],['ガチ勢(PvE 派)','ガチ勢(PvE 派)'],['エンジョイ勢(PvP 派)','エンジョイ勢(PvP 派)'],['ガチ勢(PvP 派)','ガチ勢(PvP 派)']],class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
