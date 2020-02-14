@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class FriendsController < ApplicationController
+  before_action :login_required, only: [:edit,:new]
+
   def index
     @friends = Friend.all.page(params[:page]).per(10)
     @user = User.all
@@ -36,7 +38,6 @@ class FriendsController < ApplicationController
 
   def create
     @friend = Friend.new(friend_params)
-    @user = User.find(current_user.id).image
     @friend.user_id = current_user.id
 
     if @friend.save
@@ -50,5 +51,9 @@ class FriendsController < ApplicationController
 
   def friend_params
     params.require(:friend).permit(:name, :description, :email, :model)
+  end
+
+  def login_required
+      redirect_to login_url unless current_user
   end
 end

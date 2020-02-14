@@ -11,7 +11,9 @@ h1.text-center
 .container
    .row
         .col-md-10.offset-md-1
-            = link_to '編集',edit_user_registration_path,class: 'btn btn-primary mr-3 float-right'
+            - if user_signed_in?
+                = link_to '編集',edit_user_registration_path,class: 'btn btn-primary mr-3 float-right'
+            - else
             table.table.input-table
                 tbody
                     tr
