@@ -39,6 +39,9 @@ gem 'rack-mini-profiler', require: false
 # コードチェック
 gem 'rubocop', '~> 0.79.0', require: false
 
+# データベースのテーブルやカラムの情報をmodelに書き出してくれる
+gem 'annotate'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
 # Use sqlite3 as the database for Active Record
