@@ -11,9 +11,8 @@ h1.text-center
 .container
    .row
         .col-md-10.offset-md-1
-            - if user_signed_in?
+            - if user_signed_in? && current_user.id == @user.id
                 = link_to '編集',edit_user_registration_path,class: 'btn btn-primary mr-3 float-right'
-            - else
             table.table.input-table
                 tbody
                     tr
