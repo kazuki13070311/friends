@@ -8,6 +8,11 @@
             .media-body
                 .h5 
                     = link_to user.name, user,class: 'badge badge-pill badge-primary'
+                .h6
+                    = user.sex
+                .h6
+                    | キルレ：
+                    = user.strength
                 .h8.mr-2 
                     |登録日：
                     = I18n.l(user.updated_at, format: :long)
