@@ -1,13 +1,9 @@
 class Admin::UsersController < ApplicationController
-    before_action :if_not_admin
-
-    def show
-
-    end
+    before_action :admin_user
 
     private
-    def if_not_admin
-      redirect_to root_path unless current_user.admin?
+    def admin_user
+      redirect_to(root_path) unless current_user.admin?
     end
 
 end

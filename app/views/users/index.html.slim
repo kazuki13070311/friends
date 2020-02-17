@@ -1,0 +1,21 @@
+h1.text-center
+    |ユーザー一覧
+
+//.col-md-10.offset-md-1
+    = search_form_for @q,class: 'mb-5' do |f|
+        .form.group.row
+            = f.label :募集検索, class: 'col-sm-2 col-form-label'
+            .col-sm-8
+                = f.search_field :name_cont, class: 'form-control'
+        .form.group
+            = f.submit class: 'btn btn-outline-primary'
+
+    //= link_to '新規登録', new_friend_path, class: 'btn btn-primary mb-3'
+
+//.mb-3
+    .col-md-10.offset-md-1
+        = paginate @users
+        = page_entries_info @users
+
+.row
+    = render 'users/body'

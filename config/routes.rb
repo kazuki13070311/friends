@@ -4,9 +4,6 @@ Rails.application.routes.draw do
   root to: 'home#home'
 
   resources :users, only: %i[index new edit update]
-    namespace :admin do
-      resource :users, only: [:index, :new, :create, :show]
-    end
 
   resources :friends
 
