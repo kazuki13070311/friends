@@ -7,7 +7,7 @@
         - if user_signed_in?
           li= link_to "ホーム画面",root_path,class:'post',class:'btn'
           li= link_to "マイページ","/users/#{current_user.id}",class:'post',class:'btn'
-          li= link_to "ログアウト", destroy_user_session_path, method: "delete",class: 'btn'
+          li= link_to "ログアウト",destroy_user_session_path, method: "delete",class: 'btn'
         - else
           li= link_to "ログイン",new_user_session_path, class: 'post',class: 'btn'
           li= link_to "新規登録",new_user_registration_path, class: 'post',class: 'btn'

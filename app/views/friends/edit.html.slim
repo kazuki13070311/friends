@@ -1,6 +1,8 @@
-h1 募集内容の編集
+h1.text-center
+    |募集内容の編集
 
 .nav.justify-content-end
     = link_to '一覧', friends_path, class: 'nav-link'
 
-= render partial: 'form',locals: {friend: @friend}
+.col-md-10.offset-md-1
+    = render partial: 'form',locals: {friend: @friend}

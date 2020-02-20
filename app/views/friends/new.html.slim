@@ -4,4 +4,5 @@ h1.text-center
 .nav.justify-content-end
     = link_to '一覧', friends_path, class: 'nav-link'
 
-= render partial: 'form',locals: {friend: @friend,user: @user}
+.col-md-10.offset-md-1
+    = render partial: 'form',locals: {friend: @friend,user: @user}

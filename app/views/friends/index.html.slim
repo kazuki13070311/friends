@@ -1,12 +1,38 @@
 h1.text-center
     |募集一覧
 
+//.col-md-10.offset-md-1
+    = search_form_for @q,class: 'mb-5' do |f|
+        .form.group.row
+            = f.label :募集検索, class: 'col-sm-2 col-form-label'
+            .col-sm-8
+                = f.search_field :model_cont, class: 'form-control'
+        .form.group
+            = f.submit class: 'btn btn-outline-primary'
+
 .col-md-10.offset-md-1
     = search_form_for @q,class: 'mb-5' do |f|
         .form.group.row
             = f.label :募集検索, class: 'col-sm-2 col-form-label'
             .col-sm-8
-                = f.search_field :name_cont, class: 'form-control'
+                = f.radio_button :model_cont, 'PS4'
+                | PS4
+                = f.radio_button :model_cont, 'PS3'
+                | PS3
+                = f.radio_button :model_cont, 'PC'
+                | PC
+                = f.radio_button :model_cont, 'XboxOne'
+                | XboxOne
+            
+   
+            h1
+            | 検索クエリ
+            - unless params[:q][:model_cont].empty?
+            | 名前:
+            = params[:q][:model_cont]           
+            
+            
+
         .form.group
             = f.submit class: 'btn btn-outline-primary'
 
