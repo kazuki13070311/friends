@@ -21,7 +21,7 @@ class Friend < ApplicationRecord
   validates :description, presence: true
 
   belongs_to :user
-  # has_many :friend
+  #has_many :friend
 
   # def user
   # return User.find_by(id: self.user_id)

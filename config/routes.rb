@@ -20,5 +20,7 @@ Rails.application.routes.draw do
     get 'logout/:id', to: 'users#destroy'
   end
 
+  get 'search', to: 'friends#search'
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
