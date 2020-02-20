@@ -4,14 +4,29 @@ h1.text-center
 .col-md-10.offset-md-1
     = search_form_for @q,class: 'mb-5' do |f|
         .form.group.row
-            = f.label :ユーザー検索, class: 'col-sm-2 col-form-label'
-            .col-sm-8
+            = f.label :name_cont,"ユーザー名", class: 'col-sm-2 col-form-label'
+            .col-sm-6
                 = f.search_field :name_cont, class: 'form-control'
+        .form.group.row
+            = f.label :sex_cont,"性別", class: 'col-sm-2 col-form-label'
+            .col-sm-8
+                = f.radio_button :sex_cont, '男性'
+                | 男性　
+                = f.radio_button :sex_cont, '女性'
+                | 女性　
+        .form.group.row
+            = f.label :strength,"キルレ", class: 'col-sm-2 col-form-label'
+            .col-sm-8
+                = f.number_field :strength_gteq
+                |  以上〜 
+                = f.number_field :strength_lt
+                |  未満
+        
         .form.group
             = f.submit class: 'btn btn-outline-primary'
 
     
-.col-md-10.offset-md-1
+//.col-md-10.offset-md-1
     = search_form_for @q,class: 'mb-5' do |f|
         .form.group.row
             = f.label :キルレ検索, class: 'col-sm-2 col-form-label'

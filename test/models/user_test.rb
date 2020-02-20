@@ -20,7 +20,7 @@
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string
 #  sex                    :string
-#  strength               :string
+#  strength               :integer
 #  style                  :string
 #  timezone               :string
 #  voice                  :string
