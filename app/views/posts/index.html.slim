@@ -3,16 +3,19 @@ h1 テスト
 - if user_signed_in?
     h2 投稿する
     = form_for @post do |f|
-        = f.text_field :content
+        = f.file_field :image, class: "image"
         = f.submit
 
     hr
     h2 投稿一覧
     - @posts.each do |post|
-        a href="/users/#{post.user.id}" #{post.user.email}
-        br
-        a href="/posts/#{post.id}" #{post.content}
+        = image_tag post.image.url,class: 'm-4',size: '75x75'
 
 - else
+    h2 投稿一覧
+    - @posts.each do |post|
+        = image_tag post.image.url,class: 'm-4',size: '75x75'
+
+    br
     = link_to "ユーザー登録", new_user_registration_path
     = link_to "ログイン", new_user_session_path

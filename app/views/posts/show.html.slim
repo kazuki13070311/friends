@@ -2,5 +2,6 @@ h1 投稿詳細ページ
 h3
     = @post.user.email
 h3
-    = @post.content
+    = image_tag @post.image.url if @post.image?
+
 = link_to "ホームへ戻る",posts_path
