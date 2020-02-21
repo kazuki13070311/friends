@@ -1,11 +1,14 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'posts/index'
+  get 'posts/show'
   root to: 'home#home'
 
   resources :users, only: %i[index new edit update]
 
   resources :friends
+  resources :posts, only: [:index,:show,:create]
 
   devise_for :users, controllers: {
     registrations: 'users/registrations',

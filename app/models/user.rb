@@ -43,6 +43,7 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :profile, length: { maximum: 400 }
 
+  has_many :posts, dependent: :destroy
   has_many :friends, dependent: :destroy
   has_one_attached :image, dependent: :destroy
 

@@ -2,6 +2,7 @@
       .navbar-brand = link_to "Guardians",root_path,class:"navbar-brand logo"
 
       ul.navbar-nav.ml-auto
+        li= link_to "投稿一覧",posts_path,class: 'post',class: 'btn'
         li= link_to "攻略サイト",'https://kattyan.net/',class: 'post',class: 'btn'
         li= link_to "ユーザー一覧",users_path,class: 'post',class: 'btn'
         li= link_to "募集一覧",friends_path,class: 'post',class: 'btn'
