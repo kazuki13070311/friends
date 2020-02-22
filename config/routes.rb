@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :users, only: %i[index new edit update]
 
   resources :friends
-  resources :posts, only: [:index,:show,:create]
+  resources :posts, only: [:index,:show,:create,:destroy]
 
   devise_for :users, controllers: {
     registrations: 'users/registrations',

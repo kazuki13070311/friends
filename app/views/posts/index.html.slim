@@ -3,18 +3,35 @@ h1 テスト
 - if user_signed_in?
     h2 投稿する
     = form_for @post do |f|
-        = f.file_field :image, class: "image"
+        .form.group.row
+            = f.label :content,"コメント", class: 'col-sm-2 col-form-label'
+            = f.text_field :content
+        .form.group.row
+            = f.file_field :image, class: "image"
         = f.submit
 
     hr
     h2 投稿一覧
     - @posts.each do |post|
-        = image_tag post.image.url,class: 'm-4',size: '75x75'
-
+        .container
+            .row
+                .card
+                    .card-img-top
+                        = link_to image_tag post.image.url,class: 'm-4',size: '150x150',root_path
+                        = post.content
+                    
+                        
+                    
 - else
     h2 投稿一覧
-    - @posts.each do |post|
-        = image_tag post.image.url,class: 'm-4',size: '75x75'
+    - @posts.includes(:user).each do |post|
+        .container
+            .row
+                .card
+                    .card-img-top
+                        = image_tag post.image.url,class: 'm-4',size: '75x75'
+                    .card-body
+                        | テスト投稿
 
     br
     = link_to "ユーザー登録", new_user_registration_path
