@@ -17,9 +17,9 @@ h1 テスト
             .row
                 .card
                     .card-img-top
-                        = link_to image_tag post.image.url,class: 'm-4',size: '150x150',root_path
+                        = image_tag post.image.url,class: 'm-4',size: '150x150'
                         = post.content
-                    
+                    = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
                         
                     
 - else

@@ -1,9 +1,9 @@
-h1 投稿詳細ページ
-h3
-    = @post.user.email
-h3
+h1.text-center
+    |投稿詳細ページ
+
+h2.text-center
     = image_tag @post.image.url if @post.image?
 
-= link_to '削除',@post,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'
+    = link_to '削除',@post,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'
 
-= link_to "ホームへ戻る",posts_path
+    = link_to "ホームへ戻る",posts_path
