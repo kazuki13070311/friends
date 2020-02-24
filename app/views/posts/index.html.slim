@@ -1,6 +1,8 @@
 h1 テスト
 
 - if user_signed_in?
+    = link_to '新規登録', new_post_path, class: 'btn btn-primary mb-3'
+
     h2 投稿する
     = form_for @post do |f|
         .form.group.row

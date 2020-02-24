@@ -1,0 +1,9 @@
+//= form_for @post do |f|
+ 
+= form_with model: @post, local: true do |f|
+        .form.group.row
+            = f.label :content,"コメント", class: 'col-sm-2 col-form-label'
+            = f.text_field :content
+        .form.group.row
+            = f.file_field :image, class: "image"
+        = f.submit nil, class: 'btn btn-primary'

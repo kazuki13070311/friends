@@ -14,7 +14,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_path, notice: '投稿が完了しました。'
     else
-      redirect_to posts_path, notice: '投稿できませんでした。全項目入力してください。 '
+      render :new
     end
       
       #redirect_back(fallback_location: root_path)
@@ -32,6 +32,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:image,:remove_image)
+    params.require(:post).permit(:content,:image,:remove_image)
   end
 end
