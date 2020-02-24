@@ -3,6 +3,9 @@ h1.text-center
 
 h2.text-center
     = image_tag @post.image.url if @post.image?
+    
+.h5 
+    = link_to @post.user.name, @post.user,class: 'badge badge-pill badge-primary'
 
     = link_to '削除',@post,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'
 
