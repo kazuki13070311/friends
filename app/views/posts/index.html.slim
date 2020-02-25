@@ -1,40 +1,35 @@
-h1 テスト
-
-- if user_signed_in?
-    = link_to '新規登録', new_post_path, class: 'btn btn-primary mb-3'
-
-    h2 投稿する
-    = form_for @post do |f|
-        .form.group.row
-            = f.label :content,"コメント", class: 'col-sm-2 col-form-label'
-            = f.text_field :content
-        .form.group.row
-            = f.file_field :image, class: "image"
-        = f.submit
+h1.text-center
+    |テスト
 
     hr
-    h2 投稿一覧
-    - @posts.each do |post|
-        .container
-            .row
-                .card
-                    .card-img-top
-                        = image_tag post.image.url,class: 'm-4',size: '150x150'
-                        = post.content
-                    = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
-                        
-                    
-- else
-    h2 投稿一覧
-    - @posts.includes(:user).each do |post|
-        .container
-            .row
-                .card
-                    .card-img-top
-                        = image_tag post.image.url,class: 'm-4',size: '75x75'
-                    .card-body
-                        | テスト投稿
+.col-md-10.offset-md-1
+    - if user_signed_in?
+        = link_to '新規登録', new_post_path, class: 'btn btn-primary mb-3'
 
-    br
-    = link_to "ユーザー登録", new_user_registration_path
-    = link_to "ログイン", new_user_session_path
+
+        h2 投稿一覧
+        - @posts.includes(:user).each do |post|
+            .container
+                .row
+                    .card
+                        .card-img-top
+                            = image_tag post.image.url,class: 'm-4',size: '150x150'
+                            br
+                            = post.content
+                        = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
+                                
+                        
+    - else
+        h2 投稿一覧
+        - @posts.includes(:user).each do |post|
+            .container
+                .row
+                    .card
+                        .card-img-top
+                            = image_tag post.image.url,class: 'm-4',size: '75x75'
+                        .card-body
+                            | テスト投稿
+
+        br
+        = link_to "ユーザー登録", new_user_registration_path
+        = link_to "ログイン", new_user_session_path

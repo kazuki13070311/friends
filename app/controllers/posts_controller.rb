@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     else
       render :new
     end
-      
+
       #redirect_back(fallback_location: root_path)
     #else
       #redirect_back(fallback_location: root_path)
@@ -32,6 +32,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:content,:image,:remove_image)
+    params.permit(:content, :image, :remove_image)
   end
 end
