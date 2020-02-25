@@ -8,6 +8,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
+
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
@@ -21,6 +25,12 @@ class PostsController < ApplicationController
     #else
       #redirect_back(fallback_location: root_path)
     #end
+  end
+
+  def update
+    post = Post.find(params[:id])
+    post.update!(post_params)
+    redirect_to post_url, notice: '投稿内容の更新が完了しました。'
   end
 
   def destroy
