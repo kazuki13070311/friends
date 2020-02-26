@@ -5,6 +5,11 @@
         = f.text_field :content,class: 'form-control'
     br
     .form.group.row
+        = f.label :descriptin,"投稿内容", class:'col-md-5'
+    .col-md-12
+        = f.text_area :description, rows: 5,class: 'form-control', id: 'post_description'
+    br
+    .form.group.row
         = f.label :image,"投稿画像", class:'col-md-5'
     .col-md-12
         = f.file_field :image, class: "image form-control"

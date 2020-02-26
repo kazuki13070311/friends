@@ -42,6 +42,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.permit(:content, :image, :remove_image)
+    params.permit(:content, :image, :remove_image, :description)
   end
 end

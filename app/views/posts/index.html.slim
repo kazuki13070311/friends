@@ -6,20 +6,31 @@ h1.text-center
     - if user_signed_in?
         = link_to '新規登録', new_post_path, class: 'btn btn-primary mb-3'
 
-
-        h2 投稿一覧
+    
+        h2
+            |投稿一覧
         - @posts.includes(:user).each do |post|
+            .postindex
+                .test
+                    = image_tag post.image.url,class: 'm-5',size: '175x175'
+                    br
+                    = post.content
+                    br
+                    = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
+            
+        //- @posts.includes(:user).each do |post|
             .container
-                .row
+                .card-deck.row
                     .card
                         .card-img-top
-                            = image_tag post.image.url,class: 'm-4',size: '150x150'
+                            = image_tag post.image.url,class: 'm-5',size: '300x300'
                             br
                             = post.content
-                        = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
-                                
+                            br
+                            = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
+                                        
                         
-    - else
+    //- else
         h2 投稿一覧
         - @posts.includes(:user).each do |post|
             .container
