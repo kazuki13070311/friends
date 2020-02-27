@@ -2,33 +2,23 @@ h1.text-center
     |テスト
 
     hr
+
 .col-md-10.offset-md-1
     - if user_signed_in?
         = link_to '新規登録', new_post_path, class: 'btn btn-primary mb-3'
 
-    
-        h2
-            |投稿一覧
-        - @posts.includes(:user).each do |post|
-            .postindex
-                .test
-                    = image_tag post.image.url,class: 'm-5',size: '175x175'
-                    br
-                    = post.content
-                    br
-                    = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
-            
-        //- @posts.includes(:user).each do |post|
-            .container
-                .card-deck.row
+.row
+    .col-md-12.offset-md-1
+        .card-group
+            - @posts.includes(:user).each do |post|
+                .row.col-md-4
                     .card
-                        .card-img-top
-                            = image_tag post.image.url,class: 'm-5',size: '300x300'
-                            br
-                            = post.content
-                            br
-                            = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
-                                        
+                        = image_tag post.image.url,class: 'card-img-top',size: '200x200'
+                        br
+                        = post.content
+                        br
+                        = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
+                                                
                         
     //- else
         h2 投稿一覧
@@ -44,3 +34,15 @@ h1.text-center
         br
         = link_to "ユーザー登録", new_user_registration_path
         = link_to "ログイン", new_user_session_path
+
+
+//h2
+            |投稿一覧
+        //- @posts.includes(:user).each do |post|
+            .row.
+                .col-md-12
+                    = image_tag post.image.url,class: 'm-5',size: '175x175'
+                    br
+                    = post.content
+                    br
+                    = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
