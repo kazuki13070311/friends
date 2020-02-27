@@ -1,5 +1,5 @@
 h1.text-center
-    |テスト
+    |自慢の一枚
 
     hr
 
@@ -9,15 +9,15 @@ h1.text-center
 
 .row
     .col-md-12.offset-md-1
-        .card-group
+        .row.col-md-12
             - @posts.includes(:user).each do |post|
-                .row.col-md-4
-                    .card
-                        = image_tag post.image.url,class: 'card-img-top',size: '200x200'
-                        br
-                        = post.content
-                        br
-                        = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
+                .card-group.m-2
+                    .card style="width: 19rem"
+                        = image_tag post.image.url,class: 'card-img-top'
+                        .card-body
+                            = post.content
+                        .card-footer
+                            = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
                                                 
                         
     //- else
