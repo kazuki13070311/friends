@@ -2,13 +2,15 @@ h1.text-center
     |自慢の一枚
 
     hr
+    = link_to '新規登録', new_post_path, class: 'btn btn-primary mb-3'
 
-.col-md-10.offset-md-1
-    - if user_signed_in?
-        = link_to '新規登録', new_post_path, class: 'btn btn-primary mb-3'
+.mb-3
+    .col-md-10.offset-md-1
+        = paginate @posts
+        = page_entries_info @posts
 
 .row
-    .col-md-12.offset-md-1
+   .col-md-12.offset-md-1
         .row.col-md-12
             - @posts.includes(:user).each do |post|
                 .card-group.m-2
@@ -18,31 +20,8 @@ h1.text-center
                             = post.content
                         .card-footer
                             = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
-                                                
-                        
-    //- else
-        h2 投稿一覧
-        - @posts.includes(:user).each do |post|
-            .container
-                .row
-                    .card
-                        .card-img-top
-                            = image_tag post.image.url,class: 'm-4',size: '75x75'
-                        .card-body
-                            | テスト投稿
+                                                    
 
-        br
-        = link_to "ユーザー登録", new_user_registration_path
-        = link_to "ログイン", new_user_session_path
-
-
-//h2
-            |投稿一覧
-        //- @posts.includes(:user).each do |post|
-            .row.
-                .col-md-12
-                    = image_tag post.image.url,class: 'm-5',size: '175x175'
-                    br
-                    = post.content
-                    br
-                    = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
+.mb-3.mt-3
+    .col-md-10.offset-md-1
+        = paginate @posts

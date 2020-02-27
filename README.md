@@ -1,24 +1,19 @@
-# ポートフォリオ作成中
+# Guardians
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+オンラインゲーム「Destiny2」で一緒に遊べる仲間を見つける場所を提供
 
-Things you may want to cover:
+# このサイトを使用するメリット３点
 
-* Ruby version
+* 自分が求めるユーザーが探しやすい
 
-* System dependencies
+* フレンド登録後のミスマッチを防げる
 
-* Configuration
+* 事前にお互いどんなユーザーなのか簡略的に分かる
 
-* Database creation
+# 使用技術
 
-* Database initialization
+*バックエンド
 
-* How to run the test suite
+Ruby
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ruby on Rails6

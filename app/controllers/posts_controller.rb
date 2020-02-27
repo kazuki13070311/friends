@@ -1,7 +1,11 @@
 class PostsController < ApplicationController
+  before_action :login_required, only: [:edit,:new]
+
   def index
-    @posts = Post.all
     @post = Post.new
+    @posts = Post.all.page(params[:page]).per(9)
+    @q = @posts.ransack(params[:q])
+    @posts = @q.result(distinct: true)
   end
 
   def show
@@ -20,11 +24,6 @@ class PostsController < ApplicationController
     else
       render :new
     end
-
-      #redirect_back(fallback_location: root_path)
-    #else
-      #redirect_back(fallback_location: root_path)
-    #end
   end
 
   def update
@@ -44,4 +43,9 @@ class PostsController < ApplicationController
   def post_params
     params.permit(:content, :image, :remove_image, :description)
   end
+
+   def login_required
+      redirect_to login_url unless current_user
+  end
+
 end

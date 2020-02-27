@@ -2,12 +2,12 @@
       .navbar-brand = link_to "Guardians",root_path,class:"navbar-brand logo"
 
       ul.navbar-nav.ml-auto
-        li= link_to "投稿一覧",posts_path,class: 'post',class: 'btn'
+        li= link_to "自慢の一枚",posts_path,class: 'post',class: 'btn'
         li= link_to "攻略サイト",'https://kattyan.net/',class: 'post',class: 'btn'
         li= link_to "ユーザー一覧",users_path,class: 'post',class: 'btn'
         li= link_to "募集一覧",friends_path,class: 'post',class: 'btn'
         - if user_signed_in?
-          li= link_to "ホーム画面",root_path,class:'post',class:'btn'
+          li= link_to "トップページ",root_path,class:'post',class:'btn'
           li= link_to "マイページ","/users/#{current_user.id}",class:'post',class:'btn'
           li= link_to "ログアウト",destroy_user_session_path, method: "delete",class: 'btn'
         - else

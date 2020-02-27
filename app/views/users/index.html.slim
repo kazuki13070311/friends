@@ -25,16 +25,6 @@ h1.text-center
         .form.group
             = f.submit class: 'btn btn-outline-primary'
 
-    
-//.col-md-10.offset-md-1
-    = search_form_for @q,class: 'mb-5' do |f|
-        .form.group.row
-            = f.label :キルレ検索, class: 'col-sm-2 col-form-label'
-            .col-sm-8
-                = f.search_field :strength_cont, class: 'form-control'
-        .form.group
-            = f.submit class: 'btn btn-outline-primary'
-
 
 .mb-3
     .col-md-10.offset-md-1
@@ -43,3 +33,7 @@ h1.text-center
 
 .row
     = render 'users/body'
+
+.mb-3
+    .col-md-10.offset-md-1
+        = paginate @users
