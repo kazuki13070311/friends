@@ -28,6 +28,7 @@ class PostsController < ApplicationController
 
   def update
     post = Post.find(params[:id])
+
     post.update!(post_params)
     redirect_to post_url, notice: '投稿内容の更新が完了しました。'
   end
@@ -41,7 +42,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.permit(:content, :image, :remove_image, :description)
+    params[:post].permit(:content, :image, :remove_image, :description)
   end
 
    def login_required

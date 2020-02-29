@@ -1,8 +1,11 @@
 h1.text-center
     |投稿詳細ページ
 
-    h2.text-center
-        = image_tag @post.image.url if @post.image?
+.container
+    .row
+        .image_arrangement
+            - if @post.image?
+                = image_tag @post.image.url,size: '500x450'
 
     h5.text-center 
         = link_to @post.user.name, @post.user,class: 'badge badge-pill badge-primary'
