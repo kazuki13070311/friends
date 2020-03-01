@@ -12,8 +12,18 @@
 
 # 使用技術
 
-*バックエンド
+*フロントサイド
+HTML&CSS
 
-Ruby
+slim
+
+bootstrap4
+
+*サーバーサイド
+
+sqlite3
+
+Ruby:2.6.3
 
 Ruby on Rails6
+
