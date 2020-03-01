@@ -12,19 +12,19 @@
 
 # 使用技術
 
-* フロントサイド
+## フロントサイド
 
-HTML&CSS
+* HTML&CSS
 
-slim
+* slim
 
-bootstrap4
+* bootstrap4
 
-* サーバーサイド
+## サーバーサイド
 
-sqlite3
+* sqlite3
 
-Ruby:2.6.3
+* Ruby:2.6.3
 
-Ruby on Rails6
+* Ruby on Rails6
 
