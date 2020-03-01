@@ -16,5 +16,6 @@ h1.text-center
 
         = link_to "前のページ",posts_path
 
-        = link_to '編集',edit_post_path,class: 'btn btn-primary mr-3'
-        = link_to '削除',@post,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'
+        - if user_signed_in? && current_user.id
+            = link_to '編集',edit_post_path,class: 'btn btn-primary mr-3'
+            = link_to '削除',@post,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'
