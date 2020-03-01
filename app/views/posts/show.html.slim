@@ -19,14 +19,13 @@ h1.text-center
             tbody
                 tr
                     th= Post.human_attribute_name(:投稿者)
-                    td= @post.user.name
+                    td= link_to @post.user.name,@user
                 tr
                     th= Post.human_attribute_name(:タイトル)
-                    td= link_to @post.content
-        
-    .col-md-10.offset-md-1
-        h3
-            |PRポイント
+                    td= @post.content
+                tr
+                    th= Post.human_attribute_name(:アピールポイント)
+                    td= simple_format(@post.description)
 
 
 

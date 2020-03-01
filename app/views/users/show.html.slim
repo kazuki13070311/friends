@@ -26,7 +26,7 @@ h1.text-center
                         td= @user.sex
                     tr
                         th= "プロフィール"
-                        td= @user.profile 
+                        td= simple_format(@user.profile) 
                     tr
                         th= "機種"
                         td= @user.model
@@ -67,7 +67,7 @@ h1.text-center
                 .h5 
                     = link_to friend.name, friend
                 .h6.mr-1 
-                    = friend.description
+                    = simple_format(friend.description)
                 .h8.mr-2
                     |投稿日：
                     = I18n.l(friend.updated_at, format: :long)
