@@ -7,12 +7,28 @@ h1.text-center
             - if @post.image?
                 = image_tag @post.image.url,size: '500x450'
 
-    h5.text-center 
+    //h5.text-center 
         = link_to @post.user.name, @post.user,class: 'badge badge-pill badge-primary'
         br
         = @post.content
         br
         = @post.description
+    br
+    .col-md-10.offset-md-1
+        table.table.table-hover
+            tbody
+                tr
+                    th= Post.human_attribute_name(:投稿者)
+                    td= @post.user.name
+                tr
+                    th= Post.human_attribute_name(:タイトル)
+                    td= link_to @post.content
+        
+    .col-md-10.offset-md-1
+        h3
+            |PRポイント
+
+
 
         = link_to "前のページ",posts_path
 
