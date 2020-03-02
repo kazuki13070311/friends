@@ -20,8 +20,15 @@ h1.text-center
                             = post.content
                         .card-footer
                             = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
-                                                    
-                        = post.liked_users.count 
+
+                            - if current_user.already_liked?(@post)
+                                = link_to like_path(@post),method: :delete do 
+                                    i class="far fa-heart unlike-btn"
+                            - else
+                                = link_to likes_path(@post), method: :post do
+                                    i class="fas fa-heart like-btn"
+                            end                            
+                            = post.liked_users.count 
 .mb-3.mt-3
     .col-md-10.offset-md-1
         = paginate @posts
