@@ -45,11 +45,17 @@ class User < ApplicationRecord
 
   has_many :posts, dependent: :destroy
   has_many :friends, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :liked_posts, through: :likes, source: :post
   has_one_attached :image, dependent: :destroy
 
   mount_uploader :image, ImageUploader
 
   def friends
     Friend.where(user_id: id)
+  end
+
+  def already_liked?(post)
+    self.likes.exists?(post_id: post.id)
   end
 end

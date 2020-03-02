@@ -10,7 +10,10 @@ Rails.application.routes.draw do
   resources :friends
   resources :posts, only: [:index,:show,:create,:destroy,:new,:edit,:update]
     post 'posts/new', to: 'posts#create'
-
+  
+  resources :posts, only: [:index, :show, :create] do
+    resources :likes, only:[:create, :destroy]
+  end
   devise_for :users, controllers: {
     registrations: 'users/registrations',
     sessions: 'users/sessions'

@@ -88,3 +88,7 @@ hr
                                 = post.content
                             .card-footer
                                 = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
+
+h3 いいねしている投稿
+- @user.liked_posts.each do |post|
+    li= link_to post.content,post

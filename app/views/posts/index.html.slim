@@ -21,7 +21,7 @@ h1.text-center
                         .card-footer
                             = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
                                                     
-
+                        = post.liked_users.count 
 .mb-3.mt-3
     .col-md-10.offset-md-1
         = paginate @posts

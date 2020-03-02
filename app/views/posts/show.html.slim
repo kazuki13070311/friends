@@ -36,3 +36,16 @@ h1.text-center
         = link_to "前のページ",posts_path
         br
         <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    
+h3 いいね件数: 
+= @post.likes.count
+- if current_user.already_liked?(@post)
+    = button_to 'いいねを取り消す', post_like_path(@post),method: :delete
+- else
+    = button_to 'いいね',post_likes_path(@post)
+end
+
+h2
+    | いいねしたユーザー
+- @post.liked_users.each do |user|
+    li= link_to user.name,user
