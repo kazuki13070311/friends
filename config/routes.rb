@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :posts, only: [:index, :show, :create] do
     resources :likes, only:[:create, :destroy]
   end
+  
   devise_for :users, controllers: {
     registrations: 'users/registrations',
     sessions: 'users/sessions'

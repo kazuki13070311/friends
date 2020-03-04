@@ -1,7 +1,7 @@
-//= require bootstrap-sprockets
 //= require jquery3
-//= require popper
-//= require_self
-//= require_tree .
 //= require jquery_ujs
 //= require jquery.turbolinks
+//= require_tree .
+//= require_self
+//= require popper
+//= require bootstrap-sprockets
