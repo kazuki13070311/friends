@@ -31,28 +31,31 @@ h1.text-center
         br
         <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     
+.row
+    .col-md-10.offset-md-1
+        <div id="likes_buttons_<%= @post.id %>">
+            = render partial: 'likes/like', locals:{ post: @post }
 
-<div id="likes_buttons_<%= @post.id %>">
-    = render partial: 'likes/like', locals:{ post: @post }
+        /- if current_user.already_liked?(@post)    
+            = render partial: 'likes/like', locals:{ post:post }
 
-/- if current_user.already_liked?(@post)    
-    = render partial: 'likes/like', locals:{ post:post }
-    
-    = link_to post_like_path(@post),remote: true, method: :delete do 
-        i class="far fa-heart unlike-btn"
-/- else
-    = link_to post_likes_path(@post),remote: true, method: :post do
-        i class="fas fa-heart like-btn"
-end
+            //#likes_buttons = @post.id
+            
+            //= link_to post_like_path(@post),remote: true, method: :delete do 
+                i class="far fa-heart unlike-btn"
+        /- else
+            = link_to post_likes_path(@post),remote: true, method: :post do
+                i class="fas fa-heart like-btn"
+        end
 
-h2
-    | いいねしたユーザー
-- @post.liked_users.each do |user|
-    li= link_to user.name,user
+        h2
+            | いいねしたユーザー
+        - @post.liked_users.each do |user|
+            li= link_to user.name,user
 
-<h1>Ajax#index</h1>
-<p id="hoge">赤色になるよ</p>
+        <h1>Ajax#index</h1>
+        <p id="hoge">赤色になるよ</p>
 
-javascript:
-    $("#hoge").css("color","red")
+        javascript:
+            $("#hoge").css("color","red")
 
