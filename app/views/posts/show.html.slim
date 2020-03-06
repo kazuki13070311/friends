@@ -34,7 +34,7 @@ h1.text-center
 .row
     .col-md-10.offset-md-1
         <div id="likes_buttons_<%= @post.id %>">
-            = render partial: 'likes/like', locals:{ post: @post }
+            = render 'likes/like', post: @post,like: @like
 
         /- if current_user.already_liked?(@post)    
             = render partial: 'likes/like', locals:{ post:post }
@@ -52,10 +52,3 @@ h1.text-center
             | いいねしたユーザー
         - @post.liked_users.each do |user|
             li= link_to user.name,user
-
-        <h1>Ajax#index</h1>
-        <p id="hoge">赤色になるよ</p>
-
-        javascript:
-            $("#hoge").css("color","red")
-
