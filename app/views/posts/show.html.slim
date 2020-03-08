@@ -33,8 +33,8 @@ h1.text-center
     
 .row
     .col-md-10.offset-md-1
-        <div id="likes_buttons_<%= @post.id %>">
-            = render 'likes/like', post: @post,like: @like
+        div.likes_buttons
+            = render partial: 'likes/like', post: @post,like: @like
 
         /- if current_user.already_liked?(@post)    
             = render partial: 'likes/like', locals:{ post:post }
