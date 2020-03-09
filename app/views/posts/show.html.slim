@@ -33,8 +33,8 @@ h1.text-center
     
 .row
     .col-md-10.offset-md-1
-        div.likes_buttons
-            = render partial: 'likes/like', post: @post,like: @like
+        #like_btn
+            = render partial: 'likes/like', locals:{ post: @post,like: @like}
 
         /- if current_user.already_liked?(@post)    
             = render partial: 'likes/like', locals:{ post:post }
@@ -46,9 +46,5 @@ h1.text-center
         /- else
             = link_to post_likes_path(@post),remote: true, method: :post do
                 i class="fas fa-heart like-btn"
-        end
+        
 
-        h2
-            | いいねしたユーザー
-        - @post.liked_users.each do |user|
-            li= link_to user.name,user
