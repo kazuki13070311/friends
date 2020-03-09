@@ -35,7 +35,6 @@ h1.text-center
     .col-md-10.offset-md-1
         #like_btn
             = render partial: 'likes/like', locals:{ post: @post,like: @like}
-
         /- if current_user.already_liked?(@post)    
             = render partial: 'likes/like', locals:{ post:post }
 
