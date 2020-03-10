@@ -14,6 +14,10 @@ class PostsController < ApplicationController
     @like = Like.new
   end
 
+  def ranking
+    @all_ranks = Post.create_all_ranks
+  end
+
   def edit
     @post = Post.find(params[:id])
   end
