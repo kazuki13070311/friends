@@ -21,20 +21,26 @@ h1.text-center
                     th= Post.human_attribute_name(:アピールポイント)
                     td= simple_format(@post.description)
 
-
-
-        - if user_signed_in? && current_user.id == @user.id
-            = link_to '編集',edit_post_path,class: 'btn btn-primary mr-3'
-            = link_to '削除',@post,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'
+        
         br
-        = link_to "前のページ",posts_path
-        br
-        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    
-.row
-    .col-md-10.offset-md-1
+        u
+            h6 評価する
         #like_btn
             = render partial: 'likes/like', locals:{ post: @post,like: @like}
+        
+        - if user_signed_in? && current_user.id == @user.id
+            = link_to '編集',edit_post_path,class: 'btn btn-primary mr-3 my-3'
+            = link_to '削除',@post,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger my-3'
+        
+        br
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        br
+            = link_to "一覧に戻る",posts_path
+
+//.row
+    .col-md-10.offset-md-1
+        #like_btn
+                = render partial: 'likes/like', locals:{ post: @post,like: @like}
         /- if current_user.already_liked?(@post)    
             = render partial: 'likes/like', locals:{ post:post }
 

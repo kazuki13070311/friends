@@ -18,11 +18,13 @@ h1.text-center
                         = image_tag post.image.url,class: 'card-img-top',size: '300x250'
                         .card-body
                             = post.content
+                        .card-text
+                            .mr-2.mb-1
+                                i class="fas fa-heart unlike-btn"
+                                    = post.liked_users.count
                         .card-footer
                             = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
-
-                        i class="fas fa-heart unlike-btn"
-                            = post.liked_users.count 
+                         
 .mb-3.mt-3
     .col-md-10.offset-md-1
         = paginate @posts

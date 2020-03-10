@@ -116,7 +116,7 @@
     float: right;
 }
 
-/*実績画像投稿ページ*/
+/*自慢の一枚投稿ページ*/
 .card{
     width: 200%;
 }
@@ -125,8 +125,23 @@
     border-radius: 3px;
 }
 
+.card-text{
+    text-align: right;
+}
+
 /*自慢の一枚投稿詳細ページ*/
 .image_arrangement{
     margin: auto;
     text-align: center;
 }
+
+/*評価ボタン*/
+.like-btn{
+    font-size: 18px;
+    color: #808080;
+}
+
+.unlike-btn{
+    font-size: 18px;
+    color: #e54747;
+} 
