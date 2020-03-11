@@ -27,6 +27,7 @@ Rails.application.routes.draw do
     get 'login', to: 'users/sessions#new'
     get 'logout', to: 'users/sessions#destroy'
     get 'logout/:id', to: 'users#destroy'
+    post 'users/guest_sign_in', to: 'users/sessions#new_guest'
   end
 
   get 'search', to: 'friends#search'

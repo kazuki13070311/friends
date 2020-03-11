@@ -28,3 +28,6 @@ h2.text-center
           = f.submit "ログイン",class: 'btn btn-outline-primary btn-block'
           br
           = render "devise/shared/links"
+          
+  .field
+    = link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post
