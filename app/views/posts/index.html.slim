@@ -3,10 +3,10 @@ h1.text-center
     |自慢の一枚
 
     hr
-    = link_to '新規登録', new_post_path, class: 'btn btn-primary mb-3'
+    = link_to "評価ランキング","/posts/ranking",class: "fas fa-crown btn btn-primary mb-3"
     br
-    = link_to "ランキング","/posts/ranking",class: "fas fa-crown btn btn-primary"
-
+    = link_to '新規登録', new_post_path, class: 'btn btn-primary mb-3'
+   
 .mb-3
     .col-md-10.offset-md-1
         = paginate @posts

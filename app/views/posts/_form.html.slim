@@ -1,16 +1,16 @@
 = form_with model: @post, local: true do |f|
     .form.group.row
-        = f.label :content,"タイトル", class:'col-md-12'
+        = f.label :content,"タイトル(必須)", class:'col-md-12'
     .col-md-12
         = f.text_field :content,class: 'form-control'
     br
     .form.group.row
-        = f.label :descriptin,"投稿内容", class:'col-md-5'
+        = f.label :descriptin,"投稿内容(必須)", class:'col-md-5'
     .col-md-12
         = f.text_area :description, rows: 5,class: 'form-control', id: 'post_description'
     br
     .form.group.row
-        = f.label :image,"投稿画像", class:'col-md-12'
+        = f.label :image,"投稿画像(必須)", class:'col-md-12'
     .col-md-12
         = f.file_field :image, class: "image form-control"
     br
