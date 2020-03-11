@@ -34,6 +34,7 @@ class PostsController < ApplicationController
 
   def update
     post = Post.find(params[:id])
+    
     post.update!(posts_params)
     redirect_to post_url, notice: '投稿内容の更新が完了しました。'
   end
