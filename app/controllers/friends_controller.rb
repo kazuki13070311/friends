@@ -4,7 +4,7 @@ class FriendsController < ApplicationController
   before_action :login_required, only: [:edit,:new]
 
   def index
-    @friends = Friend.all.page(params[:page]).per(10)
+    @friends = Friend.all.page(params[:page]).per(10).order(updated_at: :desc)
     @user = User.all
     @q = @friends.ransack(params[:q])
     @friends = @q.result(distinct: true)

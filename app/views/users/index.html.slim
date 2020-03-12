@@ -6,7 +6,7 @@ h1.text-center
     = search_form_for @q,class: 'mb-5' do |f|
         .form.group.row
             = f.label :name_cont,"ユーザー名", class: 'col-sm-2 col-form-label'
-            .col-sm-6
+            .col-sm-8
                 = f.search_field :name_cont, class: 'form-control'
         .form.group.row
             = f.label :sex_cont,"性別", class: 'col-sm-2 col-form-label'

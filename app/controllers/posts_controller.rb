@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @post = Post.new
-    @posts = Post.all.page(params[:page]).per(9)
+    @posts = Post.all.page(params[:page]).per(9).order(updated_at: :desc)
     @q = @posts.ransack(params[:q])
     @posts = @q.result(distinct: true)
   end
