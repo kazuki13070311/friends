@@ -1,16 +1,24 @@
-.app-title.navbar.navbar-expand-md.navbar-light.bg-light
+.app-title.navbar.navbar-expand-lg.navbar-light.bg-light
       .navbar-brand = link_to "Guardians",root_path,class:"navbar-brand logo"
 
-      ul.navbar-nav.ml-auto
-        li= link_to "自慢の一枚",posts_path,class: 'post',class: 'fas fa-camera btn'
-        li= link_to "攻略サイト",'https://kattyan.net/',class: 'post',class: 'fas fa-info-circle btn'
-        li= link_to "ユーザー一覧",users_path,class: 'post',class: 'fas fa-user btn'
-        li= link_to "募集一覧",friends_path,class: 'post',class: 'fas fa-user-friends btn'
-        - if user_signed_in?
-          li= link_to "ホーム",root_path,class:'post',class:'fas fa-home btn'
-          li= link_to "マイページ","/users/#{current_user.id}",class:'post',class:'fas fa-user-circle btn'
-          li= link_to "ログアウト",destroy_user_session_path, method: "delete",class: "fas fa-sign-out-alt btn"
-        - else
-          li= link_to "ログイン",new_user_session_path, class: 'post',class: 'fas fa-sign-in-alt btn'
-          li= link_to "新規登録",new_user_registration_path, class: 'post',class: 'fas fa-user-plus btn'
-        end
+      button.navbar-toggler type="button" data-toggle="collapse" data-target="#foo" aria-controls="foo" aria-expanded="false" aria-label="Toggle navigation"
+        span.navbar-toggler-icon
+      
+      #foo.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.nav-item.active
+            a.nav-link href="#"
+            | ホーム
+            = link_to "自慢の一枚",posts_path,class: 'post',class: 'fas fa-camera btn'
+          
+          /li= link_to "攻略サイト",'https://kattyan.net/',class: 'post',class: 'fas fa-info-circle btn'
+          /li= link_to "ユーザー一覧",users_path,class: 'post',class: 'fas fa-user btn'
+          /li= link_to "募集一覧",friends_path,class: 'post',class: 'fas fa-user-friends btn'
+          /- if user_signed_in?
+            li= link_to "ホーム",root_path,class:'post',class:'fas fa-home btn'
+            li= link_to "マイページ","/users/#{current_user.id}",class:'post',class:'fas fa-user-circle btn'
+            li= link_to "ログアウト",destroy_user_session_path, method: "delete",class: "fas fa-sign-out-alt btn"
+          /- else
+            li= link_to "ログイン",new_user_session_path, class: 'post',class: 'fas fa-sign-in-alt btn'
+            li= link_to "新規登録",new_user_registration_path, class: 'post',class: 'fas fa-user-plus btn'          
+          /end
