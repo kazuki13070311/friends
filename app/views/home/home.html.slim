@@ -5,7 +5,7 @@
         - unless current_user
             p = link_to "新規登録",new_user_registration_path,class: "btn btn-lg"
             p = link_to "ログイン",new_user_session_path,class: "btn btn-lg"
-            p = link_to 'ゲストログイン（閲覧用）',users_guest_sign_in_path, method: :post,class: "btn btn-lg"
+            p = link_to "簡単ログイン（閲覧用）",users_guest_sign_in_path, method: :post,class: "btn btn-lg"
 
 //.container-fluid.contents
     .content-primary
