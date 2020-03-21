@@ -46,8 +46,12 @@ gem 'jquery-turbolinks'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+
+
+# Use qlite3 as the database for Active Record
+# gem 'sqlite3', '~> 1.4'
+gem 'mysql2'
+
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -94,9 +98,9 @@ group :test do
   gem 'webdrivers'
 end
 
-group :production do
-  gem 'pg', '0.20.0'
-end
+#group :production do
+  #gem 'pg', '0.20.0'
+#end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

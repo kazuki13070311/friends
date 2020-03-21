@@ -1,3 +1,23 @@
+# == Schema Information
+#
+# Table name: posts
+#
+#  id          :bigint           not null, primary key
+#  content     :string(255)
+#  description :text(65535)
+#  image       :string(255)
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  user_id     :bigint           not null
+#
+# Indexes
+#
+#  index_posts_on_user_id  (user_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (user_id => users.id)
+#
 class Post < ApplicationRecord
   validates :content, presence: true 
   validates :image, presence: true
@@ -13,5 +33,5 @@ class Post < ApplicationRecord
     Post.find(Like.group(:post_id).order('count(post_id) desc').limit(5).pluck(:post_id))
   end
 
-  default_scope -> { order(post_id: :desc) }
+  #default_scope -> { order(post_id: :desc) }
 end
