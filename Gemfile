@@ -79,6 +79,10 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'rspec-rails'
   gem 'spring-commands-rspec'
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
 end
 
 group :development do
@@ -98,9 +102,9 @@ group :test do
   gem 'webdrivers'
 end
 
-#group :production do
-  #gem 'pg', '0.20.0'
-#end
+group :production,  :staging do
+  gem 'unicorn'
+end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
