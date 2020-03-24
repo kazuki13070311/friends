@@ -9,7 +9,7 @@
 
 server '18.180.36.193', user: 'kazuki',roles:  %w{app db web}
 
-set :ssh_options, keys: 'kazuki_key_rsa'
+set :ssh_options, keys: '~/Desktop/friends-portfolio-ssh-key.pem'
 
 
 # role-based syntax
