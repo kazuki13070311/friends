@@ -7,7 +7,7 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-server '18.180.36.193', user; 'kazuki',roles:  %w{app db web}
+server '18.180.36.193', user: 'kazuki',roles:  %w{app db web}
 
 set :ssh_options, keys: '~/.ssh/'kazuki_aws_git_rsa'
 
