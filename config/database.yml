@@ -9,8 +9,10 @@ default: &default
   #pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   #timeout: 5000
   adapter: mysql2
-  database: portfolio_name
-  username: portfolio_name
+  database: mysql
+  username: root
+  #database: portfolio_name
+  #username: portfolio_name
   password: Kazu0311
   host: localhost
   encoding: utf8
@@ -28,4 +30,7 @@ test:
 
 production:
   <<: *default
+  database: friends_production
+  username: root
+  password:
 #  database: db/production.sqlite3
