@@ -83,6 +83,9 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
+
+  gem 'ed25519'
+  gem 'bcrypt_pbkdf'
 end
 
 group :development do
@@ -107,4 +110,5 @@ group :production,  :staging do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+#gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+  gem 'tzinfo-data'
