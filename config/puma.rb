@@ -6,6 +6,13 @@
 # the maximum value specified for Puma. Default is set to 5 threads for minimum
 # and maximum; this matches the default thread size of Active Record.
 #
+
+app_dir = File.expand_path("../..",__FILE__)
+bind "unix://#{app_dir}/tmp/sockets/puma.sock"
+pidfile "#{app_dir}/tmp/pids/puma.pid"
+state_path "#{app_dir}/tmp/pids/puma.state"
+stdout_redirect "#{app_dir}/log/puma.stdout.log", "#{app_dir}/log/puma.stderr.log", true
+
 max_threads_count = ENV.fetch('RAILS_MAX_THREADS') { 5 }
 min_threads_count = ENV.fetch('RAILS_MIN_THREADS') { max_threads_count }
 threads min_threads_count, max_threads_count

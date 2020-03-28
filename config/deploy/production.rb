@@ -9,7 +9,11 @@
 
 server '18.180.36.193', user: 'kazuki',roles:  %w{app db web}
 
-set :ssh_options, keys: '~/.ssh/kazuki_key_rsa'
+set :ssh_options, {
+    keys: %w(~/.ssh/kazuki_key_rsa),
+    forward_agent: true,
+    auth_methods: %w(publickey)
+}
 
 
 # role-based syntax
