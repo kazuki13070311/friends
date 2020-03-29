@@ -1,12 +1,15 @@
 .jumbotron.jumbotron-extend
     .jumbotron-fluid.jumbotron-container
-        h1.site-name Guardians 
-        p.site-introduction GuardiansはDestiny2専用のサイトです
+        h1.site-name.text-center Guardians Community
+        h3.site-introduction.text-center
+            |理想の仲間を見つけて
+            br
+            |素晴らしいGuardian Lifeを送ろう！
         - unless current_user
-            .form.group
+            .form.group.text-center.mt-3
                 = link_to "新規登録",new_user_registration_path,class: "btn btn-outline-primary rounded-pill m-1"
                 = link_to "ログイン",new_user_session_path,class: "btn btn-outline-primary rounded-pill m-1"
-            .form.group.mt-3
+            .form.group.mt-3.text-center
                 = link_to "簡単ログイン（閲覧用）",users_guest_sign_in_path, method: :post,class: "btn btn-outline-primary rounded-pill"
 
 .top-main
@@ -35,13 +38,13 @@ hr
       .col-md-6.col-sm-8.text-center.my-5
         h2.description-parts  一緒に遊べるフレンドが欲しい
         h4
-        | 
-        br
-        |Destiny2で一緒に遊ぶことができる
-        br
-        |フレンドを探しているが、
-        br
-        |一緒に遊べる友達が見つからない
+          | 
+          br
+          |Destiny2で一緒に遊ぶことができる
+          br
+          |フレンドを探しているが、
+          br
+          |一緒に遊べる友達が見つからない
   
 hr
   .container
@@ -58,14 +61,25 @@ hr
           |一緒に遊べる友達が見つからない
       .col-md-6.col-sm-8.text-center.my-5
         .jumbotron.jumbotron-extend1 
+
 hr
+
 .top-second
   .container
     .section-title.text-center
-      h1.title 当サイトを利用するメリット
+      h1.title1
+        |そのお悩み…
+      h1.title1
+        |解決できます！！
+hr
+.top-third
+  .container
+    .section-title.text-center
+      h1.title.mt-5
+        |当サイトを利用する3つのメリット
     .row.description-body
       .col-md-4.col-sm-6.text-center
-        h3.description-parts 自分が求めるユーザーが探しやすい
+        h3.description-parts 自分が求めるユーザーを探しやすい
         p
           | ✔ 一定の基準をクリアした、
           br

@@ -24,10 +24,6 @@
           
           - if user_signed_in?
             li.nav-item
-              a.nav-link href="#"  
-                = link_to "ホーム",root_path,class:'post',class:'fas fa-home btn'
-            
-            li.nav-item
               a.nav-link href="#"
                 = link_to "マイページ","/users/#{current_user.id}",class:'post',class:'fas fa-user-circle btn'
               
