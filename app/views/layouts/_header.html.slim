@@ -7,35 +7,35 @@
       #foo.collapse.navbar-collapse
         ul.navbar-nav.ml-auto.align-items-center
           li.nav-item.active
-            a.nav-link href="#"
+            b.nav-link href="#"
               = link_to "自慢の一枚",posts_path,class: 'post',class: 'fas fa-camera btn'
           
           li.nav-item
-            a.nav-link href="#"
+            b.nav-link href="#"
               = link_to "攻略サイト",'https://kattyan.net/',class: 'post',class: 'fas fa-info-circle btn'
           
           li.nav-item
-            a.nav-link href="#"
+            b.nav-link href="#"
               = link_to "ユーザー一覧",users_path,class: 'post',class: 'fas fa-user btn'
           
           li.nav-item
-            a.nav-link href="#"
+            b.nav-link href="#"
               = link_to "フレンド募集一覧",friends_path,class: 'post',class: 'fas fa-user-friends btn'
           
           - if user_signed_in?
             li.nav-item
-              a.nav-link href="#"
+              b.nav-link href="#"
                 = link_to "マイページ","/users/#{current_user.id}",class:'post',class:'fas fa-user-circle btn'
               
             li.nav-item
-              a.nav-link href="#"
+              b.nav-link href="#"
                 = link_to "ログアウト",destroy_user_session_path, method: "delete",class: "fas fa-sign-out-alt btn"
           - else
             li.nav-item
-              a.nav-link href="#"
+              b.nav-link href="#"
                 = link_to "ログイン",new_user_session_path, class: 'post',class: 'fas fa-sign-in-alt btn'
               
             li.nav-item
-              a.nav-link href="#"
+              b.nav-link href="#"
                 = link_to "新規登録",new_user_registration_path, class: 'post',class: 'fas fa-user-plus btn'          
           end

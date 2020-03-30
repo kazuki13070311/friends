@@ -10,15 +10,21 @@
                 = link_to "新規登録",new_user_registration_path,class: "btn btn-outline-primary rounded-pill m-2"
                 = link_to "ログイン",new_user_session_path,class: "btn btn-outline-primary rounded-pill m-2"
             .form.group.mt-3.text-center
-                = link_to "簡単ログイン（閲覧用）",users_guest_sign_in_path, method: :post,class: "btn btn-outline-primary-lg rounded-pill"
+                = link_to "簡単ログイン（閲覧用）",users_guest_sign_in_path, method: :post,class: "btn btn-outline-primary rounded-pill"
+
+.top-grap
+  .container
+    .section-title.text-center.my-5
+      h1.title1
+        |突然ですが…
+      h1.title1
+        |こんなお悩み、ありませんか？
 
 .top-main
   .container
-    .section-title.text-center.my-5
-      h1.title こんなお悩み、ありませんか？
     .row.description-body
       .col-md-6.col-sm-8.text-center.my-5
-        h2.description-parts  一緒に遊べるフレンドが欲しい
+        h2.description-parts  ソロプレイはもう限界だ…
         h4
           | 
           br
@@ -34,9 +40,9 @@ hr
   .container
     .row.description-body
       .col-md-6.col-sm-8.text-center.my-5
-        .jumbotron.jumbotron-extend1
+        .jumbotron.jumbotron-extend2
       .col-md-6.col-sm-8.text-center.my-5
-        h2.description-parts  一緒に遊べるフレンドが欲しい
+        h2.description-parts  協力して遊べる仲間が欲しい
         h4
           | 
           br
@@ -50,7 +56,7 @@ hr
   .container
     .row.description-body
       .col-md-6.col-sm-8.text-center.my-5
-        h2.description-parts  一緒に遊べるフレンドが欲しい
+        h2.description-parts 理想のユーザーと出会いたい
         h4
           | 
           br
@@ -60,7 +66,7 @@ hr
           br
           |一緒に遊べる友達が見つからない
       .col-md-6.col-sm-8.text-center.my-5
-        .jumbotron.jumbotron-extend1 
+        .jumbotron.jumbotron-extend3
 
 hr
 
@@ -69,7 +75,7 @@ hr
     .section-title.text-center
       h1.title1
         |そのお悩み…
-      h1.title1
+      h1.title2
         |解決できます！！
         .form.group.text-center.mt-5
             = link_to "今すぐ利用する",new_user_registration_path,class: "btn btn-outline-primary rounded-pill m-2"
