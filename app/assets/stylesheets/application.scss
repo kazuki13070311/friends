@@ -21,6 +21,11 @@
     padding: 100px 0px 100px 0px;
 }
 
+.title3{
+    font-weight: bold;
+    font-size: 50px;
+    padding: 70px 0px 100px 0px;
+}
 
 .jumbotron-extend{
     position: relative;
@@ -67,7 +72,7 @@
 }
 
 .description-parts {
-  padding: 200px 0px 20px 0px;
+  padding: 0px 0px 20px 0px;
   font-weight: bold; // 太文字にする
 }
 
@@ -228,4 +233,13 @@ b::after {
 }
 b:hover::after {
   transform: scale(1, 1);
+}
+
+.fa-top {
+  font-size: 50px;
+  padding: 180px 0px 20px 0px;
+}
+
+p {
+  padding: 0px 0px 100px 0px;
 }

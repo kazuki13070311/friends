@@ -7,10 +7,10 @@
             |素晴らしいGuardian Lifeを送ろう！
         - unless current_user
             .form.group.text-center.mt-3
-                = link_to "新規登録",new_user_registration_path,class: "btn btn-outline-primary rounded-pill m-2"
-                = link_to "ログイン",new_user_session_path,class: "btn btn-outline-primary rounded-pill m-2"
+                = link_to "新規登録",new_user_registration_path,class: "btn btn-outline-primary rounded-pill m-2 btn-lg"
+                = link_to "ログイン",new_user_session_path,class: "btn btn-outline-primary rounded-pill m-2 btn-lg"
             .form.group.mt-3.text-center
-                = link_to "簡単ログイン（閲覧用）",users_guest_sign_in_path, method: :post,class: "btn btn-outline-primary rounded-pill"
+                = link_to "簡単ログイン（閲覧用）",users_guest_sign_in_path, method: :post,class: "btn btn-outline-primary rounded-pill btn-lg"
 
 .top-grap
   .container
@@ -82,9 +82,9 @@ hr
       h1.title1
         |そのお悩み…
       h1.title2
-        |全て解決できます！！
+        |解決できます！！
         .form.group.text-center.mt-5
-            = link_to "今すぐ利用する",new_user_registration_path,class: "btn btn-outline-primary rounded-pill m-2"
+            = link_to "今すぐ利用する",new_user_registration_path,class: "btn btn-outline-primary rounded-pill m-2 btn-lg"
 hr
 .top-third
   .container
@@ -93,33 +93,48 @@ hr
         | その根拠となる3つのメリット
     .row.description-body
       .col-md-4.col-sm-6.text-center
-        h3.description-parts 自分が求めるユーザーを探しやすい
+        i.fas.fa-users.fa-top
+        h3.description-parts ユーザー情報量が豊富
         p
-          | ✔ 一定の基準をクリアした、
+          | ✔ 非常に多くのプレイヤー情報を
           br
-          |筋肉に嬉しい食品のみを表示
+          |記述できる様になっているので、
           br
-          | もう、コンビニでタンパク質量を
+          |フレンド登録しなくても
           br
-          | 確認しなくて済みます！
+          |事前にユーザーの詳細な情報を知れる
       .col-md-4.col-sm-6.text-center
-        h3.description-parts フレンド登録後のミスマッチを防ぐ
+        i.fas.fa-search.fa-top
+        h3.description-parts 高精度な検索機能
         p
-          | ✔ 多種多様な食品の口コミが集結しており、
+          | ✔ 各ユーザーの情報量が豊富なので
           br
-          | 購入する前に味をチェック
+          |事前情報を的確に仕入れる事ができ、
           br
-          | もう、コンビニで「どれにしようか....」
+          |その結果自分の求めるユーザーを
           br
-          | と悩まずに済みます！
+          |高精度で見つける事ができる
       .col-md-4.col-sm-6.text-center
-        h3.description-parts さらに快適に遊べる
+        i.fas.fa-user-shield.fa-top
+        h3.description-parts ミスマッチを防ぐ
         p
-          | ✔ 口コミ内容だけでなく、「タンパク質順」
+          | ✔ プロフィールを詳細に書くなど
           br
-          | 「値段順」など、あなた好みに検索可能
+          |自発的にアピールすればするほど
           br
-          | お気に入りの食品を見つけて、
+          |自分の求めるユーザー像を他ユーザーに
           br
-          | 鶏あえずタンパク質を摂取しよう！
-      
+          |共有する事ができ、結果ミスマッチを防げる
+
+hr
+.top-forth
+  .container
+    .section-title.text-center
+      h1.title1
+        |Guardians Communityで
+        br
+        |理想の仲間を見つけて
+      h1.title3
+        |より一層Destiny2を満喫しよう！！
+        .form.group.text-center.mt-5
+            = link_to "今すぐ利用する",new_user_registration_path,class: "btn btn-outline-primary rounded-pill m-2 btn-lg"
