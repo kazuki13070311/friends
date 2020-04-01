@@ -7,10 +7,10 @@
             |素晴らしいGuardian Lifeを送ろう！
         - unless current_user
             .form.group.text-center.mt-3
-                = link_to "新規登録",new_user_registration_path,class: "btn btn-outline-primary rounded-pill m-2 btn-lg"
-                = link_to "ログイン",new_user_session_path,class: "btn btn-outline-primary rounded-pill m-2 btn-lg"
+                = link_to "新規登録",new_user_registration_path,class: "btn btn-outline-primary rounded-pill m-2"
+                = link_to "ログイン",new_user_session_path,class: "btn btn-outline-primary rounded-pill m-2"
             .form.group.mt-3.text-center
-                = link_to "簡単ログイン（閲覧用）",users_guest_sign_in_path, method: :post,class: "btn btn-outline-primary rounded-pill btn-lg"
+                = link_to "簡単ログイン（閲覧用）",users_guest_sign_in_path, method: :post,class: "btn btn-outline-primary rounded-pill"
 
 hr
 .top-grap
@@ -84,7 +84,7 @@ hr
       h1.title1
         |そのお悩み…
       h1.title2
-        |解決できます！！
+        |全て解決できます！！
         .form.group.text-center.mt-5
             = link_to "今すぐ利用する",new_user_registration_path,class: "btn btn-outline-primary rounded-pill m-2 btn-lg"
 hr
