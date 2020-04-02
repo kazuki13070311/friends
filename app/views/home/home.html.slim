@@ -85,8 +85,9 @@ hr
         |そのお悩み…
       h1.title2
         |全て解決できます！！
-        .form.group.text-center.mt-5
-            = link_to "今すぐ利用する",new_user_registration_path,class: "btn btn-outline-primary rounded-pill m-2 btn-lg"
+        - unless current_user
+          .form.group.text-center.mt-5
+              = link_to "今すぐ利用する",new_user_registration_path,class: "btn btn-outline-primary rounded-pill m-2 btn-lg"
 hr
 .top-third
   .container
@@ -138,5 +139,6 @@ hr
         |理想の仲間を見つけて
       h1.title3
         |より一層Destiny2を満喫しよう！！
-        .form.group.text-center.mt-5
-            = link_to "今すぐ利用する",new_user_registration_path,class: "btn btn-outline-primary rounded-pill m-2 btn-lg"
+        - unless current_user
+          .form.group.text-center.mt-5
+              = link_to "今すぐ利用する",new_user_registration_path,class: "btn btn-outline-primary rounded-pill m-2 btn-lg"

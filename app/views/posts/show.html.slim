@@ -36,19 +36,6 @@ h1.text-center
         br
             = link_to "一覧に戻る",posts_path
 
-//.row
-    .col-md-10.offset-md-1
-        #like_btn
-                = render partial: 'likes/like', locals:{ post: @post,like: @like}
-        /- if current_user.already_liked?(@post)    
-            = render partial: 'likes/like', locals:{ post:post }
 
-            //#likes_buttons = @post.id
-            
-            //= link_to post_like_path(@post),remote: true, method: :delete do 
-                i class="far fa-heart unlike-btn"
-        /- else
-            = link_to post_likes_path(@post),remote: true, method: :post do
-                i class="fas fa-heart like-btn"
         
 

@@ -2,9 +2,9 @@
     .col-md-4.col-xs-12
         .media.my-3.rounded.bg-white
             - if user.image?
-                = image_tag user.image.url,class: 'm-4',size: '75x75'
+                = image_tag user.image.url,class: 'm-4',size: '100x100'
             - else
-                = image_tag "/assets/default.jpg",class: 'm-4',size: '75x75'
+                = image_tag "/assets/default.jpg",class: 'm-4',size: '100x100'
             .media-body
                 .h5 
                     = link_to user.name, user,class: 'badge badge-pill badge-primary'
