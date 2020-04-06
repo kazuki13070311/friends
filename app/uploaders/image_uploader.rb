@@ -5,8 +5,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
 
-  process resize_to_limit: [200, 200]
-  process resize_to_fit: [200, 200]
+  #process resize_to_limit: [200, 200]
+  #process resize_to_fit: [200, 200]
+  process resize_to_fill: [1280, 720, "Center"]
 
   # 保存形式をJPGにする
   process convert: 'jpg'
