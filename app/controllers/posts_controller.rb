@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :login_required, only: [:edit,:new]
+  before_action :login_required, only: [:edit,:new,:show]
 
   def index
     @post = Post.new

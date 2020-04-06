@@ -1,4 +1,4 @@
-.h2 プロフィール編集
+h2 プロフィール編集
 = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
   = render "devise/shared/error_messages", resource: resource
   .thumbnail
@@ -99,7 +99,7 @@
       = f.label :変更したいパスワード
       br
       = f.password_field :password, autocomplete: "new-password",class: 'form-control'
-      | (パスワードを変更しない場合は空白のままにします)
+      | (パスワードを変更しない場合は空白にして下さい)
       - if @minimum_password_length
         br
         em
@@ -111,7 +111,7 @@
       = f.label :password_confirmation
       br
       = f.password_field :password_confirmation, autocomplete: "new-password",class: 'form-control'
-      | (パスワードを変更しない場合は空白のままにします)
+      | (パスワードを変更しない場合は空白にして下さい)
   
   .form-group.row
     .col-md-8.offset-md-2
