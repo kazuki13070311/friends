@@ -1,4 +1,4 @@
-# Guardians
+# Guardians Community
 
 オンラインゲーム「Destiny2」で一緒に遊べる仲間を見つける場所を提供
 
