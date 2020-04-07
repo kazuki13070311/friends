@@ -31,10 +31,21 @@ class UsersController < ApplicationController
     end
   end
 
-  #def destroy
-  #  user = User.find(params[:id])
-  #  user.destroy
-  #end
+  def friend
+    @user = User.find(params[:id])
+    @friends = @user.friends
+  end
+
+  def post
+    @user = User.find(params[:id])
+    @friends = @user.friends
+  end
+
+
+  def like
+    @user = User.find(params[:id])
+    @friends = @user.friends
+  end
 
   private
 

@@ -1,0 +1,9 @@
+h2.text-center
+    | プロフィール
+
+.thumbnail.mb-3
+    - if @user.image?
+        = image_tag @user.image.url,class: "d-block mx-auto"
+    - else
+        = image_tag "/assets/default.jpg",class: "d-block mx-auto"
+    end

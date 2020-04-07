@@ -1,0 +1,18 @@
+h1.text-center
+    |募集履歴
+
+.col-md-10.offset-md-1
+     - @user.friends.includes(:user).each do |friend|
+            .media.bg-white.m-3.rounded
+                - if friend.user.image?
+                    = image_tag friend.user.image.url,class: 'm-5',size: '100x100'
+                - else
+                    = image_tag "/assets/default.jpg",class: 'm-5',size: '100x100'
+                .media-body
+                    .h5 
+                        = link_to friend.name,friend,class: 'badge badge-pill badge-primary'
+                    .h6.mr-1 
+                        = simple_format(friend.description)
+                    .h8.mr-2
+                        |投稿日：
+                        = I18n.l(friend.updated_at, format: :long)
