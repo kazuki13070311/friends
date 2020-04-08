@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :login_required, only: [:edit,:new,:show]
+  before_action :login_check, only: [:new, :edit, :show,:update ,:destroy]
 
   def index
     @post = Post.new
@@ -12,6 +12,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @user = @post.user
     @like = Like.new
+    
   end
 
   def ranking
@@ -59,4 +60,9 @@ class PostsController < ApplicationController
     redirect_to login_url unless current_user
   end
 
+  def login_check
+    unless user_signed_in?
+      redirect_to new_user_session_path,notice: 'ログインしてください'
+    end
+  end
 end

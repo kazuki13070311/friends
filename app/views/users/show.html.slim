@@ -9,21 +9,11 @@
     end
 
 = render 'users/mypage'
-
-= render 'users/tab'
-//ul.nav.nav-tabs.text-center
-    li.nav-item
-        .nav-link.active
-            = link_to "募集マイ投稿","/users/#{current_user.id}/friend"
-    li.nav-item
-        .nav-link
-            = link_to "写真マイ投稿","/users/#{current_user.id}/post"
-    li.nav-item
-        .nav-link
-            = link_to "良いね一覧","/users/#{current_user.id}/like"
 br
-
 = render 'users/profile'
+br
+= render 'users/nav'
+
 //.container
    .row
         .col-md-10.offset-md-1
@@ -67,30 +57,14 @@ br
                     tr
                         th= "プレイ時間"
                         td= @user.timezone
-
-
-
-//ul.nav.nav-tabs
-    li.nav-item
-        .nav-link
-            = render 'users/friends'
-    li.nav-item
-        .nav-link
-            = render 'users/posts'
-    li.nav-item
-        .nav-link
-            = render 'users/likes'
-
-ul.nav.nav-tabs.justify-content-center
-    li.nav-item
-        .nav-link
-            = link_to "募集マイ投稿","/users/#{current_user.id}/friend"
-    li.nav-item
-        .nav-link
-            = link_to "写真マイ投稿","/users/#{current_user.id}/post"
-    li.nav-item
-        .nav-link
-            = link_to "良いね一覧","/users/#{current_user.id}/like"
-
-
-//.href.#home.role.tab.aria-controls.home.aria-selected.true
+//- if user_signed_in? && current_user.id == @user.id
+    ul.nav.nav-tabs.justify-content-center
+        li.nav-item
+            .nav-link
+                = link_to "募集マイ投稿","/users/#{current_user.id}/friend"
+        li.nav-item
+            .nav-link
+                = link_to "写真マイ投稿","/users/#{current_user.id}/post"
+        li.nav-item
+            .nav-link
+                = link_to "良いね一覧","/users/#{current_user.id}/like"

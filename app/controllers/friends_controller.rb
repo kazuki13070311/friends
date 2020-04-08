@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class FriendsController < ApplicationController
-  before_action :login_required, only: [:edit,:new]
+  #before_action :login_required, only: [:edit,:new]
+  before_action :login_check, only: [:new, :edit,:update ,:destroy]
 
   def index
     @friends = Friend.all.page(params[:page]).per(10).order(updated_at: :desc)
@@ -54,7 +55,12 @@ class FriendsController < ApplicationController
   end
 
   def login_required
-      redirect_to login_url unless current_user
+    redirect_to login_url unless current_user
   end
 
+  def login_check
+    unless user_signed_in?
+      redirect_to new_user_session_path,notice: 'ログインしてください'
+    end
+  end
 end

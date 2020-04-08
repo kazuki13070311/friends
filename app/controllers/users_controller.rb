@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all.page(params[:page]).per(9)
+    @users = User.all.page(params[:page]).per(9).order(updated_at: :desc)
     @q = @users.ransack(params[:q])
     @users = @q.result(distinct: true)
   end
@@ -32,19 +32,19 @@ class UsersController < ApplicationController
   end
 
   def friend
-    @user = User.find(params[:id])
-    @friends = @user.friends
+   @user = User.find(params[:id])
+   @friends = @user.friends
   end
 
   def post
-    @user = User.find(params[:id])
-    @friends = @user.friends
+   @user = User.find(params[:id])
+   @friends = @user.friends
   end
 
 
   def like
-    @user = User.find(params[:id])
-    @friends = @user.friends
+   @user = User.find(params[:id])
+   @friends = @user.friends
   end
 
   private
