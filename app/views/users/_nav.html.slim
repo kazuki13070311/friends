@@ -1,4 +1,4 @@
-- if user_signed_in? && current_user.id == @user.id
+//- if user_signed_in? && current_user.id == @user.id
     ul.nav.nav-tabs.justify-content-center
         li.nav-item
             .nav-link
@@ -12,3 +12,17 @@
         li.nav-item
             .nav-link
                 = link_to "良いね一覧","/users/#{current_user.id}/like"
+
+ul.nav.nav-tabs.justify-content-center
+    li.nav-item
+        .nav-link
+            = link_to "マイページトップ","/users/#{@user.id}"
+    li.nav-item
+        .nav-link
+            = link_to "募集マイ投稿","/users/#{@user.id}/friend"
+    li.nav-item
+        .nav-link
+            = link_to "写真マイ投稿","/users/#{@user.id}/post"
+    li.nav-item
+        .nav-link
+            = link_to "良いね一覧","/users/#{@user.id}/like"
