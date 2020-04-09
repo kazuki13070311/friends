@@ -2,12 +2,12 @@
     .form.group.row
         = f.label :content,"タイトル(必須)", class:'col-md-12'
     .col-md-12
-        = f.text_field :content,placeholder: "例文　怒涛の20連続キル",class: 'form-control'
+        = f.text_field :content,placeholder: "タイトルを記入してください",class: 'form-control'
     br
     .form.group.row
         = f.label :descriptin,"投稿内容(必須)", class:'col-md-5'
     .col-md-12
-        = f.text_area :description,placeholder: "例文　アイアンバナーにて初めて20連続キルをしました", rows: 5,class: 'form-control', id: 'post_description'
+        = f.text_area :description,placeholder: "投稿内容の詳細やアピールポイントを記入してください", rows: 5,class: 'form-control', id: 'post_description'
     br
     .form.group.row
         = f.label :image,"投稿画像(必須)", class:'col-md-12'

@@ -32,19 +32,19 @@ class UsersController < ApplicationController
   end
 
   def friend
-   @user = User.find(params[:id])
-   @friends = @user.friends
+    @user = User.find(params[:id])
+    @friends = @user.friends.page(params[:page]).per(10).order(updated_at: :desc)
   end
 
   def post
-   @user = User.find(params[:id])
-   @friends = @user.friends
+    @user = User.find(params[:id])
+    @posts = @user.posts.page(params[:page]).per(6).order(updated_at: :desc)
   end
 
 
   def like
-   @user = User.find(params[:id])
-   @friends = @user.friends
+    @user = User.find(params[:id])
+    @likes = @user.likes.page(params[:page]).per(6).order(updated_at: :desc)
   end
 
   private

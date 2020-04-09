@@ -16,19 +16,19 @@ h2.text-center
     .col-md-8.offset-md-2
       = f.label :name
       br
-      = f.text_field :name, autofocus: true,class: 'form-control'
+      = f.text_field :name, placeholder:"名前を記入して下さい",autofocus: true,class: 'form-control'
   
   .form-group.row
     .col-md-8.offset-md-2
-      = f.label :"ゲーム内ID名"
+      = f.label :"ゲーム内ID"
       br
-      = f.text_field :psnid, autofocus: true,class: 'form-control'
+      = f.text_field :psnid,placeholder: "Destiny2でご使用中のID(アカウント名)をご記入下さい",autofocus: true,class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
       = f.label :email
       br
-      = f.email_field :email, autofocus: true, autocomplete: "email",class: 'form-control'
+      = f.email_field :email, placeholder: "メールアドレスを記入して下さい",autofocus: true, autocomplete: "email",class: 'form-control'
     - if devise_mapping.confirmable? && resource.pending_reconfirmation?
       div
         | Currently waiting confirmation for: 
@@ -44,7 +44,7 @@ h2.text-center
     .col-md-8.offset-md-2
       = f.label :プロフィール
       br
-      = f.text_area :profile, autofocus: true,rows: 5,class: 'form-control'
+      = f.text_area :profile, placeholder: "詳細に書けば書くほど良いガーディアンに出会える確率が上昇します",autofocus: true,rows: 5,class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
@@ -56,25 +56,25 @@ h2.text-center
     .col-md-8.offset-md-2
       = f.label :所属クラン
       br
-      = f.text_field :clan, autofocus: true,class: 'form-control'
+      = f.text_field :clan,placeholder: "所属クラン名を記入して下さい", autofocus: true,class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
       = f.label :レベル
       br
-      = f.text_field :level, autofocus: true,class: 'form-control'
+      = f.text_field :level,placeholder: "レベルを記入して下さい", autofocus: true,class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
       = f.label :光レベル
       br
-      = f.text_field :lightlevel, autofocus: true,class: 'form-control'
+      = f.text_field :lightlevel, placeholder: "光レベルを記入して下さい",autofocus: true,class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
       = f.label :キルレ
       br
-      = f.text_field :strength, autofocus: true,class: 'form-control'
+      = f.text_field :strength, placeholder: "キルレ(K/D)を記入して下さい",autofocus: true,class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
@@ -92,7 +92,7 @@ h2.text-center
     .col-md-8.offset-md-2
       = f.label :プレイ時間帯
       br
-      = f.text_field :timezone, autofocus: true,class: 'form-control'
+      = f.text_field :timezone, placeholder: "Destiny2を良く遊ぶ時間帯を記入してください",autofocus: true,class: 'form-control'
 
 
   .form-group.row
@@ -118,7 +118,7 @@ h2.text-center
     .col-md-8.offset-md-2
       = f.label :current_password
       br
-      = f.password_field :current_password, autocomplete: "current-password",class: 'form-control'
+      = f.password_field :current_password, placeholder: "現在のパスワードを入力してください",autocomplete: "current-password",class: 'form-control'
       br
       | (プロフィールを変更するには現在のパスワードを入力してください)
 

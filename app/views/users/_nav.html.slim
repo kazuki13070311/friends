@@ -19,10 +19,10 @@ ul.nav.nav-tabs.justify-content-center
             = link_to "マイページトップ","/users/#{@user.id}"
     li.nav-item
         .nav-link
-            = link_to "募集マイ投稿","/users/#{@user.id}/friend"
+            = link_to "募集一覧","/users/#{@user.id}/friend"
     li.nav-item
         .nav-link
-            = link_to "写真マイ投稿","/users/#{@user.id}/post"
+            = link_to "自慢の一枚一覧","/users/#{@user.id}/post"
     li.nav-item
         .nav-link
-            = link_to "良いね一覧","/users/#{@user.id}/like"
+            = link_to "いいね一覧","/users/#{@user.id}/like"
