@@ -20,7 +20,7 @@ h2.text-center
   
   .form-group.row
     .col-md-8.offset-md-2
-      = f.label :"ゲーム内ID"
+      = f.label :"PSID"
       br
       = f.text_field :psnid,placeholder: "Destiny2でご使用中のID(アカウント名)をご記入下さい",autofocus: true,class: 'form-control'
 
@@ -39,12 +39,6 @@ h2.text-center
       = f.label :性別
       br
       = f.select :sex,[['男性','男性'],['女性','女性']]
-
-  .form-group.row
-    .col-md-8.offset-md-2
-      = f.label :プロフィール
-      br
-      = f.text_area :profile, placeholder: "詳細に書けば書くほど良いガーディアンに出会える確率が上昇します",autofocus: true,rows: 5,class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
@@ -94,25 +88,28 @@ h2.text-center
       br
       = f.text_field :timezone, placeholder: "Destiny2を良く遊ぶ時間帯を記入してください",autofocus: true,class: 'form-control'
 
+  .form-group.row
+    .col-md-8.offset-md-2
+      = f.label :プロフィール
+      br
+      = f.text_area :profile, placeholder: "詳細に書けば書くほど良いガーディアンに出会える確率が上昇します",autofocus: true,rows: 5,class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
       = f.label :変更したいパスワード
       br
-      = f.password_field :password, autocomplete: "new-password",class: 'form-control'
-      | (パスワードを変更しない場合は空白にして下さい)
+      = f.password_field :password, placeholder:"パスワードを変更しない場合は空白にして下さい",autocomplete: "new-password",class: 'form-control'
       - if @minimum_password_length
-        br
         em
           = @minimum_password_length
-          |  文字以上
+          | 文字以上
   
   .form-group.row
     .col-md-8.offset-md-2
       = f.label :password_confirmation
       br
-      = f.password_field :password_confirmation, autocomplete: "new-password",class: 'form-control'
-      | (パスワードを変更しない場合は空白にして下さい)
+      = f.password_field :password_confirmation, placeholder: "パスワードを変更しない場合は空白にして下さい", autocomplete: "new-password",class: 'form-control'
+      
   
   .form-group.row
     .col-md-8.offset-md-2

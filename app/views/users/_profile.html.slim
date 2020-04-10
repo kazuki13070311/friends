@@ -9,14 +9,11 @@
                         th= "名前"
                         td= @user.name
                     tr
-                        th= "ゲーム内ID"
+                        th= "PSID"
                         td= @user.psnid
                     tr
                         th= "性別"
                         td= @user.sex
-                    tr
-                        th= "プロフィール"
-                        td= simple_format(@user.profile) 
                     tr
                         th= "機種"
                         td= @user.model
@@ -41,3 +38,6 @@
                     tr
                         th= "プレイ時間"
                         td= @user.timezone
+                    tr
+                        th= "プロフィール"
+                        td= simple_format(@user.profile) 

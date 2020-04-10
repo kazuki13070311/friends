@@ -1,6 +1,10 @@
-h2.text-center
-    i class="fas fa-user"
-    |ユーザー一覧
+.jumbotron.jumbotron-extend4
+    h1.page-name1.text-center.mt-5
+        i class="fas fa-user"
+        |ユーザー一覧
+    //h1.text-center.mt-5.text-white
+        i class="fas fa-user"
+        |ユーザー一覧
 
 .col-md-10.offset-md-1
     = search_form_for @q,class: 'mb-5' do |f|
