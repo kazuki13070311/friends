@@ -1,15 +1,15 @@
-h1.text-center
+//h1.text-center
         |自慢の一枚
 
-.mb-3
+//.mb-3
     .col-md-10.offset-md-1
-        = paginate @posts
-        = page_entries_info @posts
+        = paginate @posts.user
+        = page_entries_info @user.posts
 
 .row
    .col-md-12.offset-md-1
         .row.col-md-12
-            - @posts.includes(:user).each do |post|
+            - @user.posts.includes(:user).each do |post|
                     .card-group.m-2
                         .card style="width: 19rem"
                             = image_tag post.image.url,class: 'card-img-top',size: '300x250'

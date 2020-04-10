@@ -1,3 +1,25 @@
+ul.nav.nav-tabs.justify-content-center id="myTab" role="tablist"
+    li.nav-item
+        .nav-link.active id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"
+            = link_to "マイページトップ","/users/#{@user.id}"
+    li.nav-item
+        .nav-link id="friend-tab" data-toggle="tab" href="#friend" role="tab" aria-controls="friend" aria-selected="false"
+            = link_to "募集履歴","/users/#{@user.id}/friend"
+    li.nav-item
+        .nav-link id="post-tab" data-toggle="tab" href="#post" role="tab" aria-controls="post" aria-selected="false"
+            = link_to "自慢の一枚一覧","/users/#{@user.id}/post"
+    li.nav-item
+        .nav-link id="like-tab" data-toggle="tab" href="#like" role="tab" aria-controls="like" aria-selected="false"
+            = link_to "いいね一覧","/users/#{@user.id}/like"
+.tab-content id="myTabContent"
+    .tab-pane.fade.show.active id="home" role="tabpanel" aria-labelledby="home-tab"
+    .tab-pane.fade id="friend" role="tabpanel" aria-labelledby="friend-tab"
+        = render "users/friends"
+    .tab-pane.fade id="post" role="tabpanel" aria-labelledby="post-tab"
+        = render "users/posts"
+    .tab-pane.fade id="like" role="tabpanel" aria-labelledby="like-tab"
+        = render "users/likes"
+    
 //- if user_signed_in? && current_user.id == @user.id
     ul.nav.nav-tabs.justify-content-center
         li.nav-item
@@ -12,17 +34,3 @@
         li.nav-item
             .nav-link
                 = link_to "良いね一覧","/users/#{current_user.id}/like"
-
-ul.nav.nav-tabs.justify-content-center
-    li.nav-item
-        .nav-link
-            = link_to "マイページトップ","/users/#{@user.id}"
-    li.nav-item
-        .nav-link
-            = link_to "募集履歴","/users/#{@user.id}/friend"
-    li.nav-item
-        .nav-link
-            = link_to "自慢の一枚一覧","/users/#{@user.id}/post"
-    li.nav-item
-        .nav-link
-            = link_to "いいね一覧","/users/#{@user.id}/like"
