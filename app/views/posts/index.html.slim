@@ -1,11 +1,16 @@
-h2.text-center
+.jumbotron.jumbotron-extend5
+    h1.page-name1.text-center.mt-5
+        i class="fas fa-camera" style="color: midnightblue;"
+        |自慢の一枚
+//h2.text-center
     i class="fas fa-camera" style="color: midnightblue;"
     |自慢の一枚
 
-    hr
-    = link_to "評価ランキング","/posts/ranking",class: "fas fa-crown btn btn-primary mb-3"
-    br
-    = link_to '新規登録', new_post_path, class: 'btn btn-primary mb-3'
+.container
+    .text-center
+        = link_to "評価ランキング","/posts/ranking",class: "fas fa-crown btn btn-primary mb-3"
+        br
+        = link_to '新規登録', new_post_path, class: 'btn btn-primary mb-3'
    
 .mb-3
     .col-md-10.offset-md-1
