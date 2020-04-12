@@ -66,10 +66,9 @@ class FriendsController < ApplicationController
   end
 
   def correct_user
-    #@user = User.find(params[:id])
     friend = Friend.find(params[:id])
     unless user_signed_in? && friend.user.id == current_user.id
-      redirect_to(friends_url)
+      redirect_to friend, notice: '他ユーザーの投稿は編集できません'
     end
   end
 end

@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :login_check, only: [:new, :edit, :show,:update ,:destroy]
+  before_action :correct_user, only:[:edit,:update]
 
   def index
     @post = Post.new
@@ -63,6 +64,13 @@ class PostsController < ApplicationController
   def login_check
     unless user_signed_in?
       redirect_to new_user_session_path,notice: 'ログインしてください'
+    end
+  end
+
+  def correct_user
+    post = Post.find(params[:id])
+    unless user_signed_in? && post.user.id == current_user.id
+      redirect_to post,notice: '他ユーザーの投稿は編集できません'
     end
   end
 end
