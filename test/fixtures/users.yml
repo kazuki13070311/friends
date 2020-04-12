@@ -3,7 +3,7 @@
 # Table name: users
 #
 #  id                     :bigint           not null, primary key
-#  admin                  :boolean          default("0")
+#  admin                  :boolean          default(FALSE)
 #  clan                   :string(255)
 #  email                  :string(255)      default(""), not null
 #  encrypted_password     :string(255)      default(""), not null
@@ -18,7 +18,7 @@
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string(255)
 #  sex                    :string(255)
-#  strength               :integer
+#  strength               :float(24)
 #  style                  :string(255)
 #  timezone               :string(255)
 #  voice                  :string(255)

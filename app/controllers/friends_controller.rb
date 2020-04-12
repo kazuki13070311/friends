@@ -3,6 +3,7 @@
 class FriendsController < ApplicationController
   #before_action :login_required, only: [:edit,:new]
   before_action :login_check, only: [:new, :edit,:update ,:destroy]
+  before_action :correct_user, only:[:edit,:update]
 
   def index
     @friends = Friend.all.page(params[:page]).per(10).order(updated_at: :desc)
@@ -61,6 +62,14 @@ class FriendsController < ApplicationController
   def login_check
     unless user_signed_in?
       redirect_to new_user_session_path,notice: 'ログインしてください'
+    end
+  end
+
+  def correct_user
+    #@user = User.find(params[:id])
+    friend = Friend.find(params[:id])
+    unless user_signed_in? && friend.user.id == current_user.id
+      redirect_to(friends_url)
     end
   end
 end

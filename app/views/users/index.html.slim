@@ -22,9 +22,9 @@
         .form.group.row
             = f.label :strength,"キルレ", class: 'col-sm-2 col-form-label'
             .col-sm-8
-                = f.number_field :strength_gteq
+                = f.number_field :strength_gteq,step: '0.1'
                 |  以上〜 
-                = f.number_field :strength_lt
+                = f.number_field :strength_lt, step: '0.1'
                 |  未満
         
         .form.group

@@ -19,6 +19,7 @@ class Friend < ApplicationRecord
   validates :name, length: { maximum: 30 }
   validate :validate_name_not_including_comma
   validates :description, presence: true
+  validates :description, length: { maximum: 400 }
 
   belongs_to :user
   #has_many :friend

@@ -20,8 +20,10 @@
 #
 class Post < ApplicationRecord
   validates :content, presence: true 
+  validates :content, length: { maximum: 30 }
   validates :image, presence: true
   validates :description, presence: true
+  validates :description, length: { maximum: 400 }
 
   belongs_to :user
   has_many :likes,dependent: :destroy

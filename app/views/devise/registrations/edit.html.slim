@@ -90,19 +90,15 @@ h2.text-center
 
   .form-group.row
     .col-md-8.offset-md-2
-      = f.label :プロフィール
+      = f.label :プロフィール（400文字以内）
       br
       = f.text_area :profile, placeholder: "詳細に書けば書くほど良いガーディアンに出会える確率が上昇します",autofocus: true,rows: 5,class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
-      = f.label :変更したいパスワード
+      = f.label :変更したいパスワード（6文字以上）
       br
       = f.password_field :password, placeholder:"パスワードを変更しない場合は空白にして下さい",autocomplete: "new-password",class: 'form-control'
-      - if @minimum_password_length
-        em
-          = @minimum_password_length
-          | 文字以上
   
   .form-group.row
     .col-md-8.offset-md-2
