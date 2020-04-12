@@ -48,6 +48,12 @@ h2.text-center
 
   .form-group.row
     .col-md-8.offset-md-2
+      = f.label :メイン職業
+      br
+      = f.select :profession,[['タイタン','タイタン'],['ウォーロック','ウォーロック'],['ハンター','ハンター']],class: 'form-control'
+
+  .form-group.row
+    .col-md-8.offset-md-2
       = f.label :所属クラン
       br
       = f.text_field :clan,placeholder: "所属クラン名を記入して下さい", autofocus: true,class: 'form-control'
@@ -60,7 +66,7 @@ h2.text-center
 
   .form-group.row
     .col-md-8.offset-md-2
-      = f.label :光レベル
+      = f.label :パワーレベル
       br
       = f.text_field :lightlevel, placeholder: "光レベルを記入して下さい",autofocus: true,class: 'form-control'
 

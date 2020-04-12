@@ -14,6 +14,7 @@
 #  lightlevel             :integer
 #  model                  :string(255)
 #  name                   :string(255)
+#  profession             :string(255)
 #  profile                :text(65535)
 #  psnid                  :string(255)
 #  remember_created_at    :datetime
