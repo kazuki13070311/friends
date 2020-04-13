@@ -12,6 +12,9 @@
 #
 FactoryBot.define do
   factory :friend do
-    
+    name { "フレンド募集" }
+    model {"PS4"}
+    description {"テスト投稿"}
+    user
   end
 end

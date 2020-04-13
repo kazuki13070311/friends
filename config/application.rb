@@ -8,7 +8,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Friends
+module Friends1
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
@@ -23,5 +23,12 @@ module Friends
 
     # タイムゾーンを日本時間にするコード
     config.time_zone = 'Asia/Tokyo'
+
+    config.generators do |g|
+      g.test_framework :rspec,
+        view_specs: false,
+        helper_specs: false, 
+        routing_specs: false
+    end
   end
 end

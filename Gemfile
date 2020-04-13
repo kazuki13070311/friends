@@ -97,6 +97,7 @@ group :development do
   gem 'capistrano-rbenv'
   gem 'capistrano-rbenv-vars'
   gem 'capistrano3-puma'
+  gem 'spring-commands-rspec'
 end
 
 group :test do

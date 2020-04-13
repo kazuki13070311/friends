@@ -1,22 +1,26 @@
 default: &default
   adapter: mysql2
-  database: mysql
   username: root
   password: Kazu0311
   host: localhost
   encoding: utf8
+  pool: 5 
+  #socket: /tmp/mysql.sock
 
 development:
   <<: *default
+  database: mysql_development
 
 test:
   <<: *default
+  database: mysql_test
 
 production:
   #<<: *default
   adapter: mysql2 
   encoding: utf8
   pool: 5 
+  #database: mysql_production
   database: friends_production 
   username: root
   password:

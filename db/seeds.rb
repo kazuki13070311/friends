@@ -15,3 +15,12 @@ User.create!(
     password_confirmation: "test123",
     admin: true
 )
+
+User.create!(
+    name: "テストユーザー",
+    email: "test@example.jp",
+    image: "default.jpg",
+    password: "test234",
+    password_confirmation: "test234",
+    admin: true
+)
