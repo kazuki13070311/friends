@@ -11,10 +11,13 @@
 #  user_id     :integer
 #
 FactoryBot.define do
-  factory :friend do
+  factory :friend, class: Friend do
     name { "フレンド募集" }
     model {"PS4"}
     description {"テスト投稿"}
     user
+    trait :invalid do
+      description nil
+    end
   end
 end
