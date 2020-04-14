@@ -30,7 +30,7 @@ RSpec.describe "募集投稿のリクエストテスト", type: :request do
             end
         end
 
-        describe 'ログインしている場合' do
+        context 'ログインしている場合' do
             before do
                 user1 = create(:user1)
                 sign_in user1
@@ -71,7 +71,7 @@ RSpec.describe "募集投稿のリクエストテスト", type: :request do
             end
         end
 
-        context "募集投稿したユーザーでログインしている場合" do
+        context '募集投稿したユーザーでログインしている場合' do
             before do
                 sign_in @user1
                 get edit_friend_path(@friend)
@@ -96,7 +96,7 @@ RSpec.describe "募集投稿のリクエストテスト", type: :request do
     end
 
     describe 'POST #create' do
-        context 'パラメータが妥当な場合'do
+        describe 'パラメータが妥当な場合'do
             before do
                 user1 = create(:user1)
                 sign_in user1
