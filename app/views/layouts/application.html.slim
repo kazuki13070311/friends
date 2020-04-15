@@ -20,11 +20,11 @@ html
   body
   .sticky-top
     = render 'layouts/header'
-    
+      
   .container.bg-light
     - if flash.notice.present?
       .alert.alert-success= flash.notice
     = yield
 
-  .container-field.bg-light
+  .container-fluid.bg-light
     = render 'layouts/footer'
