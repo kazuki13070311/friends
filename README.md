@@ -1,8 +1,8 @@
-# :muscle: Guardians Community
+# :two_men_holding_hands: Guardians Community
 
 オンラインゲーム「Destiny2」で一緒に遊べる仲間を見つける場所を提供
 
-
+![localhost_3000_](https://user-images.githubusercontent.com/57397215/79339158-6c149700-7f63-11ea-920f-8866d51f3e98.png)
 
 # このサイトを利用するメリット
 
