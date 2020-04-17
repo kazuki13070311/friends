@@ -91,7 +91,8 @@ Destiny2が今よりも盛り上がるような仕組みを作れたら良いな
 * Rubucop
 * RSpec  
 　  
-インフラ構成図
+### インフラ構成図  
+
 ![Untitled Diagram](https://user-images.githubusercontent.com/57397215/79564758-377f1780-80ea-11ea-979e-857eb66d20fe.png)
 
 ## 機能一覧
