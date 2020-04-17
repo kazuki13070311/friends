@@ -1,2 +1,16 @@
-.footer.h3.bg-yellow
-    |©️2020 Guardians
+footer#footer
+    .footer-content.bg-yellow
+        .container
+            .row
+                .col-md-4.col-sm-6
+                    ul
+                        li= link_to 'トップページ', root_path
+                        li= link_to '利用規約'
+                        //= link_to '利用規約', term_path
+                        li= link_to 'プライバシーポリシー'
+                        //= link_to 'プライバシーポリシー', privacy_path
+                        li= link_to 'お問い合わせ','https://twitter.com/kattyan1307'
+                .col-md-8.col-sm-6
+                    p
+                        small
+                            | © 2020. Guardians Community All Rights Reserved.
