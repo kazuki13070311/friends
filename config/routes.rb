@@ -35,7 +35,8 @@ Rails.application.routes.draw do
   get 'users/:id/friend',to: 'users#friend'
   get 'users/:id/post',to: 'users#post'
   get 'users/:id/like',to: 'users#like'
-
+  get 'home/term'
+  get 'home/privacy'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

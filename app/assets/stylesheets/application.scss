@@ -313,6 +313,7 @@ p {
     background-blend-mode:lighten;
 }
 
+/* footer */
 #footer p {
     display: block;
     padding-top: 70px;
@@ -328,4 +329,11 @@ p {
         line-height: 16px;
         color: #9a9fa5;
     }
+}
+
+/*プライバシーポリシー*/
+.content-privacy{
+    font-size: 28px;
+    margin: 25px 0px;
+    padding-top: 30px;
 }

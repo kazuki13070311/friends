@@ -2,4 +2,5 @@
 
 class HomeController < ApplicationController
   def home; end
+  def term; end
 end
