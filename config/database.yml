@@ -1,11 +1,11 @@
 default: &default
   adapter: mysql2
   username: root
-  password: Kazu0311
+  password: Kazu0311# 
   host: localhost
   encoding: utf8
   pool: 5 
-  #socket: /tmp/mysql.sock
+  socket: /tmp/mysql.sock
 
 development:
   <<: *default
@@ -20,8 +20,8 @@ production:
   adapter: mysql2 
   encoding: utf8
   pool: 5 
-  #database: mysql_production
   database: friends_production 
   username: root
   password:
-  socket: /tmp/mysql.sock
+  #socket: /tmp/mysql.sock
+  socket: /var/lib/mysql/mysql.sock
