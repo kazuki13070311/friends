@@ -27,6 +27,8 @@ h2.text-center
         #like_btn
             = render partial: 'likes/like', locals:{ post: @post,like: @like}
         
+        - if current_user.admin?
+            = link_to '削除',@post,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger my-3'
         - if user_signed_in? && current_user.id == @user.id
             = link_to '編集',edit_post_path,class: 'btn btn-primary mr-3 my-3'
             = link_to '削除',@post,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger my-3'

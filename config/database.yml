@@ -1,7 +1,7 @@
 default: &default
   adapter: mysql2
   username: root
-  password: Kazu0311# 
+  password: Kazu0311
   host: localhost
   encoding: utf8
   pool: 5 
