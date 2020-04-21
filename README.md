@@ -101,7 +101,7 @@ Destiny2が今よりも盛り上がるような仕組みを作れたら良いな
 　  
 ### インフラ構成図  
 
-![Untitled Diagram (1)](https://user-images.githubusercontent.com/57397215/79885483-f06a8c80-8431-11ea-8df9-64485b9c8d5f.png)
+![Untitled Diagram (1) (1)](https://user-images.githubusercontent.com/57397215/79885773-7e467780-8432-11ea-8fbd-c562c5ba1e1f.png)
 
 ## 機能一覧
 * ユーザー登録、ログイン、編集機能（devise）
