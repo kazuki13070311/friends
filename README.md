@@ -4,10 +4,10 @@
 
 ![localhost_3000_](https://user-images.githubusercontent.com/57397215/79339158-6c149700-7f63-11ea-920f-8866d51f3e98.png)
 
-## ポートフォリオへのアクセスURL
+## :closed_book: ポートフォリオへのアクセスURL
 http://guardians-community.com/
 
-### Destiny2とは？
+## Destiny2とは？
 PS4やPCなどで無料で遊べるオンラインシューティングゲームです。
 
 Destiny2公式紹介サイト↓
