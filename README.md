@@ -10,8 +10,7 @@ http://guardians-community.com/
 ## Destiny2とは？
 PS4やPCなどで無料で遊べるオンラインシューティングゲームです。
 
-Destiny2公式紹介サイト↓
-https://www.jp.playstation.com/games/destiny-2-ps4/
+Destiny2公式紹介サイト→https://www.jp.playstation.com/games/destiny-2-ps4/
 
 # :closed_book: サービス概要
 
