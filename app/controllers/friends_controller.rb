@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class FriendsController < ApplicationController
-  #before_action :login_required, only: [:edit,:new]
   before_action :login_check, only: [:new, :edit,:update ,:destroy]
   before_action :correct_user, only:[:edit,:update]
 
@@ -10,7 +9,6 @@ class FriendsController < ApplicationController
     @user = User.all
     @q = @friends.ransack(params[:q])
     @friends = @q.result(distinct: true)
-    #@user = User.find(current_user.id).image
   end
 
   def show

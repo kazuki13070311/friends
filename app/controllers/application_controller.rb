@@ -1,16 +1,13 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-  # protect_from_forgery with: :exception
-
   before_action :set_current_user, only: [:create]
   before_action :configure_permitted_parameters, if: :devise_controller?
-  # bifore_action :authenticate_user!
+  
   # ログイン後のリダイレクト先
   def after_sing_in_path_for(_resource)
     friends_path
     blogs_path
-    # "/user/#{current_user.id}"
   end
 
   def set_current_user
@@ -19,12 +16,9 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  # 入力フォームからアカウント名情報をDBに保存するために追加
   def configure_permitted_parameters
-    # sign_upのときに、nameをストロングパラメータに追加する
-    devise_parameter_sanitizer.permit(:sign_up, keys: %i[name image]) # 新規登録時(sign_up時)にnameというキーのパラメーターを追加で許可する
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[name image]) 
 
-    # account_updateのときに、指定した名前をストロングパラメータに追加する
     devise_parameter_sanitizer.permit(:account_update, keys: %i[name email profile image strength clan psnid])
     devise_parameter_sanitizer.permit(:account_update, keys: %i[sex level lightlevel model voice style timezone profession])
   end

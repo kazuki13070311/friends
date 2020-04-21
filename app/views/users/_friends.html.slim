@@ -1,11 +1,3 @@
-//h1.text-center
-    |募集履歴
-
-/.mb-3
-    .col-md-10.offset-md-1
-        = paginate @friends
-        = page_entries_info @friends
-
 .col-md-10.offset-md-1
      - @friends.includes(:user).each do |friend|
             .media.bg-white.m-3.rounded

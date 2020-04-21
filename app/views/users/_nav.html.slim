@@ -20,17 +20,3 @@ ul.nav.nav-tabs.justify-content-center id="myTab" role="tablist"
     .tab-pane.fade id="like" role="tabpanel" aria-labelledby="like-tab"
         = render "users/likes"
     
-//- if user_signed_in? && current_user.id == @user.id
-    ul.nav.nav-tabs.justify-content-center
-        li.nav-item
-            .nav-link
-                = link_to "マイページトップ","/users/#{current_user.id}"
-        li.nav-item
-            .nav-link
-                = link_to "募集マイ投稿","/users/#{current_user.id}/friend"
-        li.nav-item
-            .nav-link
-                = link_to "写真マイ投稿","/users/#{current_user.id}/post"
-        li.nav-item
-            .nav-link
-                = link_to "良いね一覧","/users/#{current_user.id}/like"
