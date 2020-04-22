@@ -9,13 +9,13 @@ Rails.application.routes.draw do
   resources :users, only: %i[index new edit update]
 
   resources :friends
-  resources :posts, only: [:index,:show,:create,:destroy,:new,:edit,:update]
-    post 'posts/new', to: 'posts#create'
-  
-  resources :posts, only: [:index, :show, :create] do
-    resources :likes, only:[:create, :destroy]
+  resources :posts, only: %i[index show create destroy new edit update]
+  post 'posts/new', to: 'posts#create'
+
+  resources :posts, only: %i[index show create] do
+    resources :likes, only: %i[create destroy]
   end
-  
+
   devise_for :users, controllers: {
     registrations: 'users/registrations',
     sessions: 'users/sessions'
@@ -32,9 +32,9 @@ Rails.application.routes.draw do
 
   get 'search', to: 'friends#search'
 
-  get 'users/:id/friend',to: 'users#friend'
-  get 'users/:id/post',to: 'users#post'
-  get 'users/:id/like',to: 'users#like'
+  get 'users/:id/friend', to: 'users#friend'
+  get 'users/:id/post', to: 'users#post'
+  get 'users/:id/like', to: 'users#like'
   get 'home/term'
   get 'home/privacy'
 

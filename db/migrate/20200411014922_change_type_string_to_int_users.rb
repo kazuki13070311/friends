@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class ChangeTypeStringToIntUsers < ActiveRecord::Migration[6.0]
   def change
-    change_column :users, :strength,:string
+    change_column :users, :strength, :string
   end
 end

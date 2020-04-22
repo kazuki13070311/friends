@@ -38,15 +38,15 @@ gem 'rack-mini-profiler', require: false
 
 # コードチェック
 gem 'rubocop', '~> 0.79.0', require: false
-
-# データベースのテーブルやカラムの情報をmodelに書き出してくれる
-gem 'annotate'
+gem 'rubocop-rails'
 
 gem 'jquery-turbolinks'
 
+# Googleアナリティクス
+gem 'google-analytics-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
-
 
 # Use qlite3 as the database for Active Record
 # gem 'sqlite3', '~> 1.4'
@@ -75,13 +75,13 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'bcrypt_pbkdf'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'capistrano-bundler'
+  gem 'ed25519'
   gem 'factory_bot_rails'
   gem 'rspec-rails'
   gem 'spring-commands-rspec'
-  gem 'ed25519'
-  gem 'bcrypt_pbkdf'
-  gem 'capistrano-bundler'
 end
 
 group :development do
@@ -89,13 +89,13 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'capistrano'
-  gem 'capistrano-rails'
   gem 'capistrano-bundler'
+  gem 'capistrano-rails'
   gem 'capistrano-rbenv'
+  gem 'spring'
   gem 'spring-commands-rspec'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :test do
@@ -106,10 +106,10 @@ group :test do
   gem 'webdrivers'
 end
 
-group :production,  :staging do
+group :production, :staging do
   gem 'unicorn'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-#gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-  gem 'tzinfo-data'
+# gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'tzinfo-data'

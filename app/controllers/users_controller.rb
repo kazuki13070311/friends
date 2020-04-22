@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-
-  def home
-  end
+  def home; end
 
   def index
     @users = User.all.page(params[:page]).per(9).order(updated_at: :desc)
@@ -40,7 +38,6 @@ class UsersController < ApplicationController
     @posts = @user.posts.page(params[:page]).per(6).order(updated_at: :desc)
   end
 
-
   def like
     @user = User.find(params[:id])
     @likes = @user.likes.page(params[:page]).per(6).order(updated_at: :desc)
@@ -53,7 +50,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:name, :email, :profile, :profession,:image, :strength,:image_cache)
+    params.require(:user).permit(:name, :email, :profile, :profession, :image, :strength, :image_cache)
   end
-
 end

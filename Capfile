@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 # Load DSL and set up stages
-require "capistrano/setup"
+require 'capistrano/setup'
 
 # Include default deployment tasks
-require "capistrano/deploy"
+require 'capistrano/deploy'
 
 # Load the SCM plugin appropriate to your project:
 #
@@ -12,7 +14,7 @@ require "capistrano/deploy"
 # require "capistrano/scm/svn"
 # install_plugin Capistrano::SCM::Svn
 # or
-require "capistrano/scm/git"
+require 'capistrano/scm/git'
 # install_plugin Capistrano::SCM::Git
 
 # Include tasks from other gems included in your Gemfile
@@ -29,26 +31,25 @@ require "capistrano/scm/git"
 
 # require 'capistrano/setup'
 # require 'capistrano/deploy'
-require 'capistrano/rbenv' 
+require 'capistrano/rbenv'
 require 'capistrano/bundler'
-require 'capistrano/rails/assets' 
+require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 
 # require "capistrano/rvm"
 # require "capistrano/rbenv"
 # require "capistrano/chruby"
-require "capistrano/bundler"
+require 'capistrano/bundler'
 # require "capistrano/rails/assets"
 # require "capistrano/rails/migrations"
 # require "capistrano/passenger"
 
-#require 'capistrano/puma'
-#install_plugin Capistrano::Puma
+# require 'capistrano/puma'
+# install_plugin Capistrano::Puma
 
-#追記
-require "capistrano/scm/git"
+# 追記
+require 'capistrano/scm/git'
 install_plugin Capistrano::SCM::Git
 
-
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
-Dir.glob("lib/capistrano/tasks/unicorn.rb").each { |r| import r }
+Dir.glob('lib/capistrano/tasks/unicorn.rb').each { |r| import r }

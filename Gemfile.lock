@@ -60,9 +60,6 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     airbrussh (1.4.0)
       sshkit (>= 1.6.1, != 1.7.0)
-    annotate (3.1.1)
-      activerecord (>= 3.2, < 7.0)
-      rake (>= 10.4, < 14.0)
     ast (2.4.0)
     autoprefixer-rails (9.7.5)
       execjs
@@ -133,6 +130,7 @@ GEM
     ffi (1.12.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    google-analytics-rails (1.1.1)
     hpricot (0.8.6)
     html2slim (0.2.0)
       hpricot
@@ -282,6 +280,10 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 1.7)
+    rubocop-rails (2.5.2)
+      activesupport
+      rack (>= 1.1)
+      rubocop (>= 0.72.0)
     ruby-progressbar (1.10.1)
     ruby-vips (2.0.17)
       ffi (~> 1.9)
@@ -364,7 +366,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  annotate
   bcrypt_pbkdf
   bootsnap (>= 1.4.2)
   bootstrap (~> 4.4.1)
@@ -381,6 +382,7 @@ DEPENDENCIES
   devise-i18n-views
   ed25519
   factory_bot_rails
+  google-analytics-rails
   html2slim
   jbuilder (~> 2.7)
   jquery-rails
@@ -398,6 +400,7 @@ DEPENDENCIES
   ransack
   rspec-rails
   rubocop (~> 0.79.0)
+  rubocop-rails
   sass-rails (>= 6)
   selenium-webdriver
   slim-rails

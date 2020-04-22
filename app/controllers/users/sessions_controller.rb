@@ -6,7 +6,7 @@ class Users::SessionsController < Devise::SessionsController
     sign_in user
     redirect_to "/users/#{current_user.id}", notice: 'ゲストユーザーとしてログインしました。'
   end
-  
+
   # GET /resource/sign_in
   # def new
   #   super
@@ -18,9 +18,9 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   # DELETE /resource/sign_out
-  #def destroy
-  #end
-  
+  # def destroy
+  # end
+
   protected
 
   def after_sign_in_path_for(_resource)

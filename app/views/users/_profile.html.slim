@@ -1,46 +1,43 @@
-.container
-   .row
-        .col-md-10.offset-md-1
-            - if user_signed_in? && current_user.id == @user.id
-                = link_to '編集',edit_user_registration_path,class: 'btn btn-primary mr-3 float-right'
-            table.table.input-table
-                tbody
-                    tr
-                        th= "名前"
-                        td= @user.name
-                    tr
-                        th= "PSID"
-                        td= @user.psnid
-                    tr
-                        th= "性別"
-                        td= @user.sex
-                    tr
-                        th= "機種"
-                        td= @user.model
-                    tr
-                        th= "メイン職業"
-                        td= @user.profession
-                    tr
-                        th= "クラン名"
-                        td= @user.clan
-                    tr
-                        th= "レベル"
-                        td= @user.level
-                    tr
-                        th= "パワーレベル"
-                        td= @user.lightlevel
-                    tr
-                        th= "キルレ"
-                        td= @user.strength
-                    tr
-                        th= "ボイスチャット"
-                        td= @user.voice
-                    tr
-                        th= "プレイスタイル"
-                        td= @user.style
-                    tr
-                        th= "プレイ時間"
-                        td= @user.timezone
-                    tr
-                        th= "プロフィール"
-                        td= simple_format(@user.profile) 
+- if user_signed_in? && current_user.id == @user.id
+    = link_to '編集',edit_user_registration_path,class: 'btn btn-primary mr-3 float-right'
+table.table.input-table
+    tbody
+        tr
+            th= "名前"
+            td= @user.name
+        tr
+            th= "PSID"
+            td= @user.psnid
+        tr
+            th= "性別"
+            td= @user.sex
+        tr
+            th= "機種"
+            td= @user.model
+        tr
+            th= "メイン職業"
+            td= @user.profession
+        tr
+            th= "クラン名"
+            td= @user.clan
+        tr
+            th= "レベル"
+            td= @user.level
+        tr
+            th= "パワーレベル"
+            td= @user.lightlevel
+        tr
+            th= "キルレ"
+            td= @user.strength
+        tr
+            th= "ボイスチャット"
+            td= @user.voice
+        tr
+            th= "プレイスタイル"
+            td= @user.style
+        tr
+            th= "プレイ時間"
+            td= @user.timezone
+        tr
+            th= "プロフィール"
+            td= simple_format(@user.profile) 

@@ -5,14 +5,13 @@ class ImageUploader < CarrierWave::Uploader::Base
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
 
-  #process resize_to_limit: [200, 200]
-  #process resize_to_fit: [200, 200]
-  #投稿画像サイズ調整
-  process resize_to_fill: [1280, 720, "Center"]
+  # process resize_to_limit: [200, 200]
+  # process resize_to_fit: [200, 200]
+  # 投稿画像サイズ調整
+  process resize_to_fill: [1280, 720, 'Center']
 
   # 保存形式をJPGにする
   process convert: 'jpg'
-  
 
   version :thumb do
     process resize_to_fit: [200, 200]

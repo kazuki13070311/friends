@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: friends
@@ -12,9 +14,9 @@
 #
 FactoryBot.define do
   factory :friend, class: Friend do
-    name { "フレンド募集" }
-    model {"PS4"}
-    description {"テスト投稿"}
+    name { 'フレンド募集' }
+    model { 'PS4' }
+    description { 'テスト投稿' }
     user
     trait :invalid do
       description nil

@@ -1,19 +1,20 @@
+# frozen_string_literal: true
+
 # config valid for current version and patch releases of Capistrano
 # lock "~> 3.12.1"
-lock "~> 3.7.0"
+lock '~> 3.7.0'
 
-set :application, "friends"
-set :repo_url, "git@github.com:kazuki13070311/friends.git"
+set :application, 'friends'
+set :repo_url, 'git@github.com:kazuki13070311/friends.git'
 
-#append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
+# append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 set :branch, 'master'
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/var/www/rails/friends"
-
+set :deploy_to, '/var/www/rails/friends'
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
@@ -26,7 +27,7 @@ set :deploy_to, "/var/www/rails/friends"
 # set :pty, true
 
 # Default value for :linked_files is []
-#append :linked_files, "config/database.yml"
+# append :linked_files, "config/database.yml"
 set :linked_files, fetch(:linked_files, []).push('config/settings.yml')
 
 # Default value for linked_dirs is []
@@ -57,7 +58,7 @@ namespace :deploy do
 
   desc 'Create database'
   task :db_create do
-    on roles(:db) do |host|
+    on roles(:db) do |_host|
       with rails_env: fetch(:rails_env) do
         within current_path do
           execute :bundle, :exec, :rake, 'db:create'

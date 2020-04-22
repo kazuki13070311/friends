@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
@@ -18,11 +20,11 @@ class User < ApplicationRecord
   end
 
   def already_liked?(post)
-    self.likes.exists?(post_id: post.id)
+    likes.exists?(post_id: post.id)
   end
 
   def self.guest
-    find_or_create_by!(name: 'ゲストユーザー',email: 'test123@example.com') do |user|
+    find_or_create_by!(name: 'ゲストユーザー', email: 'test123@example.com') do |user|
       user.password = SecureRandom.urlsafe_base64
     end
   end
