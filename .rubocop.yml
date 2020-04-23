@@ -1,1 +1,27 @@
-inherit_from: .rubocop_todo.yml
+
+inherit_from: rubocop-todo.yml
+
+AllCops:
+  Exclude:
+    - db/schema.rb
+    - config/unicorn.rb
+    - config/unicorn_staging.rb
+    - tmp/**/*
+
+AsciiComments:
+  Enabled: false
+
+Lambda:
+  Enabled: false
+
+ClassAndModuleChildren:
+  Enabled: false
+
+AccessorMethodName:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+AndOr:
+  Enabled: false
