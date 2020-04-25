@@ -8,7 +8,10 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[index new edit update]
 
-  resources :friends
+  resources :friends do
+    resources :comments,only: [:create,:destroy]
+  end
+  
   resources :posts, only: %i[index show create destroy new edit update]
   post 'posts/new', to: 'posts#create'
 

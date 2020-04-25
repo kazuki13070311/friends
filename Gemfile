@@ -45,6 +45,8 @@ gem 'jquery-turbolinks'
 # Googleアナリティクス
 gem 'google-analytics-rails'
 
+gem 'annotate'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
 

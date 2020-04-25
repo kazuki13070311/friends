@@ -1,6 +1,6 @@
 # :two_men_holding_hands: Guardians Community
 
-オンラインゲーム「Destiny2」で一緒に遊べる仲間を見つける場所を提供「http://guardians-community.com/」
+オンラインゲーム「Destiny2」で一緒に遊べる仲間を見つける場所を提供→http://guardians-community.com/
 
 ![localhost_3000_](https://user-images.githubusercontent.com/57397215/79339158-6c149700-7f63-11ea-920f-8866d51f3e98.png)
 
@@ -18,7 +18,7 @@ Destiny2公式紹介サイト→https://www.jp.playstation.com/games/destiny-2-p
 # :closed_book: サービス概要
 
 オンラインゲーム（Destiny2）のフレンド登録後のミスマッチを防ぎ  
-自分が求める理想のユーザーと出会うためのサービスです。
+自分が求める理想のユーザーと出会うための場を提供するサービスです。
 
 # :round_pushpin: 制作背景
 

@@ -1,5 +1,17 @@
 # frozen_string_literal: true
 
+# == Schema Information
+#
+# Table name: friends
+#
+#  id          :bigint           not null, primary key
+#  description :text(65535)
+#  model       :string(255)
+#  name        :string(30)       not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  user_id     :integer
+#
 class Friend < ApplicationRecord
   validates :name, presence: true
   validates :name, length: { maximum: 30 }
@@ -8,6 +20,7 @@ class Friend < ApplicationRecord
   validates :description, length: { maximum: 400 }
 
   belongs_to :user
+  has_many :comments, dependent: :destroy
 
   private
 
