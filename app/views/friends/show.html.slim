@@ -26,30 +26,32 @@ h2.text-center
                 th= Friend.human_attribute_name(:updated_at)
                 td= @friend.updated_at
 
-.col-md-10
-    ul
-        .li.comment-create
-            h3.text-left.title
-                |コメント
-        
-        li#comments_area
-            = render partial: 'comments/index', locals: {comments: @comments}
-
-    hr
-    - if user_signed_in?
-        .comment_create
-            h3.text-left
-                | コメントを投稿する
-            = render partial: 'comments/form', locals: {comment: @comment,friend: @friend}
-
 .col-md-10.offset-md-1
     - if current_user.admin?
         = link_to '削除',@friend,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'
     - if user_signed_in? && current_user.id == @user.id
         = link_to '編集',edit_friend_path,class: 'btn btn-primary mr-3'
         = link_to '削除',@friend,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'
-    end
+    
+br
+hr
+.row
+    .col-md-10.offset-md-1
+        .comment-create
+            h3.text-left.title
+                |コメント
+        
+        #comments_area
+            = render partial: 'comments/index', locals: {comments: @comments}
 
-    br
-    h6
-    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        br
+        hr
+        - if user_signed_in?
+            .comment_create
+                h3.text-left
+                    | コメントを投稿する
+                = render partial: 'comments/form', locals: {comment: @comment,friend: @friend}
+
+        br
+            h6
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

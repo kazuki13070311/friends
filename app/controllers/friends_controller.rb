@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class FriendsController < ApplicationController
-  before_action :login_check, only: %i[new edit update destroy]
+  before_action :login_check, only: %i[new edit update destroy show]
   before_action :correct_user, only: %i[edit update]
 
   def index

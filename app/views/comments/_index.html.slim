@@ -4,32 +4,40 @@
 h6.more data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
     |もっと見る…
 
-- comments.first(2).each do |comment|
+//- comments.first(3).each do |comment|
     - unless comment.id.nil?
-        li.comment-container
+        .comment-container
             .comment-box
                 .comment-avatar
                     //= image_tag comment.user, :profile_image, fallback: "no_image.jpg", class:"comment-image",size: "40×40"
-                    
-                    .comment-text
+                    //- if @user.image?
+                        = image_tag user.image.url,class: 'mx-4 my-5',size: '40x40'
+                    //- else
+                        = image_tag "/assets/default.jpg",class: 'mx-4 my-5',size: '40x40'
+
+//                    .comment-text
                         = link_to "@#{comment.user.name}", comment.user
                         .comment-entry
                             = comment.content
                             - if comment.user == current_user
                                 = link_to friend_comment_path(comment.friend_id,comment.id),method: :delete,remote: true, class: "comment_destroy" do
                                     i class="fas fa-trash" style="color: black;"
-                        span.comment-data.pull-right
+                        span.comment-data.float-right
                             = comment.created_at.strftime('%Y/%m/%d %H:%M:%S')
 
-        .collapse id="collapseExample"
-            - comments.offset(2).each do |comment|
+//        .collapse id="collapseExample"
+            - comments.offset(3).each do |comment|
                 - unless comment.id.nil?
-                    li.comment-container
+                    .comment-container
                         .comment-box
                             .comment-avatar
                                 //= attachment_image_tag comment.user, :profile_image, fallback: "no_image.jpg",class: "comment-image",size:"40×40"
+                                //- if @user.image?
+                                    = image_tag user.image.url,class: 'mx-4 my-5',size: '40x40'
+                                //- else
+                                    = image_tag "/assets/default.jpg",class: 'mx-4 my-5',size: '40x40'
 
-                                .comment-text
+//                                .comment-text
                                     = link_to "@#{comment.user.name}", comment.user
                                     .comment-entry
                                         = comment.content
@@ -37,5 +45,44 @@ h6.more data-toggle="collapse" data-target="#collapseExample" aria-expanded="fal
                                             = link_to friend_comment_path(comment.friend_id,comment.id),method: :delete, remote: true, class: "comment_destroy" do
                                                 i class="fas fa-trash" style="color: black;"
 
-                                    span.comment-date.pull-right
+//                                    span.comment-date.float-right
                                         = comment.created_at.strftime('%Y/%m/%d %H:%M:%S')
+
+
+- comments.first(2).each do |comment|
+    - unless comment.id.nil?
+        .media
+            - if comment.user.image?
+                = image_tag comment.user.image.url,class: "mt-1 mr-3",size: '40x40'
+            - else
+                = image_tag "/assets/default.jpg",class: "mt-1 mr-3",size: '40x40'
+            .media-body
+                = link_to "@#{comment.user.name}", comment.user
+                .media-entry
+                    = comment.content
+                    - if comment.user == current_user
+                        = link_to friend_comment_path(comment.friend_id,comment.id),method: :delete,remote: true, class: "comment_destroy ml-3" do
+                            i class="fas fa-trash" style="color: black;"
+                .span.comment-data.float-right
+                    = comment.created_at.strftime('%Y/%m/%d %H:%M:%S')
+
+        .collapse id="collapseExample"
+            - comments.offset(2).each do |comment|
+                - unless comment.id.nil?
+                    .media
+                        - if comment.user.image?
+                            = image_tag comment.user.image.url,class: "mt-1 mr-3",size: '40x40'
+                        - else
+                            = image_tag "/assets/default.jpg",class: "mt-1 mr-3",size: '40x40'
+
+                        .media-body
+                            = link_to "@#{comment.user.name}", comment.user
+                            .comment-entry
+                                = comment.content
+                                - if comment.user == current_user
+                                    = link_to friend_comment_path(comment.friend_id,comment.id),method: :delete, remote: true, class: "comment_destroy ml-3" do
+                                        i class="fas fa-trash" style="color: black;"
+
+                            .span.comment-date.float-right
+                                = comment.created_at.strftime('%Y/%m/%d %H:%M:%S')
+
