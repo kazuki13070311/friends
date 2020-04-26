@@ -32,7 +32,7 @@ h2.text-center
     - if user_signed_in? && current_user.id == @user.id
         = link_to '編集',edit_friend_path,class: 'btn btn-primary mr-3'
         = link_to '削除',@friend,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'
-    
+
 br
 hr
 .row
@@ -45,13 +45,6 @@ hr
             = render partial: 'comments/index', locals: {comments: @comments}
 
         br
-        hr
         - if user_signed_in?
             .comment_create
-                h3.text-left
-                    | コメントを投稿する
                 = render partial: 'comments/form', locals: {comment: @comment,friend: @friend}
-
-        br
-            h6
-            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

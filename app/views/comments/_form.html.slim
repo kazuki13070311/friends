@@ -1,3 +1,4 @@
 = form_with(model: [friend,comment],url: friend_comments_path(@friend)) do |f|
-    = f.text_area :content,class: "input-xlarge"
-    = f.submit "送信" ,class: "btn btn-outline-dark comment-submit float-right"
+    = f.text_area :content,placeholder: "コメントする", rows: 2,class: 'form-control'
+    br
+    = f.submit "投稿する" ,class: "btn btn-outline-primary comment-submit float-right btn-block"
