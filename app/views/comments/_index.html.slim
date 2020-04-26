@@ -1,0 +1,41 @@
+= comments.count
+|件コメント
+
+h6.more data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+    |もっと見る…
+
+- comments.first(2).each do |comment|
+    - unless comment.id.nil?
+        li.comment-container
+            .comment-box
+                .comment-avatar
+                    //= image_tag comment.user, :profile_image, fallback: "no_image.jpg", class:"comment-image",size: "40×40"
+                    
+                    .comment-text
+                        = link_to "@#{comment.user.name}", comment.user
+                        .comment-entry
+                            = comment.content
+                            - if comment.user == current_user
+                                = link_to friend_comment_path(comment.friend_id,comment.id),method: :delete,remote: true, class: "comment_destroy" do
+                                    i class="fas fa-trash" style="color: black;"
+                        span.comment-data.pull-right
+                            = comment.created_at.strftime('%Y/%m/%d %H:%M:%S')
+
+        .collapse id="collapseExample"
+            - comments.offset(2).each do |comment|
+                - unless comment.id.nil?
+                    li.comment-container
+                        .comment-box
+                            .comment-avatar
+                                //= attachment_image_tag comment.user, :profile_image, fallback: "no_image.jpg",class: "comment-image",size:"40×40"
+
+                                .comment-text
+                                    = link_to "@#{comment.user.name}", comment.user
+                                    .comment-entry
+                                        = comment.content
+                                        - if comment.user == current_user
+                                            = link_to friend_comment_path(comment.friend_id,comment.id),method: :delete, remote: true, class: "comment_destroy" do
+                                                i class="fas fa-trash" style="color: black;"
+
+                                    span.comment-date.pull-right
+                                        = comment.created_at.strftime('%Y/%m/%d %H:%M:%S')

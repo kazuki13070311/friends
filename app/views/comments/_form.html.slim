@@ -1,0 +1,3 @@
+= form_with(model: [friend,comment],url: friend_comments_path(@friend)) do |f|
+    = f.text_area :content,class: "input-xlarge"
+    = f.submit "送信" ,class: "btn btn-outline-dark comment-submit float-right"

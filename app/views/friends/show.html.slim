@@ -26,6 +26,23 @@ h2.text-center
                 th= Friend.human_attribute_name(:updated_at)
                 td= @friend.updated_at
 
+.col-md-10
+    ul
+        .li.comment-create
+            h3.text-left.title
+                |コメント
+        
+        li#comments_area
+            = render partial: 'comments/index', locals: {comments: @comments}
+
+    hr
+    - if user_signed_in?
+        .comment_create
+            h3.text-left
+                | コメントを投稿する
+            = render partial: 'comments/form', locals: {comment: @comment,friend: @friend}
+
+.col-md-10.offset-md-1
     - if current_user.admin?
         = link_to '削除',@friend,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'
     - if user_signed_in? && current_user.id == @user.id

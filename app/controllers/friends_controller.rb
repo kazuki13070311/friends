@@ -14,6 +14,8 @@ class FriendsController < ApplicationController
   def show
     @friend = Friend.find(params[:id])
     @user = @friend.user
+    @comment = Comment.new
+    @comments = @friend.comments.order(created_at: :desc)
   end
 
   def new

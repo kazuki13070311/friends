@@ -11,7 +11,7 @@
 #
 class Comment < ApplicationRecord
   belongs_to :user
-  belongs_to :item
+  belongs_to :friend
 
   validates :content, presence: true
 end
