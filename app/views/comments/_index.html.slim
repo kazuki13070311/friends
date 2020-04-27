@@ -4,7 +4,7 @@
 h6.more data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
     |もっと見る…
 
-- comments.first(2).each do |comment|
+- comments.includes(:user).first(2).each do |comment|
     - unless comment.id.nil?
         .media
             - if comment.user.image?

@@ -21,10 +21,10 @@ h2.text-center
                 td= simple_format(h(@friend.description),{},sanitize: false,wrapper_tag: "div")
             tr
                 th= Friend.human_attribute_name(:created_at)
-                td= @friend.created_at
+                td= @friend.created_at.strftime('%Y/%m/%d %H:%M:%S')
             tr
                 th= Friend.human_attribute_name(:updated_at)
-                td= @friend.updated_at
+                td= @friend.updated_at.strftime('%Y/%m/%d %H:%M:%S')
 
 .col-md-10.offset-md-1
     - if current_user.admin?
@@ -34,13 +34,13 @@ h2.text-center
         = link_to '削除',@friend,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'
 
 br
-hr
 .row
     .col-md-10.offset-md-1
         .comment-create
             h3.text-left.title
+                i class="far fa-comment-dots"
                 |コメント
-        
+        hr
         #comments_area
             = render partial: 'comments/index', locals: {comments: @comments}
 

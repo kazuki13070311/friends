@@ -1,6 +1,7 @@
-- if user_signed_in? && current_user.id == @user.id
-    = link_to '編集',edit_user_registration_path,class: 'btn btn-primary mr-3 float-right'
-table.table.input-table
+.text-center
+    - if user_signed_in? && current_user.id == @user.id
+        = link_to '編集',edit_user_registration_path,class:"col-6 btn btn-outline-primary rounded-pill mb-3"
+table.table.table
     tbody
         tr
             th= "名前"

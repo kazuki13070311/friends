@@ -165,6 +165,36 @@ h1{
     font-weight: bold;
 }
 
+@media screen and (max-width:600px) { 
+  table, tbody, tr, th, td {
+    display: block;
+    max-width: 100%; 
+  }
+}
+
+@media screen and (min-width:601px) { 
+  th {
+    width: 18%;
+  }
+}
+
+table{
+  border-collapse:collapse;
+  margin:0 auto;
+}
+
+th{
+  border:1px solid #ccc;
+  padding:10px;
+  background:#EFEFEF;
+}
+
+td{
+  border:1px solid #ccc;
+  padding:10px;
+}
+
+
 /*編集ページ*/
 .h2{
     text-align:center;
