@@ -8,6 +8,7 @@
 #  content     :string(255)
 #  description :text(65535)
 #  image       :string(255)
+#  post_image  :string(255)
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  user_id     :bigint           not null

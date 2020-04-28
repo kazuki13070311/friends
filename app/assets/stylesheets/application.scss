@@ -95,9 +95,6 @@
     color: #fff;
 }
 
-.button-position{
-    //padding: 50px 0px 0px 0px;
-}
 
 .btn-lg{
     border-radius: 0;
@@ -151,6 +148,7 @@
   border-radius: 50%;
   height: 150px;
   width: 150px;
+  background-size: cover;
 }
 
 .btn-default{
@@ -205,6 +203,7 @@ td{
 .media{
     margin: auto;
     position: relative;
+    object-fit: cover;
 }
 
 .media img{
@@ -288,9 +287,8 @@ p {
 
 .jumbotron-extend4{
     position: relative;
-    height: 50vh;
     width: 100%;
-    min-height: 300px;
+    min-height: 200px;
     background: image-url('destiny2-23.jpg')no-repeat center center;
     background-size: cover;
     background-color:rgba(255,255,255,0.05);
@@ -308,10 +306,9 @@ p {
 
 .jumbotron-extend5{
     position: relative;
-    height: 50vh;
     width: 100%;
-    min-height: 300px;
-    background: image-url('destiny2-31.jpg')no-repeat center center;
+    min-height: 200px;
+    background: image-url('destiny2-33.jpg')no-repeat center center;
     background-size: cover;
     background-color:rgba(255,255,255,0.05);
     background-blend-mode:lighten;
@@ -321,9 +318,8 @@ p {
 
 .jumbotron-extend6{
     position: relative;
-    height: 50vh;
     width: 100%;
-    min-height: 300px;
+    min-height: 200px;
     background: image-url('destiny2-26.jpg')no-repeat center center;
     background-size: cover;
     background-color:rgba(255,255,255,0);
@@ -333,9 +329,8 @@ p {
 
 .jumbotron-extend7{
     position: relative;
-    height: 50vh;
     width: 100%;
-    min-height: 300px;
+    min-height: 200px;
     background: image-url('destiny2-32.jpg')no-repeat center center;
     background-position: 100% 33%;
     background-size: cover;
@@ -383,4 +378,8 @@ p {
 h6:hover {
     color:#0099FF;
     text-decoration: underline;
+}
+
+.card-img-top{
+    object-fit: cover;
 }

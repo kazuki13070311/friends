@@ -2,11 +2,11 @@
     - @friends.includes(:user).each do |friend|
         .media.my-3.rounded.bg-white
             - if friend.user.image?
-                = image_tag friend.user.image.url,class: 'mx-4 my-5',size: '100x100'
+                = image_tag friend.user.image.url,class: 'mx-4 mt-5',size: '100x100'
             - else
-                = image_tag "/assets/default.jpg",class: 'mx-4 my-5',size: '100x100'
+                = image_tag "/assets/default.jpg",class: 'mx-4 mt-5',size: '100x100'
             .media-body
-                .h5 
+                .h5
                     = link_to friend.name, friend,class: 'mt-3 mb-1 badge badge-pill badge-primary'
                 .h6.mx-1
                     = simple_format(friend.description)

@@ -3,7 +3,7 @@ h2.text-center
 
 .thumbnail.mb-3
     - if @user.image?
-        = image_tag @user.image.url,class: "d-block mx-auto"
+        = image_tag @user.image.url(:thumb),class: "d-block mx-auto"
     - else
         = image_tag "/assets/default.jpg",class: "d-block mx-auto"
     end
