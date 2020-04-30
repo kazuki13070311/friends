@@ -40,6 +40,7 @@ Rails.application.routes.draw do
   get 'users/:id/like', to: 'users#like'
   get 'home/term'
   get 'home/privacy'
+  get 'home/sitenav'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

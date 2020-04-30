@@ -17,7 +17,7 @@
 
 .title2{
     font-weight: bold;
-    font-size: 50px;
+    font-size: 50;
     padding: 100px 0px 100px 0px;
 }
 
@@ -210,6 +210,10 @@ td{
   border-radius: 50%;
 }
 
+.h6{
+    line-height: 1.5;
+}
+
 .h8{
     font-size: 1px; 
     bottom: 0px;
@@ -280,7 +284,7 @@ b:hover::after {
 }
 
 p {
-  padding: 0px 0px 100px 0px;
+  //padding: 0px 0px 100px 0px;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
@@ -382,4 +386,19 @@ h6:hover {
 
 .card-img-top{
     object-fit: cover;
+}
+
+/* サイト使い方ページ */
+.display1{
+    filter: drop-shadow(6px 6px 6px rgba(0,0,0,0.6));
+    padding: 50px;
+}
+
+.display2{
+    filter: drop-shadow(6px 6px 6px rgba(0,0,0,0.6));
+    padding: 50px;
+}
+
+.display3{
+    filter: drop-shadow(6px 6px 6px rgba(0,0,0,0.6));
 }

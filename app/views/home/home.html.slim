@@ -5,6 +5,8 @@
             |理想の仲間を見つけて
             br
             |素晴らしいGuardian Lifeを送ろう！
+            .form.group.mt-3.text-center
+                = link_to "サイトの使い方",home_sitenav_path,class: "btn btn-outline-primary rounded-pill"
         - unless current_user
             .form.group.text-center.mt-3
                 = link_to "新規登録",new_user_registration_path,class: "btn btn-outline-primary rounded-pill m-2"
@@ -138,7 +140,7 @@ hr
         br
         |理想の仲間を見つけて
       h1.title3
-        |より一層Destiny2を満喫しよう！！
+        |さらにDestiny2を満喫しよう！！
         - unless current_user
           .form.group.text-center.mt-5
               = link_to "今すぐ利用する",new_user_registration_path,class: "btn btn-outline-primary rounded-pill m-2 btn-lg"
