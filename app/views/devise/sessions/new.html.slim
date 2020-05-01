@@ -1,5 +1,7 @@
-h2.text-center
-  | ログイン
+.title5
+  h2.text-center
+    i.fas.fa-sign-in-alt
+    | ログイン
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   
   .field
