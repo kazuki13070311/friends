@@ -1,5 +1,9 @@
 @import "bootstrap";
 
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
 /* homeレイアウト */
 
 .app-title{
@@ -77,7 +81,7 @@
 }
 
 .description-parts1 {
-  padding: 10px 0px 20px 0px;
+  padding: 0px 0px 0px 0px;
   font-weight: bold; // 太文字にする
 }
 
@@ -199,11 +203,12 @@ td{
     font-weight: bold;
 }
 
-/*投稿一覧ページ*/
+/*募集投稿一覧ページ*/
 .media{
     margin: auto;
     position: relative;
     object-fit: cover;
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.2));
 }
 
 .media img{
@@ -223,6 +228,7 @@ td{
 /*自慢の一枚投稿ページ*/
 .card{
     width: 200%;
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
 }
 
 .card-img-top{
@@ -284,7 +290,6 @@ b:hover::after {
 }
 
 p {
-  //padding: 0px 0px 100px 0px;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
@@ -401,12 +406,72 @@ h6:hover {
 
 .display3{
     filter: drop-shadow(6px 6px 6px rgba(0,0,0,0.6));
+    padding: 50px;
 }
 
-.media{
-    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.2));
+.display4{
+    filter: drop-shadow(6px 6px 6px rgba(0,0,0,0.6));
+    padding: 50px;
 }
 
-.card{
-    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+.title10{
+    font-size: 30px;
+    padding: 80px 0px 80px 0px;
+    letter-spacing: 0.03em
+}
+
+.angle-double-down{
+    font-size: 30px;
+    padding: 50px;
+}
+
+.point{
+    padding: 50px 0px 50px 0px;
+    font-size: 24px;
+}
+
+.text-font1{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0px 0px 40px 0px;
+}
+
+.text-position{
+    padding: 100px 0px 0px 0px;
+    font-weight: bold;
+}
+
+.text-size1{
+    font-weight: bold;
+}
+
+.text-size2{
+    font-weight: bold;
+    font-size: 30px;
+    padding: 50px 0px 0px 0px;
+}
+
+.dokidoki{
+    animation: dokidoki 1.5s infinite;
+    width: 150px;
+    height: 40px;
+}
+
+@keyframes dokidoki {
+	0% {
+		transform: scale(1.05)
+	}
+	5% {
+		transform: scale(1)
+	}
+	95% {
+		transform: scale(1)
+	}
+	100% {
+		-webkit-transform: scale(1.05)
+	}
+}
+
+.fa-map-pin{
+    color: red;
 }

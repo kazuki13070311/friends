@@ -8,7 +8,7 @@
             .form.group.mt-3.text-center
                 = link_to "サイトの使い方",home_sitenav_path,class: "btn btn-outline-primary rounded-pill"
         - unless current_user
-            .form.group.text-center.mt-3
+            //.form.group.text-center.mt-3
                 = link_to "新規登録",new_user_registration_path,class: "btn btn-outline-primary rounded-pill m-2"
                 = link_to "ログイン",new_user_session_path,class: "btn btn-outline-primary rounded-pill m-2"
             .form.group.mt-3.text-center
@@ -88,7 +88,7 @@ hr
         |全て解決できます！！
         - unless current_user
           .form.group.text-center.mt-5
-              = link_to "今すぐ利用する",new_user_registration_path,class: "btn btn-outline-primary rounded-pill m-2 btn-lg"
+              = link_to "今すぐ利用する",new_user_registration_path,class: "btn btn-primary rounded-pill m-2 dokidoki"
 
 hr
 .top-third
@@ -143,4 +143,4 @@ hr
         |さらにDestiny2を満喫しよう！！
         - unless current_user
           .form.group.text-center.mt-5
-              = link_to "今すぐ利用する",new_user_registration_path,class: "btn btn-outline-primary rounded-pill m-2 btn-lg"
+              = link_to "今すぐ利用する",new_user_registration_path,class: "btn btn-primary rounded-pill m-2 dokidoki"
