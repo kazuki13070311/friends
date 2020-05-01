@@ -5,38 +5,33 @@
             |理想の仲間を見つけて
             br
             |素晴らしいGuardian Lifeを送ろう！
-            .form.group.mt-3.text-center
-                = link_to "サイトの使い方",home_sitenav_path,class: "btn btn-outline-primary rounded-pill"
+        .form.group.mt-3.text-center
+            = link_to "サイトの使い方",home_sitenav_path,class: "btn btn-outline-primary rounded-pill"
         - unless current_user
-            //.form.group.text-center.mt-3
-                = link_to "新規登録",new_user_registration_path,class: "btn btn-outline-primary rounded-pill m-2"
-                = link_to "ログイン",new_user_session_path,class: "btn btn-outline-primary rounded-pill m-2"
             .form.group.mt-3.text-center
                 = link_to "簡単ログイン（閲覧用）",users_guest_sign_in_path, method: :post,class: "btn btn-outline-primary rounded-pill"
-
 hr
 .top-grap
   .container
     .section-title.text-center.my-5
       h1.title1
         |突然ですが…
-      h1.title1
-        |こんなお悩み、ありませんか？
+      h1.title2
+        |このようなお悩みはありませんか？
 
-hr
 .top-main
   .container
     .row.description-body
       .col-md-6.col-sm-6.text-center.my-5
-        h2.description-parts ソロプレイではもう限界だ…
-        h4
+        h3.description-parts ソロプレイではもう限界だ…
+        h5
           | 
           br
-          |初めはソロでもストーリーなどを
+          |初めはソロでもストーリーを
           br
           |進めることができたけど、
           br
-          |NFや高難易度クエストなどになると
+          |NFや高難易度クエスト等になると
           br
           |1人でクリアする事が難しくなり困っている
       .col-md-6.col-sm-6.text-center.my-5
@@ -48,29 +43,29 @@ hr
       .col-md-6.col-sm-6.text-center.my-5
         .jumbotron.jumbotron-extend2
       .col-md-6.col-sm-6.text-center.my-5
-        h2.description-parts 協力して遊べる仲間が欲しい
-        h4
+        h3.description-parts 協力して遊べる仲間が欲しい
+        h5
           | 
           br
           |1人では難易度が高くて
           br
-          |攻略する事ができない高難易度クエストや
+          |攻略する事ができない高難易度のクエストや
           br
-          |初心者では挑みにくい対人戦などへ
+          |初心者では挑みにくい対人戦等へ
           br
-          |一緒に行ってくれる頼もしい仲間が欲しい
+          |一緒に行ってくれる仲間が欲しい
 
 hr
   .container
     .row.description-body
       .col-md-6.col-sm-6.text-center.my-5
-        h2.description-parts 理想のユーザーと出会いたい
-        h4
+        h3.description-parts 理想のユーザーと出会いたい
+        h5
           | 
           br
           |一緒に遊べる仲間は欲しいけど
           br
-          |自分が求めるユーザー像とマッチする
+          |求めるユーザー像とマッチする
           br
           |理想的なユーザーには
           br
@@ -85,7 +80,7 @@ hr
       h1.title1
         |そのお悩み…
       h1.title2
-        |全て解決できます！！
+        |全て解決することができます！
         - unless current_user
           .form.group.text-center.mt-5
               = link_to "今すぐ利用する",new_user_registration_path,class: "btn btn-primary rounded-pill m-2 dokidoki"
@@ -134,13 +129,13 @@ hr
 hr
 .top-forth
   .container
-    .section-title.text-center
+    .section-title1.text-center
       h1.title1
         |Guardians Communityで
         br
-        |理想の仲間を見つけて
+        |理想の仲間を探して
       h1.title3
-        |さらにDestiny2を満喫しよう！！
+        |今以上にDestiny2を満喫しよう！
         - unless current_user
           .form.group.text-center.mt-5
               = link_to "今すぐ利用する",new_user_registration_path,class: "btn btn-primary rounded-pill m-2 dokidoki"

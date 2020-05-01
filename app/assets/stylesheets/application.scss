@@ -16,19 +16,25 @@ body{
 
 .title1{
     font-weight: bold;
-    padding: 100px 0px 100px 0px;
+    font-size: 32px;
+    padding: 100px 0px 0px 0px;
 }
 
 .title2{
     font-weight: bold;
-    font-size: 50;
+    font-size: 32px;
     padding: 100px 0px 100px 0px;
 }
 
 .title3{
     font-weight: bold;
-    font-size: 50px;
-    padding: 70px 0px 100px 0px;
+    font-size: 32px;
+    padding: 70px 0px 0px 0px;
+}
+
+.section-title1{
+    font-weight: bold;
+    font-size: 32px;
 }
 
 .jumbotron-extend{
@@ -92,11 +98,13 @@ body{
     background-color:rgba(255,255,255,0);
     font-weight: bold;
     background-color:rgba(255,255,255,0);
-    font-size: 60px;
+    font-size: 55px;
 }
 
 .site-introduction{
     color: #fff;
+    font-weight: bold;
+    padding: 0 0 50px 0;
 }
 
 
