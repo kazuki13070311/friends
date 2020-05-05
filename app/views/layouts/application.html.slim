@@ -17,14 +17,14 @@ html
     script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"
     = analytics_init if Rails.env.production?
 
-  body
+  body.bg-light
   .sticky-top
     = render 'layouts/header'
       
-  .container.bg-light
+  .container
     - if flash.notice.present?
       .alert.alert-success= flash.notice
     = yield
 
-  .container-fluid.bg-light
+  .container-fluid
     = render 'layouts/footer'

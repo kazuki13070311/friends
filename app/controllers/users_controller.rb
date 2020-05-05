@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @friends = @user.friends
+    @relationship = Relationship.new
   end
 
   def edit
@@ -41,6 +42,18 @@ class UsersController < ApplicationController
   def like
     @user = User.find(params[:id])
     @likes = @user.likes.page(params[:page]).per(6).order(updated_at: :desc)
+  end
+
+  def following
+    @user = User.find(params[:id])
+    @users = @user.followings
+    render 'show_follow'
+  end
+
+  def followers
+    @user = User.find(params[:id])
+    @users = @user.followers
+    render 'show_follower'
   end
 
   private

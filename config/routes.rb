@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[index new edit update]
 
+  resources :relationships, only: %i[create destroy]
+
   resources :friends do
     resources :comments,only: [:create,:destroy]
   end
@@ -18,6 +20,7 @@ Rails.application.routes.draw do
   resources :posts, only: %i[index show create] do
     resources :likes, only: %i[create destroy]
   end
+
 
   devise_for :users, controllers: {
     registrations: 'users/registrations',
@@ -41,6 +44,16 @@ Rails.application.routes.draw do
   get 'home/term'
   get 'home/privacy'
   get 'home/sitenav'
+
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+
+
+  #get 'users/:id/following', to: 'users#following'
+  #get 'users/:id/followers', to: 'users#followers'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
