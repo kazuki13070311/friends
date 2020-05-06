@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'rooms/show'
   get 'posts/index'
   get 'posts/show'
   get 'posts/ranking'
@@ -51,9 +52,6 @@ Rails.application.routes.draw do
     end
   end
 
-
-  #get 'users/:id/following', to: 'users#following'
-  #get 'users/:id/followers', to: 'users#followers'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

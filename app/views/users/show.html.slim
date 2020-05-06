@@ -1,11 +1,16 @@
 = render 'users/mypage'
-- if user_signed_in?
-    = render 'follow_form'
-    = render 'stats'
-- else
-    .login.text-center
-        p
-        |⚠︎フォローやチャット機能の利用にはログインが必要です
+.container
+    .row
+        .col-md-10.offset-md-1
+            - if user_signed_in?
+                = render 'follow_form'
+                = render 'stats'
+            - else
+                .login.text-center
+                    p
+                    |⚠︎フォローやチャット機能の利用にはログインが必要です
+br
+= link_to "チャットルーム",rooms_show_path
 br
 .container
    .row
