@@ -1,8 +1,0 @@
-h1.text-center
-    |チャットルーム
-
-#messages
-    = render @messages
-
-= label_tag :document, 'メッセージを送る:'
-= text_field_tag :document, nil, data: { behavior: 'room_speaker'}

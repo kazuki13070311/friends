@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'rooms/show'
   get 'posts/index'
   get 'posts/show'
   get 'posts/ranking'
