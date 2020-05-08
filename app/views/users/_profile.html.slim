@@ -40,5 +40,9 @@ table.table.table
             th= "プレイ時間"
             td= @user.timezone
         tr
+            th= "Twitter"
+            - if @user.twitter?
+                td= link_to "Twitterアカウントを見にいく","https://twitter.com/#{@user.twitter}",class:"fab fa-twitter btn btn-gradient-3d-simple "
+        tr
             th= "プロフィール"
             td= simple_format(@user.profile) 

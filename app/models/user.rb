@@ -24,6 +24,7 @@
 #  strength               :float(24)
 #  style                  :string(255)
 #  timezone               :string(255)
+#  twitter                :string(255)
 #  voice                  :string(255)
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null

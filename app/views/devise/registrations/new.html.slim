@@ -9,6 +9,7 @@
     .form-group.row.mt-3
       .col-md-8.offset-md-2
         = f.label :name
+        |（必須）
         br
         = f.text_field :name, autofocus: true,class: 'form-control'
 
@@ -16,6 +17,7 @@
     .form-group.row.mt-3
       .col-md-8.offset-md-2
         = f.label :email
+        |（必須）
         br
         = f.email_field :email, autofocus: true, autocomplete: "email",class: 'form-control'
 
@@ -32,20 +34,17 @@
     .form-group.row.mt-3
       .col-md-8.offset-md-2
         = f.label :password
-        - if @minimum_password_length
-          a
-            | (
-            = @minimum_password_length
-            |  文字以上)
+        |（必須）
         br
-        = f.password_field :password, autocomplete: "new-password",class: 'form-control'
+        = f.password_field :password, autocomplete: "new-password",placeholder: "6文字以上",class: 'form-control'
 
   .field
     .form-group.row.mt-3
       .col-md-8.offset-md-2
         = f.label :password_confirmation
+        |（必須）
         br
-        = f.password_field :password_confirmation, autocomplete: "new-password",class: 'form-control'
+        = f.password_field :password_confirmation, autocomplete: "new-password",placeholder: "6文字以上",class: 'form-control'
   
   .form-group.row.mt-3
       .col-md-8.offset-md-2

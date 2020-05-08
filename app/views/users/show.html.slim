@@ -4,11 +4,7 @@
         .col-md-10.offset-md-1
             - if user_signed_in?
                 = render 'follow_form'
-                = render 'stats'
-            - else
-                .login.text-center
-                    p
-                    |⚠︎フォロー機能の利用にはログインが必要です
+            = render 'stats'
 br
 
 br
