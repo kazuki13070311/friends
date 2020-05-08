@@ -1,5 +1,11 @@
 .col-md-10.offset-md-1
-     - @friends.includes(:user).each do |friend|
+    - if @user.friends.empty?
+        .posison-point
+            p
+                = @user.name
+                |さんはまだ投稿していません
+    - else @user.friends
+        - @friends.includes(:user).each do |friend|
             .media.bg-white.m-3.rounded
                 - if friend.user.image?
                     = image_tag friend.user.image.url,class: 'mx-3 my-2',size: '50x50'

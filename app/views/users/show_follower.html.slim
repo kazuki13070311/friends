@@ -1,5 +1,36 @@
-- @user.followers.each do |user|
-  table
-  tr
-    td= user.name
-    td= link_to '詳細' ,user_path(user) 
+.follow_user_name.text-center.my-5
+  h3
+    = @user.name
+    |さんを
+    br
+    |フォローしているユーザー
+.row
+  - if @users.empty?
+    .posison-point1.text-center
+      p #{@user.name}さんはまだフォローされていません
+  - else
+    - @user.followers.each do |user|
+        .col-md-4.col-xs-12
+          .media.my-3.rounded.bg-white
+            - if user.image?
+              = image_tag user.image.url,class: 'm-3',size: '100x100'
+            - else
+              = image_tag "/assets/default.jpg",class: 'm-3',size: '100x100'
+            .media-body
+              .h5
+                = link_to user.name, user,class: 'mt-2 mb-1 badge badge-pill badge-primary'
+              .h6
+                - if user.sex?
+                  | 性別：
+                  = user.sex
+                - else
+                  |性別：未記入
+              .h6
+                - if user.strength?
+                  | キルレ：
+                  = user.strength
+                - else       
+                  | キルレ：未記入
+              .h8.mr-2.text_updated_at
+                |登録日：
+                = I18n.l(user.updated_at, format: :long)

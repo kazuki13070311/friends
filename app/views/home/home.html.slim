@@ -6,10 +6,10 @@
             br
             |素晴らしいGuardian Lifeを送ろう！
         .form.group.mt-3.text-center
-            = link_to "サイトの使い方",home_sitenav_path,class: "btn btn-outline-primary rounded-pill"
+            = link_to "サイトの使い方",home_sitenav_path,class: "btn btn-primary rounded-pill"
         - unless current_user
             .form.group.mt-3.text-center
-                = link_to "簡単ログイン（閲覧用）",users_guest_sign_in_path, method: :post,class: "btn btn-outline-primary rounded-pill"
+                = link_to "簡単ログイン（閲覧用）",users_guest_sign_in_path, method: :post,class: "btn btn-primary rounded-pill"
 hr
 .top-grap
   .container

@@ -1,6 +1,6 @@
 = render 'users/mypage'
 .container
-    .row
+    .row.text-center
         .col-md-10.offset-md-1
             - if user_signed_in?
                 = render 'follow_form'
@@ -8,7 +8,7 @@
             - else
                 .login.text-center
                     p
-                    |⚠︎フォローやチャット機能の利用にはログインが必要です
+                    |⚠︎フォロー機能の利用にはログインが必要です
 br
 
 br

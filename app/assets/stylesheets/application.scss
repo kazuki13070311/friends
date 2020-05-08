@@ -242,6 +242,13 @@ td{
     padding: 40px 0px 20px 0px;
 }
 
+/* ユーザー一覧 */
+.text_updated_at{
+    position: absolute;
+	right: 0;
+	bottom: 1px;
+}
+
 /*自慢の一枚投稿ページ*/
 .card{
     width: 200%;
@@ -497,39 +504,11 @@ h6:hover {
     color: red;
 }
 
-/* チャットルーム */
-.balloon1-left {
-  position: relative;
-  display: inline-block;
-  margin: 1.5em 0 1.5em 15px;
-  padding: 7px 10px;
-  min-width: 120px;
-  max-width: 100%;
-  color: #555;
-  font-size: 16px;
-  background: #e0edff;
-  border-radius: 6px;
+.posison-point{
+    padding: 40px;
 }
 
-.balloon1-left:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -30px;
-  margin-top: -15px;
-  border: 15px solid transparent;
-  border-right: 15px solid #e0edff;
-}
-
-.balloon1-left p {
-  margin: 0;
-  padding: 0;
-}
-
-
-.message_created_at{
-    font-size: 10px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
+.posison-point1{
+    margin: auto;
+    text-align: center;
 }

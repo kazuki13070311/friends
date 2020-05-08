@@ -1,12 +1,18 @@
 .row
    .col-md-12.offset-md-1
         .row.col-md-12
-            - @user.posts.includes(:user).each do |post|
-                    .card-group.m-2
-                        .card style="width: 19rem"
-                            = image_tag post.image.url,class: 'card-img-top',size: '300x250'
-                            .card-body
-                                = post.content
-                            .card-footer
-                                = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
+            - if @user.posts.empty?
+                .posison-point
+                    p
+                        = @user.name
+                        |さんの投稿はありません
+            - else @user.posts
+                - @user.posts.includes(:user).each do |post|
+                        .card-group.m-2
+                            .card style="width: 19rem"
+                                = image_tag post.image.url,class: 'card-img-top',size: '300x250'
+                                .card-body
+                                    = post.content
+                                .card-footer
+                                    = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
 
