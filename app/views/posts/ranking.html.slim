@@ -10,7 +10,7 @@
             - @all_ranks.each.with_index(1) do |post, i|
                 .card-group.m-2
                     .card style="width: 19rem"
-                        h5
+                        h5.m-1
                             = i 
                             |位
                         = image_tag post.image.url,class: 'card-img-top',size: '300x250'
