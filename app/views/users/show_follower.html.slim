@@ -1,9 +1,10 @@
 .follower_title.text-center.my-5
-  h3.fas.fa-users
+  h3.fas.fa-users.h3-follow
     = @user.name
     |さんを
     br
     |フォローしているユーザー
+hr
 .row
   - if @users.empty?
     .posison-point1.text-center

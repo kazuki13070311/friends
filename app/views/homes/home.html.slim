@@ -6,20 +6,87 @@
             br
             |素晴らしいGuardian Lifeを送ろう！
         .form.group.mt-3.text-center
-            = link_to "サイトの使い方",home_sitenav_path,class: "btn btn-primary rounded-pill"
+            = link_to "サイトの使い方",home_sitenav_path,class: "btn btn-primary rounded-pill btn-lg"
         - unless current_user
             .form.group.mt-3.text-center
-                = link_to "簡単ログイン（閲覧用）",users_guest_sign_in_path, method: :post,class: "btn btn-primary rounded-pill"
+                = link_to "簡単ログイン（閲覧用）",users_guest_sign_in_path, method: :post,class: "btn btn-primary rounded-pill btn-lg"
 hr
 .top-grap
-  .container
+  .row
+    .col-md-12
+      .section-title.text-center
+        h2.fas.fa-question-circle.my-5
+          |Guardians Communityとは
+      p.section-subtitele.text-center
+        |オンラインゲーム「Destiny2」でのフレンド登録後のミスマッチを防ぎ
+        br
+        |自分が求める理想のユーザーと出会うための場を提供するサービスです。
+
+.container
+  .row
+    .col-md-4.col-sm-6.text-center
+      i.fas.fa-users.fa-top
+      h3.description-parts1 ユーザー情報量が豊富
+      p
+        | ✔ 非常に多くのプレイヤー情報を
+        br
+        |記述できる様になっているので、
+        br
+        |フレンド登録しなくても
+        br
+        |事前にユーザーの詳細な情報を知れる
+    .col-md-4.col-sm-6.text-center
+      i.fas.fa-search.fa-top
+      h3.description-parts1 高精度な検索機能
+      p
+        | ✔ 各ユーザーの情報量が豊富なので
+        br
+        |事前情報を的確に仕入れる事ができ、
+        br
+        |その結果自分の求めるユーザーを
+        br
+        |高精度で見つける事ができる
+    .col-md-4.col-sm-6.text-center
+      i.fas.fa-user-shield.fa-top
+      h3.description-parts1 ミスマッチを防ぐ
+      p
+        | ✔ プロフィールを詳細に書くなど
+        br
+        |自発的にアピールすればするほど
+        br
+        |自分の求めるユーザー像を他ユーザーに
+        br
+        |共有する事ができ結果ミスマッチを防げる
+hr
+
+.home-friend-titele
+  h3.fas.fa-user-friends
+    |最新の募集
+.col-md-8.offset-md-2
+  .home-friends
+    = render 'homes/body1'
+.friend-btn.text-center
+  = link_to "新着募集をもっと見る", friends_path,class: "btn btn-primary my-5 btn-lg " 
+
+hr
+.home-friend-titele1
+  h3.fas.fa-user-friends
+    |自慢の一枚の最新投稿
+= render 'homes/body2'
+.post-btn.text-center
+  = link_to "新着投稿をもっと見る", posts_path,class: "btn btn-primary my-5 btn-lg " 
+
+    
+  //.top-grap
+  //.container
     .section-title.text-center.my-5
       h1.title1
         |突然ですが…
       h1.title2
         |このようなお悩みはありませんか？
+    
 
-.top-main
+//.top-main
   .container
     .row.description-body
       .col-md-6.col-sm-6.text-center.my-5
@@ -37,7 +104,7 @@ hr
       .col-md-6.col-sm-6.text-center.my-5
         .jumbotron.jumbotron-extend1
 
-hr
+//hr
   .container
     .row.description-body
       .col-md-6.col-sm-6.text-center.my-5
@@ -55,7 +122,7 @@ hr
           br
           |一緒に行ってくれる仲間が欲しい
 
-hr
+//hr
   .container
     .row.description-body
       .col-md-6.col-sm-6.text-center.my-5
@@ -73,8 +140,8 @@ hr
       .col-md-6.col-sm-6.text-center.my-5
         .jumbotron.jumbotron-extend3
 
-hr
-.top-second
+//hr
+//.top-second
   .container
     .section-title.text-center
       h1.title1
@@ -85,8 +152,8 @@ hr
           .form.group.text-center.mt-5
               = link_to "今すぐ利用する",new_user_registration_path,class: "btn btn-primary rounded-pill m-2 dokidoki"
 
-hr
-.top-third
+//hr
+//.top-third
   .container
     .section-title.text-center
       h1.title.mt-5.far.fa-lightbulb

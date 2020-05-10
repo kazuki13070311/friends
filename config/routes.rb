@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'posts/index'
   get 'posts/show'
   get 'posts/ranking'
-  root to: 'home#home'
+  root to: 'homes#home'
 
   resources :users, only: %i[index new edit update]
 

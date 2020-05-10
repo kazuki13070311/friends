@@ -41,6 +41,29 @@ body{
     font-size: 32px;
 }
 
+.home-friend-titele{
+    margin-left: auto;
+    margin-right: auto;
+    width: 12em;
+    padding: 30px 0 15px 0;
+}
+
+.home-friend{
+    padding: 0 0 30px 0;
+}
+
+.home-friend-titele1{
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+    padding: 45px 0 30px 0;
+}
+
+.friend-btn{
+    heigh: 50px;
+}
+
+
 .jumbotron-extend{
     position: relative;
     height: 100vh;
@@ -111,12 +134,23 @@ body{
     padding: 0 0 50px 0;
 }
 
+.section-title{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.section-subtitele{
+    font-size: 20px;
+}
+
+.far.fa-lightbulb{
+    font-weight: bold;
+}
+
 
 .btn-lg{
-    border-radius: 0;
-    background-color: #00f;
-    color: #fff;
-    font-family: 'Avenir',serif;
+    border-radius: 30px;
+    font-size: 20px;
 }
 
 .btn-lg:hover{
@@ -355,7 +389,7 @@ p {
     margin-bottom: 100px;
     color: #fff;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 37px;
     background-color:rgba(255,255,255,0);
 }
 
@@ -529,4 +563,8 @@ h6:hover {
 .posison-point1{
     margin: auto;
     text-align: center;
+}
+
+.h3-follow{
+    font-size: 26px;
 }
