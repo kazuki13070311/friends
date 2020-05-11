@@ -57,8 +57,16 @@ hr
         |自分の求めるユーザー像を他ユーザーに
         br
         |共有する事ができ結果ミスマッチを防げる
-hr
 
+hr
+.home-friend-titele2
+  h3.fas.fa-user
+    |最新の登録者
+= render 'homes/body3'
+.user-btn.text-center
+  = link_to "新規登録者をもっと見る", users_path,class: "btn btn-primary my-5 btn-lg " 
+
+hr
 .home-friend-titele
   h3.fas.fa-user-friends
     |最新の募集
@@ -71,7 +79,7 @@ hr
 hr
 .home-friend-titele1
   h3.fas.fa-camera
-    |自慢の一枚の最新投稿
+    |最新の自慢の一枚
 = render 'homes/body2'
 .post-btn.text-center
   = link_to "新着投稿をもっと見る", posts_path,class: "btn btn-primary my-5 btn-lg " 
@@ -87,5 +95,7 @@ hr
       h1.title3
         |今以上にDestiny2を満喫しよう！
         - unless current_user
-          .form.group.text-center.mt-5
-              = link_to "今すぐ利用する",new_user_registration_path,class: "btn btn-primary rounded-pill m-2 dokidoki "
+          br
+          i.fas.fa-angle-double-down.angle-double-down
+          .form.group.text-center.my-2
+              = link_to "今すぐ利用する",new_user_registration_path,class: "btn btn-primary rounded-pill dokidoki "
