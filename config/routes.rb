@@ -41,9 +41,9 @@ Rails.application.routes.draw do
   get 'users/:id/friend', to: 'users#friend'
   get 'users/:id/post', to: 'users#post'
   get 'users/:id/like', to: 'users#like'
-  get 'home/term'
-  get 'home/privacy'
-  get 'home/sitenav'
+  get 'homes/term'
+  get 'homes/privacy'
+  get 'homes/sitenav'
 
   resources :users do
     member do

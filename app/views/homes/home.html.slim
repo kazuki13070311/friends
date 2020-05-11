@@ -6,7 +6,7 @@
             br
             |素晴らしいGuardian Lifeを送ろう！
         .form.group.mt-3.text-center
-            = link_to "サイトの使い方",home_sitenav_path,class: "btn btn-primary rounded-pill btn-lg"
+            = link_to "サイトの使い方",homes_sitenav_path,class: "btn btn-primary rounded-pill btn-lg"
         - unless current_user
             .form.group.mt-3.text-center
                 = link_to "簡単ログイン（閲覧用）",users_guest_sign_in_path, method: :post,class: "btn btn-primary rounded-pill btn-lg"
@@ -71,7 +71,7 @@ hr
 hr
 .home-friend-titele1
   h3.fas.fa-camera
-    |自慢の一枚の最新投稿
+    |自慢の一枚の最新投稿
 = render 'homes/body2'
 .post-btn.text-center
   = link_to "新着投稿をもっと見る", posts_path,class: "btn btn-primary my-5 btn-lg " 
