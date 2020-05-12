@@ -105,7 +105,7 @@ https://kattyan.net/2019/06/20/destiny2-sirzun7/
 * bootstrap4
 * JavaScript(jQuely)
 
-##  サーバーサイド
+##  バックエンド
 
 * Ruby 2.6.5
 * Ruby on Rails 6.0.2
