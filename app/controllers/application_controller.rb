@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[name image])
 
-    devise_parameter_sanitizer.permit(:account_update, keys: %i[name email profile image strength clan psnid twitter])
+    devise_parameter_sanitizer.permit(:account_update, keys: %i[name email profile image strength clan psnid twitter steam])
     devise_parameter_sanitizer.permit(:account_update, keys: %i[sex level lightlevel model voice style timezone profession])
   end
 end

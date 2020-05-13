@@ -21,6 +21,7 @@
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string(255)
 #  sex                    :string(255)
+#  steam                  :string(255)
 #  strength               :float(24)
 #  style                  :string(255)
 #  timezone               :string(255)

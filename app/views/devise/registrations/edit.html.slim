@@ -22,7 +22,13 @@ h2.text-center
     .col-md-8.offset-md-2
       = f.label :"PSID"
       br
-      = f.text_field :psnid,placeholder: "Destiny2でご使用中のID(アカウント名)をご記入下さい",autofocus: true,class: 'form-control'
+      = f.text_field :psnid,placeholder: "Destiny2でご使用中のPSID(アカウント名)をご記入下さい",autofocus: true,class: 'form-control'
+
+  .form-group.row
+    .col-md-8.offset-md-2
+      = f.label :"Steam ID"
+      br
+      = f.text_field :steam,placeholder: "Destiny2でご使用中のSteam ID(アカウント名)をご記入下さい",autofocus: true,class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
@@ -92,7 +98,7 @@ h2.text-center
     .col-md-8.offset-md-2
       = f.label :プレイ時間帯
       br
-      = f.text_field :timezone, placeholder: "Destiny2を良く遊ぶ時間帯を記入してください",autofocus: true,class: 'form-control'
+      = f.text_field :timezone, placeholder: "良く遊ぶ時間帯を記入してください",autofocus: true,class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
@@ -105,7 +111,7 @@ h2.text-center
     .col-md-8.offset-md-2
       = f.label :プロフィール（400文字以内）
       br
-      = f.text_area :profile, placeholder: "詳細に書けば書くほど良いガーディアンに出会える確率が上昇します",autofocus: true,rows: 5,class: 'form-control'
+      = f.text_area :profile, placeholder: "自己紹介やDestiny2での実績など記入してください",autofocus: true,rows: 5,class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2

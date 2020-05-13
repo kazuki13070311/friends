@@ -33,6 +33,8 @@
     - if user_signed_in? && current_user.id == @user.id
         = link_to '編集',edit_friend_path,class: 'btn btn-primary mr-3'
         = link_to '削除',@friend,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'
+    .twiiter
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"  data-size="large" data-lang="ja" data-show-count="false" data-text="新規募集しました！ぜひ見てください！  #Destiny2 #募集 #拡散希望 ">tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 br
 .row
