@@ -1,12 +1,10 @@
 .jumbotron.jumbotron-extend
     .jumbotron-fluid.jumbotron-container
-        h1.site-name.text-center Guardians Community
+        h1.site-name.text-center Right Guardians
         h3.site-introduction.text-center
             |理想の仲間を見つけて
             br
             |素晴らしいGuardian Lifeを送ろう！
-        //.form.group.mt-3.text-center
-            = link_to "サイトの使い方",homes_sitenav_path,class: "btn btn-primary rounded-pill btn-lg"
         - unless current_user
             .form.group.mt-3.text-center
               = link_to "ログイン",new_user_session_path,class: 'fas fa-sign-in-alt btn btn-primary rounded-pill btn-lg mx-1'
@@ -44,7 +42,7 @@ hr
   .container
     .section-title1.text-center
       h1.title4
-        |Guardians Communityで
+        |Right Guardiansで
         br
         |理想の仲間を探して
       h1.title3

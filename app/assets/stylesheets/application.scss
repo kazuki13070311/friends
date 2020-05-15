@@ -128,7 +128,7 @@ body{
 
 .description-parts1 {
   padding: 0px 0px 0px 0px;
-  font-weight: bold; // 太文字にする
+  font-weight: bold;
 }
 
 .site-name{
@@ -139,12 +139,14 @@ body{
     font-weight: bold;
     background-color:rgba(255,255,255,0);
     font-size: 55px;
+    text-shadow: 2px 3px 4px #000;
 }
 
 .site-introduction{
     color: #fff;
     font-weight: bold;
     padding: 0 0 50px 0;
+    text-shadow: 1px 2px 3px #000;
 }
 
 .section-title{

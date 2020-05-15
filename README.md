@@ -1,8 +1,8 @@
-# :two_men_holding_hands: Guardians Community
+# :two_men_holding_hands: Right Guardians
 
 オンラインゲーム「Destiny2」で一緒に遊べる仲間を見つける場所を提供→http://guardians-community.com/
 
-![localhost_3000_](https://user-images.githubusercontent.com/57397215/79339158-6c149700-7f63-11ea-920f-8866d51f3e98.png)
+![localhost_3000_](https://user-images.githubusercontent.com/57397215/82018791-f5cd9680-96c0-11ea-9c3e-9040898a3f32.png)
 
 * 未ログイン時は閲覧のみ可能になっております。
 * 簡単ログインでの「ゲストユーザー」は投稿以外の操作を禁止しております。ご了承ください。
