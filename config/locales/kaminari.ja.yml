@@ -10,8 +10,8 @@ ja:
     page_entries_info:
       one_page:
         display_entries:
-          zero: "募集がありません"
-          one: "1件の募集が表示されています"
-          other: "%{count}件の募集が表示されています"
+          zero: "投稿がありません"
+          one: "1件表示されています"
+          other: "%{count}件表示されています"
       more_pages:
-        display_entries: "全%{total}件中 %{first}&nbsp;-&nbsp;%{last}件の募集が表示されています"
+        display_entries: "全%{total}件中 %{first}&nbsp;-&nbsp;%{last}件表示されています"

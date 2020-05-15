@@ -1,10 +1,26 @@
 = comments.count
 |件コメント
 
-h6.more data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
-    |もっと見る…
+//h6.more data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" もっと見る…
 
-- comments.includes(:user).first(2).each do |comment|
+- comments.includes(:user).each do |comment|
+    .media
+        - if comment.user.image?
+            = image_tag comment.user.image.url,class: "mt-1 mr-3",size: '45x45'
+        - else
+            = image_tag "/assets/default.jpg",class: "mt-1 mr-3",size: '45x45'
+        .media-body
+            = link_to "@#{comment.user.name}", comment.user
+            .media-entry
+                = comment.content
+                - if comment.user == current_user
+                    = link_to friend_comment_path(comment.friend_id,comment.id),method: :delete,remote: true,data: { confirm: '削除してよろしいですか？' }, class: "comment_destroy ml-3" do
+                        i class="fas fa-trash" style="color: black;"
+            .span.comment-data.float-right
+                = comment.created_at.strftime('%Y/%m/%d %H:%M:%S')
+
+
+//- comments.includes(:user).first(2).each do |comment|
     - unless comment.id.nil?
         .media
             - if comment.user.image?
@@ -21,7 +37,7 @@ h6.more data-toggle="collapse" data-target="#collapseExample" aria-expanded="fal
                 .span.comment-data.float-right
                     = comment.created_at.strftime('%Y/%m/%d %H:%M:%S')
 
-.collapse id="collapseExample"        
+//.collapse id="collapseExample"        
     - comments.offset(2).each do |comment|
         - unless comment.id.nil?
             .media

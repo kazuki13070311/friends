@@ -46,7 +46,6 @@ br
         hr
         #comments_area
             = render partial: 'comments/index', locals: {comments: @comments}
-
         br
         - if user_signed_in?
             .comment_create
