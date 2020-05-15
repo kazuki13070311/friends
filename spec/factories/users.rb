@@ -6,6 +6,7 @@
 #
 #  id                     :bigint           not null, primary key
 #  admin                  :boolean          default(FALSE)
+#  carreer                :string(255)
 #  clan                   :string(255)
 #  email                  :string(255)      default(""), not null
 #  encrypted_password     :string(255)      default(""), not null
@@ -27,6 +28,7 @@
 #  timezone               :string(255)
 #  twitter                :string(255)
 #  voice                  :string(255)
+#  weapon                 :string(255)
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #

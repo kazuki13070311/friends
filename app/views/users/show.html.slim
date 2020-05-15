@@ -5,6 +5,8 @@
             - if user_signed_in?
                 = render 'follow_form'
             = render 'stats'
+            - if current_user.admin?
+                = link_to "マイページトップ" ,"#{@user.id}/admin"
 br
 
 br

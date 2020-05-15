@@ -44,6 +44,12 @@ class UsersController < ApplicationController
     @likes = @user.likes.page(params[:page]).per(6).order(updated_at: :desc)
   end
 
+  def admin
+    @user = User.all
+    @friend = Friend.all
+    @post = Post.all
+  end
+
   def following
     @user = User.find(params[:id])
     @users = @user.followings

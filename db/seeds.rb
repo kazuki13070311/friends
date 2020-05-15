@@ -14,6 +14,7 @@ User.create!(
   image: 'default.jpg',
   password: 'test123',
   password_confirmation: 'test123',
+  twitter: 'test',
   admin: true
 )
 
@@ -23,5 +24,6 @@ User.create!(
   image: 'default.jpg',
   password: 'test234',
   password_confirmation: 'test234',
+  twitter: 'test',
   admin: true
 )

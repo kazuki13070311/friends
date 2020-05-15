@@ -60,6 +60,12 @@ h2.text-center
 
   .form-group.row
     .col-md-8.offset-md-2
+      = f.label :メイン武器
+      br
+      = f.text_field :weapon, placeholder: "良く使う武器を記入して下さい",autofocus: true,class: 'form-control'
+
+  .form-group.row
+    .col-md-8.offset-md-2
       = f.label :所属クラン
       br
       = f.text_field :clan,placeholder: "所属クラン名を記入して下さい", autofocus: true,class: 'form-control'
@@ -81,6 +87,12 @@ h2.text-center
       = f.label :キルレ
       br
       = f.text_field :strength, placeholder: "キルレ(K/D)を記入して下さい",autofocus: true,class: 'form-control'
+
+  .form-group.row
+    .col-md-8.offset-md-2
+      = f.label :Destiny歴
+      br
+      = f.text_field :carreer, placeholder: "Destiny歴を記入してください",autofocus: true,class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
@@ -125,7 +137,6 @@ h2.text-center
       br
       = f.password_field :password_confirmation, placeholder: "パスワードを変更しない場合は空白にして下さい", autocomplete: "new-password",class: 'form-control'
       
-  
   .form-group.row
     .col-md-8.offset-md-2
       = f.label :current_password
