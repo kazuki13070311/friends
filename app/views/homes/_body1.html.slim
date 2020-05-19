@@ -2,9 +2,9 @@
     - @friends.each do |friend|
         .media.my-3.rounded.bg-white
             - if friend.user.image?
-                = image_tag friend.user.image.url,class: 'mx-3 my-2',size: '50x50'
+                = link_to image_tag(friend.user.image.url,class: 'mx-3 my-2',size: '50x50'),friend.user
             - else
-                = image_tag "/assets/default.jpg",class: 'mx-3 my-2',size: '50x50'
+                = link_to image_tag("/assets/default.jpg",class: 'mx-3 my-2',size: '50x50'),friend.user
             .media-body
                 .h5
                     = link_to friend.name, friend,class: 'mt-2 mb-1 badge badge-pill badge-primary'

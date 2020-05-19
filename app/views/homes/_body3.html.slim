@@ -3,9 +3,9 @@
         .col-md-4.col-xs-12
             .media.my-3.rounded.bg-white
                 - if user.image?
-                    = image_tag user.image.url,class: 'm-3',size: '100x100'
+                    = link_to image_tag(user.image.url,class: 'm-3',size: '100x100'),user
                 - else
-                    = image_tag "/assets/default.jpg",class: 'm-3',size: '100x100'
+                    = link_to image_tag("/assets/default.jpg",class: 'm-3',size: '100x100'),user
                 .media-body
                     .h5 
                         = link_to user.name, user,class: 'mt-2 mb-1 badge badge-pill badge-primary'
@@ -22,5 +22,5 @@
                         - else       
                             | キルレ：未記入
                     .h8.mr-3.mb-3
-                        |登録日：
+                        |更新日：
                         = I18n.l(user.updated_at, format: :long)
