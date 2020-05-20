@@ -7,7 +7,7 @@
 * 未ログイン時は閲覧のみ可能になっております。
 * 簡単ログインでの「ゲストユーザー」は投稿以外の操作を禁止しております。ご了承ください。
 
-## :closed_book: ポートフォリオへのアクセスURL
+## :closed_book: 作成したwebサービスへのアクセスURL
 http://guardians-community.com/
 
 ## Destiny2とは？
