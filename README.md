@@ -101,7 +101,7 @@ https://kattyan.net/2019/06/20/destiny2-sirzun7/
 ## フロントエンド
 
 * HTML(Slim)
-* CSS(SASS)
+* CSS(SCSS)
 * bootstrap4
 * JavaScript(jQuely)
 
