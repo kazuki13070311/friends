@@ -20,6 +20,13 @@ Destiny2公式紹介サイト→https://www.jp.playstation.com/games/destiny-2-p
 オンラインゲーム（Destiny2）のフレンド登録後のミスマッチを防ぎ  
 自分が求める理想のユーザーと出会うための場を提供するサービスです。
 
+## サービス名「Right Guardians」の由来
+「it's right there Guardians」という英文から  
+「Right」と「Guardians」を切り取って付けました。
+
+「Right Guardians」というサービスを利用すれば  
+頼もしい仲間（ガーディアン）に出会えますよという意味を込めて命名しました。
+
 # :round_pushpin: 制作背景
 
 ### 僕が大好きなDestiny2のユーザー離れを防ぎたかった…
