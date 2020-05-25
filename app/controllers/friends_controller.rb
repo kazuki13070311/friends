@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class FriendsController < ApplicationController
-  before_action :login_check, only: %i[new edit update destroy show]
+  #before_action :login_check, only: %i[new edit update destroy show]
+  before_action :login_check, only: %i[new edit update destroy]
   before_action :correct_user, only: %i[edit update]
 
   def index
@@ -70,5 +71,9 @@ class FriendsController < ApplicationController
     unless user_signed_in? && friend.user.id == current_user.id
       redirect_to friend, notice: '他ユーザーの投稿は編集できません'
     end
+  end
+
+  def user_logged_in?
+    !current_user.nil?
   end
 end

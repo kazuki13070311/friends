@@ -28,7 +28,8 @@
                 td= @friend.updated_at.strftime('%Y/%m/%d %H:%M:%S')
 
 .col-md-10.offset-md-1
-    - if current_user.admin?
+    //- if current_user.admin?
+    - if current_user&.admin?
         = link_to '削除',@friend,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'
     - if user_signed_in? && current_user.id == @user.id
         = link_to '編集',edit_friend_path,class: 'btn btn-primary mr-3'

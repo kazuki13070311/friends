@@ -25,7 +25,7 @@ Destiny2公式紹介サイト→https://www.jp.playstation.com/games/destiny-2-p
 「Right」と「Guardians」を切り取って付けました。
 
 「Right Guardians」というサービスを利用すれば  
-頼もしい仲間（ガーディアン）に出会えますよという意味を込めて命名しました。
+頼もしい仲間（ガーディアン）に出会えますよという思いを込めて命名しました。
 
 # :round_pushpin: 制作背景
 
