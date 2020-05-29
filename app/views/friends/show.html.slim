@@ -32,10 +32,11 @@
     - if current_user&.admin?
         = link_to '削除',@friend,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'
     - if user_signed_in? && current_user.id == @user.id
-        = link_to '編集',edit_friend_path,class: 'btn btn-primary mr-3'
-        = link_to '削除',@friend,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'
-    .twiiter
-        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"  data-size="large" data-lang="ja" data-show-count="false" data-text="新規募集しました！ぜひ見てください！  #Destiny2 #募集 #拡散希望 ">tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        = link_to '編集',edit_friend_path,class: 'btn btn-primary mr-3 mb-3'
+        = link_to '削除',@friend,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger mb-3'
+    .twitter
+        <a href="https://twitter.com/share?url=http://guardians-community.com/friends/#{@friend.id}&text=Destiny2で一緒に遊んでくれるフレンドを募集しております！ぜひフレンドになって一緒に遊んでください！#Destiny2 #募集 #拡散希望 #Right_Guardians" rel="nofollow" target="_blank" class="fab fa-twitter btn btn-gradient-3d-simple"> 募集内容をTwitterでシェアする</a>
+        //<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"  data-size="large" data-lang="ja" data-show-count="false" data-text="新規募集しました！ぜひ見てください！  #Destiny2 #募集 #拡散希望 ">tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 br
 .row
