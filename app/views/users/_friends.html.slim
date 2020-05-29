@@ -1,5 +1,29 @@
 .col-md-10.offset-md-1
-    - if @user.friends.empty?
+    - if current_user == @user
+        - if @user.friends.empty?
+            .posison-point
+                p
+                    |まだ募集投稿がありません
+                p
+                    |プロフィールを編集した後は、募集を投稿して仲間を探そう！
+                p
+                    = link_to "仲間を募集する",new_friend_path,class: "btn btn-primary dokidoki"
+        - else @user.friends
+            - @friends.includes(:user).each do |friend|
+                .media.bg-white.m-3.rounded
+                    - if friend.user.image?
+                        = link_to image_tag(friend.user.image.url,class: 'mx-3 my-2',size: '50x50'),friend.user
+                    - else
+                        = link_to image_tag("/assets/default.jpg",class: 'mx-3 my-2',size: '50x50'),friend.user
+                    .media-body
+                        .h5 
+                            = link_to friend.name,friend,class: 'mt-2 mb-1 badge badge-pill badge-primary'
+                        .h6.mr-1 
+                            = simple_format(friend.description)
+                        .h8.mr-2
+                            |投稿日：
+                            = I18n.l(friend.updated_at, format: :long)
+    - elsif @user.friends.empty?
         .posison-point
             p
                 = @user.name
