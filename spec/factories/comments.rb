@@ -10,9 +10,8 @@
 #  user_id    :integer
 #
 FactoryBot.define do
-  factory :comment do
+  factory :comment, class: Comment do
     content { "MyText" }
-    user_id { 1 }
-    friend_id { 1 }
+    user {friend.user}
   end
 end
