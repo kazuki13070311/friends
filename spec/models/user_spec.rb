@@ -72,12 +72,7 @@ RSpec.describe "Userモデルのテスト", type: :model do
   end
 
   it "ユーザーの名前がインスタンスを通して表示される" do
-   user = User.new(
-       name: "テストユーザー１",
-       email: "test@gmail.com",
-       password: "password",
-   )
-   expect(user.name).to eq "テストユーザー１"  
+   expect(@user.name).to eq "テストユーザー"  
   end
 
   it "ユーザー名が30文字以上だとエラーになる" do
@@ -87,7 +82,7 @@ RSpec.describe "Userモデルのテスト", type: :model do
   end
 
   it "プロフィールが400文字以上だとエラーになる" do
-    user = User.new(profile: "テスト１" * 101)
+    user = User.new(profile: "a" * 401)
     user.valid?
     expect(user.errors[:profile]).to_not include("400文字以内にしてください")  
   end

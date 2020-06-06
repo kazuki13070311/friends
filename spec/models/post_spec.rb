@@ -24,4 +24,13 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
+  before do
+    user = create(:user)
+    @post = Post.new(
+        content: "テスト",
+        description: "テスト投稿",
+        image: Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec/fixtures/test_image.jpg'), 'image/jpg'),
+        user: user,
+    )
+  end
 end
