@@ -39,5 +39,56 @@
 #
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
+RSpec.describe "Userモデルのテスト", type: :model do
+  before do
+    @user = User.new(
+      name: "テストユーザー",
+      email: "test@gmail.com",
+      password: "password",
+      password_confirmation: 'password',
+      profile: "テスト",
+    )
+  end
+  
+  it "名前、メール、パスワード、パスワード確認があれば有効な状態である事" do
+    expect(@user).to be_valid
+  end
+
+  it "名前がなければ無効な状態である事" do
+    user = User.new(name: nil)
+    user.valid?
+    expect(user.errors[:name]).to_not include("空白は無効です")  
+  end
+
+  it "重複したメールアドレスなら無効な状態である事" do
+    @user = User.new(
+        name: "テストユーザー",
+        email: "test@gmail.com",
+        password: "password",
+        password_confirmation: 'password',
+    )
+    @user.valid?
+    expect(@user.errors[:email]).to_not include("すでに使用されています")  
+  end
+
+  it "ユーザーの名前がインスタンスを通して表示される" do
+   user = User.new(
+       name: "テストユーザー１",
+       email: "test@gmail.com",
+       password: "password",
+   )
+   expect(user.name).to eq "テストユーザー１"  
+  end
+
+  it "ユーザー名が30文字以上だとエラーになる" do
+    user = User.new(name: "あ" * 31)
+    user.valid?
+    expect(user.errors[:name]).to_not include("30文字以内にしてください")  
+  end
+
+  it "プロフィールが400文字以上だとエラーになる" do
+    user = User.new(profile: "テスト１" * 101)
+    user.valid?
+    expect(user.errors[:profile]).to_not include("400文字以内にしてください")  
+  end
 end
