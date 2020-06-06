@@ -11,5 +11,16 @@
 #
 require 'rails_helper'
 
-RSpec.describe Comment, type: :model do
+RSpec.describe "Commentモデルのテスト", type: :model do
+  before do
+    user = create(:user)
+    @comment = Comment.new(
+        content: "テスト投稿",
+        user: user,
+    )
+  end
+
+  it "コメント内容がインスタンスを通じて表示される" do
+    expect(@comment.content).to eq "テスト投稿"  
+  end
 end

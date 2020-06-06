@@ -14,7 +14,7 @@
 #
 require 'rails_helper'
 
-RSpec.describe Friend, type: :model do
+RSpec.describe "Friendモデルのテスト", type: :model do
   before do
     user = create(:user)
     @friend = Friend.new(
