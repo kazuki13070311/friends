@@ -45,6 +45,10 @@ gem 'jquery-turbolinks'
 # Googleアナリティクス
 gem 'google-analytics-rails'
 
+# SEO対策
+gem 'sitemap_generator'
+gem 'meta-tags'
+
 gem 'annotate'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
