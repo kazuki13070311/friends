@@ -148,4 +148,5 @@ Googleアナリティクス導入
 * ランキング機能
 * 管理ユーザー機能（予期せぬ投稿などの削除）
 * 簡単ログイン機能
+* Twitterシェア機能
 * 攻略サイト（WordPress）→https://kattyan.net/
