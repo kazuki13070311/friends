@@ -124,7 +124,7 @@ https://kattyan.net/2019/06/20/destiny2-sirzun7/
 * AWS(EC2,RDS,VPC,MySQL,Elastic IP)
 * Nginx
 * Unicorn
-* Rubucop
+* Rubocop
 * RSpec
 
 ### その他
