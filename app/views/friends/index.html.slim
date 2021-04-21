@@ -8,6 +8,8 @@
         .form.group.row
             = f.label :model_cont,'機種', class: 'col-sm-2 col-form-label'
             .col-sm-8
+                = f.radio_button :model_cont, 'PS5'
+                | PS5　
                 = f.radio_button :model_cont, 'PS4'
                 | PS4　
                 = f.radio_button :model_cont, 'PS3'
