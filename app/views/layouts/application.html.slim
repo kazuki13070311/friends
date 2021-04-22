@@ -2,7 +2,8 @@ doctype html
 html
   head
     title
-      |【Destiny2】Right Guardians
+      = page_title(yield(:title))
+      //|【Destiny2】Right Guardians
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
     = csrf_meta_tags
