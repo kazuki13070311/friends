@@ -1,9 +1,11 @@
 - content_for(:title, "【Destiny2】ディスティニー2 登録ユーザー一覧")
+- breadcrumb :users_index
 .jumbotron.jumbotron-extend4
     h1.page-name1.text-center.mt-5
         .fas.fa-user
         |ユーザー一覧
-
+= breadcrumbs separator: " &rsaquo; "
+br
 .col-md-10.offset-md-1
     = search_form_for @q,class: 'mb-5' do |f|
         .form.group.row

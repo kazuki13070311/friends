@@ -2,9 +2,15 @@ crumb :root do
   link "Home", root_path
 end
 
-# crumb :projects do
-#   link "Projects", projects_path
-# end
+crumb :users_index do
+  link "ユーザー一覧", users_path
+  parent :root
+end
+
+crumb :users_show do |user|
+  link "#{user.name}さんの詳細", users_path(user)
+  parent :users_index
+end
 
 # crumb :project do |project|
 #   link project.name, project_path(project)

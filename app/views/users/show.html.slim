@@ -1,3 +1,8 @@
+- content_for(:title,"【Destiny2】" + @user.name + "さんの詳細")
+- breadcrumb :users_show, @user
+br
+.container
+    = breadcrumbs separator: " &rsaquo; "
 = render 'users/mypage'
 .container
     .row.text-center
