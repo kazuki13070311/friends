@@ -49,6 +49,9 @@ gem 'google-analytics-rails'
 gem 'sitemap_generator'
 gem 'meta-tags'
 
+# パンくずリスト
+gem 'gretel'
+
 gem 'annotate'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
