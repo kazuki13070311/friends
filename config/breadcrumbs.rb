@@ -12,6 +12,16 @@ crumb :users_show do |user|
   parent :users_index
 end
 
+crumb :friends_index do
+  link "募集一覧", friends_path
+  parent :root
+end
+
+crumb :friends_show do |user|
+  link "#{user.name}さんの投稿", friends_path(user)
+  parent :friends_index
+end
+
 # crumb :project do |project|
 #   link project.name, project_path(project)
 #   parent :projects

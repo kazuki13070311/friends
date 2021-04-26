@@ -4,6 +4,10 @@
         .fas.fa-user-friends
         |募集一覧
 
+- breadcrumb :friends_index
+.container
+    = breadcrumbs separator: " &rsaquo; "
+br
 .col-md-10.offset-md-1
     = search_form_for @q,class: 'mb-5' do |f|
         .form.group.row

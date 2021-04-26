@@ -1,4 +1,8 @@
 - content_for(:title,"【Destiny2】" + @user.name + "さんの募集内容" )
+- breadcrumb :friends_show,@user
+br
+.container
+    = breadcrumbs separator: " &rsaquo; "
 .title5
     h2.text-center
         |募集内容の詳細
