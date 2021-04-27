@@ -8,7 +8,7 @@ crumb :users_index do
 end
 
 crumb :users_show do |user|
-  link "#{user.name}さんの詳細", users_path(user)
+  link "#{user.name}さんのプロフィール", users_path(user)
   parent :users_index
 end
 
@@ -18,9 +18,37 @@ crumb :friends_index do
 end
 
 crumb :friends_show do |user|
-  link "#{user.name}さんの投稿", friends_path(user)
+  @friend = Friend.find(params[:id])
+  user = @friend.user
+  link "#{user.name}さんの#{@friend.name}の投稿", friends_path(user)
   parent :friends_index
 end
+
+crumb :friends_new do
+  link "募集投稿ページ", friends_path(user)
+  parent :friends_index
+end
+
+crumb :posts_index do
+  link "自慢の一枚一覧", posts_path
+  parent :root
+end
+
+crumb :posts_show do |user|
+  link "#{user.name}さんの投稿", posts_path(user)
+  parent :posts_index
+end
+
+crumb :posts_ranking do
+  link "評価ランキング", posts_ranking_path
+  parent :posts_index
+end
+
+crumb :homes_sitenav do
+  link "使い方", homes_sitenav_path
+  parent :root
+end
+
 
 # crumb :project do |project|
 #   link project.name, project_path(project)

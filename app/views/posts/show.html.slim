@@ -1,4 +1,9 @@
 - content_for(:title,"【Destiny2】" + @user.name + "さんのお気に入り写真")
+- breadcrumb :posts_show,@user
+br
+.container
+    = breadcrumbs separator: " &rsaquo; "
+    hr
 .title6
     h2.text-center
         |投稿詳細ページ
