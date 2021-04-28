@@ -1,4 +1,4 @@
-- content_for(:title,"【Destiny2】" + @user.name + "さんの募集内容" )
+- content_for(:title,"【Destiny2】" + @friend.name + "の詳細" )
 - breadcrumb :friends_show,@user
 br
 .container
@@ -7,9 +7,6 @@ br
 .title5
     h2.text-center
         |募集内容の詳細
-
-.nav.justify-content-end
-    = link_to '一覧',friends_path,class: 'nav-link'
 
 .col-md-10.offset-md-1
     table.table.table-hover
