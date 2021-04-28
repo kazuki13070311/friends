@@ -134,6 +134,9 @@ GEM
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     google-analytics-rails (1.1.1)
+    gretel (4.2.0)
+      actionview (>= 5.1, < 7.0)
+      railties (>= 5.1, < 7.0)
     hpricot (0.8.6)
     html2slim (0.2.0)
       hpricot
@@ -391,6 +394,7 @@ DEPENDENCIES
   ed25519
   factory_bot_rails
   google-analytics-rails
+  gretel
   html2slim
   jbuilder (~> 2.7)
   jquery-rails
@@ -428,4 +432,4 @@ RUBY VERSION
    ruby 2.6.5p114
 
 BUNDLED WITH
-   2.0.2
+   2.2.6

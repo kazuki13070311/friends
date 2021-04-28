@@ -1,6 +1,14 @@
 - content_for(:title,"【Destiny2】使い方" )
+- breadcrumb :homes_sitenav
+br
+.container
+    .row
+        .col-12
+            = breadcrumbs separator: " &rsaquo; "
+            hr
+
 h1.text-center.title10
-    i.fas.fa-question-circle
+    i.fas.fa-question-circle.text_01
         |Right Guardiansとは？
 
 .container.text-center
@@ -85,7 +93,7 @@ hr
     .row
         .col-12
             h3.point
-                i.far.fa-hand-point-up
+                .i.far.fa-hand-point-up
                 |マッチング率を上昇させる㊙︎ポイント
             p
                 |自慢の一枚で自分の実績や一押し画像を投稿して皆んなにアピールしよう！

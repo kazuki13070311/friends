@@ -1,4 +1,10 @@
 - content_for(:title,"【Destiny2】" + @user.name + "さんのフォロワー")
+br
+- breadcrumb :users_follower,@user
+.container
+    = breadcrumbs separator: " &rsaquo; "
+    hr
+
 .follower_title.text-center.my-5
   h3.fas.fa-users.h3-follow
     = @user.name
