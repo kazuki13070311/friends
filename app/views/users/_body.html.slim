@@ -13,13 +13,13 @@
                         | 性別：
                         = user.sex
                     - else
-                        | 性別：未記入
+                        | 性別：非公開
                 .h6
                     - if user.strength?
                         | キルレ：
                         = user.strength
                     - else       
-                        | キルレ：未記入
+                        | キルレ：非公開
                 .h8.mr-3.mb-3
                     |登録日：
                     = I18n.l(user.updated_at, format: :long)
