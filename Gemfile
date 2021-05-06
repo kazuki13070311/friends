@@ -54,6 +54,9 @@ gem 'gretel'
 
 gem 'annotate'
 
+# cron用
+gem 'whenever', require: false
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
 
