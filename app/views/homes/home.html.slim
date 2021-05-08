@@ -6,11 +6,11 @@
             br
             |素晴らしいGuardian Lifeを送ろう！
         - unless current_user
-            .form.group.mt-3.text-center
-              = link_to "ログイン",new_user_session_path,class: 'fas fa-sign-in-alt btn btn-primary rounded-pill btn-lg mx-1'
-              = link_to "新規登録",new_user_registration_path,class: 'fas fa-user-plus btn btn-primary rounded-pill btn-lg mx-1'          
-            .form.group.mt-3.text-center
-              = link_to "簡単ログイン（閲覧用）",users_guest_sign_in_path, method: :post,class: "btn btn-primary rounded-pill btn-lg"
+          .form.group.mt-3.text-center
+            = link_to "ログイン",new_user_session_path,class: 'fas fa-sign-in-alt btn btn-primary rounded-pill btn-lg mx-1'
+            = link_to "新規登録",new_user_registration_path,class: 'fas fa-user-plus btn btn-primary rounded-pill btn-lg mx-1'          
+          .form.group.mt-3.text-center
+            = link_to "簡単ログイン（閲覧用）",users_guest_sign_in_path, method: :post,class: "btn btn-primary rounded-pill btn-lg"
 hr
 .home-friend-titele2
   h3.fas.fa-user

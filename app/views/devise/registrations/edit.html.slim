@@ -24,19 +24,19 @@ h2.text-center
     .col-md-8.offset-md-2
       = f.label :"PSID"
       br
-      = f.text_field :psnid,placeholder: "Destiny2でご使用中のPSID(アカウント名)をご記入下さい",autofocus: true,class: 'form-control'
+      = f.text_field :psnid,placeholder: "Destiny2でご使用中のPSID(アカウント名)をご記入下さい",class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
       = f.label :"Steam ID"
       br
-      = f.text_field :steam,placeholder: "Destiny2でご使用中のSteam ID(アカウント名)をご記入下さい",autofocus: true,class: 'form-control'
+      = f.text_field :steam,placeholder: "Destiny2でご使用中のSteam ID(アカウント名)をご記入下さい",class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
       = f.label :email
       br
-      = f.email_field :email, placeholder: "メールアドレスを記入して下さい",autofocus: true, autocomplete: "email",class: 'form-control'
+      = f.email_field :email, placeholder: "メールアドレスを記入して下さい", autocomplete: "email",class: 'form-control'
     - if devise_mapping.confirmable? && resource.pending_reconfirmation?
       div
         | Currently waiting confirmation for: 
@@ -64,37 +64,37 @@ h2.text-center
     .col-md-8.offset-md-2
       = f.label :メイン武器
       br
-      = f.text_field :weapon, placeholder: "良く使う武器を記入して下さい",autofocus: true,class: 'form-control'
+      = f.text_field :weapon, placeholder: "良く使う武器を記入して下さい",class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
       = f.label :所属クラン
       br
-      = f.text_field :clan,placeholder: "所属クラン名を記入して下さい", autofocus: true,class: 'form-control'
+      = f.text_field :clan,placeholder: "所属クラン名を記入して下さい",class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
       = f.label :シーズンランク
       br
-      = f.text_field :level,placeholder: "レベルを記入して下さい", autofocus: true,class: 'form-control'
+      = f.text_field :level,placeholder: "レベルを記入して下さい",class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
       = f.label :パワーレベル
       br
-      = f.text_field :lightlevel, placeholder: "光レベルを記入して下さい",autofocus: true,class: 'form-control'
+      = f.text_field :lightlevel, placeholder: "光レベルを記入して下さい",class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
       = f.label :キルレ
       br
-      = f.text_field :strength, placeholder: "キルレ(K/D)を記入して下さい",autofocus: true,class: 'form-control'
+      = f.text_field :strength, placeholder: "キルレ(K/D)を記入して下さい",class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
       = f.label :Destiny歴
       br
-      = f.text_field :carreer, placeholder: "Destiny歴を記入してください",autofocus: true,class: 'form-control'
+      = f.text_field :carreer, placeholder: "Destiny歴を記入してください",class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
@@ -112,20 +112,20 @@ h2.text-center
     .col-md-8.offset-md-2
       = f.label :プレイ時間帯
       br
-      = f.text_field :timezone, placeholder: "良く遊ぶ時間帯を記入してください",autofocus: true,class: 'form-control'
+      = f.text_field :timezone, placeholder: "良く遊ぶ時間帯を記入してください",class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
       = f.label :Twitter 
       |（@は含めない）
       br
-      = f.text_field :twitter, placeholder: "Twitterアカウント名を記入してください",autofocus: true,class: 'form-control'
+      = f.text_field :twitter, placeholder: "Twitterアカウント名を記入してください",class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
       = f.label :プロフィール（400文字以内）
       br
-      = f.text_area :profile, placeholder: "自己紹介やDestiny2での実績など記入してください",autofocus: true,rows: 5,class: 'form-control'
+      = f.text_area :profile, placeholder: "自己紹介やDestiny2での実績など記入してください",rows: 5,class: 'form-control'
 
   .form-group.row
     .col-md-8.offset-md-2
@@ -150,7 +150,7 @@ h2.text-center
   .form-group.row
     .col-md-8.offset-md-2
       .action
-        = f.submit "プロフィール更新",class: 'btn btn-outline-primary btn-block'
+        = f.submit "プロフィール更新",class: 'btn btn-primary btn-block'
 
 .form-group.row.mt-5
     .col-md-8.offset-md-2

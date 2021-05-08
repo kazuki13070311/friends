@@ -6,7 +6,6 @@
     | 新規登録
 = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
   = render "devise/shared/error_messages", resource: resource
-  
   .field
     .form-group.row.mt-3
       .col-md-8.offset-md-2
@@ -14,15 +13,13 @@
         |（必須）
         br
         = f.text_field :name, autofocus: true,class: 'form-control'
-
   .field
     .form-group.row.mt-3
       .col-md-8.offset-md-2
         = f.label :email
         |（必須）
         br
-        = f.email_field :email, autofocus: true, autocomplete: "email",class: 'form-control'
-
+        = f.email_field :email, autocomplete: "email",class: 'form-control'
   .thumbnail-image
     .form-group.row.mt-3
       .col-md-8.offset-md-2
@@ -31,7 +28,6 @@
         br
         = f.file_field :image
         = f.hidden_field :image_cache
-
   .field
     .form-group.row.mt-3
       .col-md-8.offset-md-2
@@ -39,7 +35,6 @@
         |（必須）
         br
         = f.password_field :password, autocomplete: "new-password",placeholder: "6文字以上",class: 'form-control'
-
   .field
     .form-group.row.mt-3
       .col-md-8.offset-md-2
@@ -47,10 +42,9 @@
         |（必須）
         br
         = f.password_field :password_confirmation, autocomplete: "new-password",placeholder: "6文字以上",class: 'form-control'
-  
   .form-group.row.mt-3
       .col-md-8.offset-md-2
         .actions
-        = f.submit "新規登録",class: 'btn btn-outline-primary btn-block'
+        = f.submit "新規登録",class: 'btn btn-primary btn-block'
         br
         = render "devise/shared/links"

@@ -51,7 +51,7 @@ table.table.table
         tr
             th= "Twitter"
             - if @user.twitter?
-                td= link_to "Twitterアカウントを見にいく","https://twitter.com/#{@user.twitter}",class:"fab fa-twitter btn btn-gradient-3d-simple "
+                td= link_to "Twitterアカウントを見にいく","https://twitter.com/#{@user.twitter}",class:"fab fa-twitter btn btn-gradient-3d-btn "
         tr
             th= "プロフィール"
             td= simple_format(@user.profile) 
