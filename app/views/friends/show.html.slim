@@ -1,4 +1,5 @@
-- content_for(:title,"【Destiny2】" + @friend.name + "の詳細" )
+- set_meta_tags title: "【Destiny2】" + @friend.name + "の詳細",
+                site: "Right Guardians"
 - breadcrumb :friends_show,@user
 br
 .container

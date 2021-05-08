@@ -1,4 +1,5 @@
-- content_for(:title, "【Destiny2】フレンド募集掲示板")
+- set_meta_tags title: "【Destiny2】フレンド募集掲示板",
+                site: "Right Guardians"
 .jumbotron.jumbotron-extend7
     h1.page-name1.text-center.mt-5
         .fas.fa-user-friends
@@ -17,8 +18,6 @@ br
                 | PS5　
                 = f.radio_button :model_cont, 'PS4'
                 | PS4　
-                = f.radio_button :model_cont, 'PS3'
-                | PS3　 
                 = f.radio_button :model_cont, 'PC'
                 | PC　
                 = f.radio_button :model_cont, 'XboxOne'
@@ -31,7 +30,7 @@ br
                 = f.radio_button :name_cont, 'クランメンバー募集'
                 | クランメンバー募集　
                 = f.radio_button :name_cont, 'クラン入隊希望'
-                | クラン入隊希望　
+                | クラン入隊希望
                 = f.radio_button :name_cont, 'その他'
                 | その他
                       

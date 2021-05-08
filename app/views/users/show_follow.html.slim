@@ -1,4 +1,5 @@
-- content_for(:title,"【Destiny2】" + @user.name + "さんのフォローユーザー")
+- set_meta_tags title: "【Destiny2】" + @user.name + "さんのフォローユーザー",
+                site: "Right Guardians"
 br
 - breadcrumb :users_following,@user
 .container

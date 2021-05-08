@@ -5,6 +5,7 @@ require 'rails_helper'
 RSpec.describe '募集投稿のリクエストテスト', type: :request do
   describe 'GET #index' do
     before do
+      friend = create(:friend)
       get friends_path
     end
 
