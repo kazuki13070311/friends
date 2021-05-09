@@ -20,7 +20,6 @@ http://guardians-community.com/
 * 「Destiny2 フレンド募集」の検索キーワードで1位を獲得
 <img width="729" alt="スクリーンショット 2021-05-09 20 15 36のコピー" src="https://user-images.githubusercontent.com/57397215/117574206-fe5f7e00-b116-11eb-832b-21ffcd077f97.png">
 
-
 ## Destiny2とは？
 PS4やPCなどで無料で遊べるオンラインシューティングゲームです。
 
