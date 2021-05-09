@@ -4,10 +4,21 @@ body{
     font-family: 'Noto Sans JP', sans-serif;
 }
 
+/* ボタン配色 */
 .btn-primary{
   color: #fff;
   background-color: #3298dc;
   border-color: transparent;
+}
+
+.btn-danger{
+    color: #fff;
+    background-color:#ee6354;
+    border-color: transparent;
+}
+
+.page-color{
+  background-color: #3298dc;
 }
 
 
