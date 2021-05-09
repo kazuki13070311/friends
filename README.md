@@ -10,6 +10,17 @@
 ## :closed_book: 作成したwebサービスへのアクセスURL
 http://guardians-community.com/
 
+# サービス運用状況(2021年5月9日まで)
+* サービス登録者数・・・900人
+* 累計UU数・・・10,122人
+* 累計PV数・・・57,752PV
+<img width="858" alt="スクリーンショット 2021-05-09 22 34 04" src="https://user-images.githubusercontent.com/57397215/117574210-00294180-b117-11eb-80fd-720909e28011.png">
+
+# SEO検索順位(2021年5月9日)
+「Destiny2 フレンド募集」のキーワードで1位を獲得
+<img width="729" alt="スクリーンショット 2021-05-09 20 15 36のコピー" src="https://user-images.githubusercontent.com/57397215/117574206-fe5f7e00-b116-11eb-832b-21ffcd077f97.png">
+
+
 ## Destiny2とは？
 PS4やPCなどで無料で遊べるオンラインシューティングゲームです。
 
@@ -127,9 +138,11 @@ https://kattyan.net/2019/06/20/destiny2-sirzun7/
 * Rubucop
 * RSpec
 
-### その他
-Googleアナリティクス導入
-　  
+### 分析ツール
+* Googleアナリティクス
+* Googleサーチコンソール
+* LogRocket
+
 ### インフラ構成図  
 
 ![Untitled Diagram (1) (1)](https://user-images.githubusercontent.com/57397215/79885773-7e467780-8432-11ea-8fbd-c562c5ba1e1f.png)
