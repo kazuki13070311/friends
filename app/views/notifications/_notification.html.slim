@@ -4,11 +4,6 @@
   .form-inline
     span
       = link_to user_path(visitor) do
-        //- if user.image?
-          //= link_to image_tag(user.image.url,class: 'm-3',size: '100x100'),user
-        //- else
-          //= link_to image_tag("/assets/default.jpg",class: 'm-3',size: '100x100'),user
-        //= image_tag avatar_url(visitor).to_s, class: "icon_mini"
         strong
           = visitor.name
       = 'さんが'
