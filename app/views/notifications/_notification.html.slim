@@ -25,7 +25,7 @@
         - else
           span
             = link_to friend_path(notification.friend) do
-              = image_tag avatar_url(notification.friend.user).to_s, class: "icon_mini" 
+              //= image_tag avatar_url(notification.friend.user).to_s, class: "icon_mini" 
               strong
                 = notification.friend.user.name + 'さんの投稿'
         = "にコメントしました"
