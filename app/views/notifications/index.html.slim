@@ -1,0 +1,16 @@
+.h3.text-center
+  |通知
+.col-md-6.mx-auto
+  = link_to destroy_all_notifications_path, method: :delete,data: { confirm: '通知を全て削除してもよろしいですか？' }
+    i.fas.fa-trash style="color: black;"
+      h7 style="color: black;"
+        |通知を全削除する
+  hr
+- notifications = @notifications.where.not(visitor_id: current_user.id)
+- if notifications.exists?
+  = render notifications
+  = paginate notifications
+- else
+  .col-md-6.mx-auto
+    p
+      | 通知はありません
