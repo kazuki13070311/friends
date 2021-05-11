@@ -32,9 +32,6 @@
             li.nav-item
               b.nav-link href="#"
                 = link_to "ログアウト",destroy_user_session_path, method: "delete",class: "fas fa-sign-out-alt btn"
-                      - if user_signed_in?
-            / li.nav-item
-            /   = render 'partial/circle'
           - else
             li.nav-item
               b.nav-link href="#"
