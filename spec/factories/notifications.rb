@@ -8,6 +8,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  comment_id :integer
+#  friend_id  :integer
 #  post_id    :integer
 #  visited_id :integer          not null
 #  visitor_id :integer          not null
@@ -15,6 +16,7 @@
 # Indexes
 #
 #  index_notifications_on_comment_id  (comment_id)
+#  index_notifications_on_friend_id   (friend_id)
 #  index_notifications_on_post_id     (post_id)
 #  index_notifications_on_visited_id  (visited_id)
 #  index_notifications_on_visitor_id  (visitor_id)

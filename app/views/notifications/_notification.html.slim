@@ -1,0 +1,37 @@
+- visitor = notification.visitor
+- visited = notification.visited
+.col-md-6.mx-auto
+  .form-inline
+    span
+      = link_to user_path(visitor) do
+        //- if user.image?
+          //= link_to image_tag(user.image.url,class: 'm-3',size: '100x100'),user
+        //- else
+          //= link_to image_tag("/assets/default.jpg",class: 'm-3',size: '100x100'),user
+        //= image_tag avatar_url(visitor).to_s, class: "icon_mini"
+        strong
+          = visitor.name
+      = 'さんが'
+
+      - case notification.action
+      - when 'follow' then
+        = "あなたをフォローしました"
+      - when 'like' then
+        = link_to 'あなたの投稿', notification.post, style: "font-weight: bold;"
+        = "にいいねしました"
+      - when 'comment' then
+        - if notification.friend.user_id == visited.id
+          = link_to "あなたの投稿", notification.friend, style: "font-weight: bold;"
+        - else
+          span
+            = link_to friend_path(notification.friend) do
+              = image_tag avatar_url(notification.friend.user).to_s, class: "icon_mini" 
+              strong
+                = notification.friend.user.name + 'さんの投稿'
+        = "にコメントしました"
+        p.text-muted.mb-0
+          = Comment.find_by(id: notification.comment_id)&.content
+
+  .small.text-muted.text-right
+    = time_ago_in_words(notification.created_at).upcase
+  hr

@@ -23,6 +23,10 @@
           
           li.nav-item
             b.nav-link href="#"
+              = link_to "通知",notifications_path,class: 'post',class: 'fas fa-user btn'
+          
+          li.nav-item
+            b.nav-link href="#"
               = link_to "募集一覧",friends_path,class: 'post',class: 'fas fa-user-friends btn'
           
           - if user_signed_in?

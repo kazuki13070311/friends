@@ -38,4 +38,23 @@ class Post < ApplicationRecord
   def self.create_all_ranks
     Post.find(Like.group(:post_id).order('count(post_id) desc').limit(5).pluck(:post_id))
   end
+
+  def create_notification_like!(current_user)
+    # すでに「良いね」されているか検索
+    temp = Notification.where(["visitor_id = ? and visited_id = ? and post_id = ? and action = ?", current_user.id, user_id, id, 'like'])
+
+    # いいねされていない場合のみ、通知レコードを作成
+    if temp.blank?
+      notification = current_user.active_notifications.new(
+        post_id: id,
+        visited_id: user_id,
+        action: 'like'
+      )
+      # 自分の投稿に対するいいねの場合は、通知済みとする
+      if notification.visitor_id == notification.visited_id
+        notification.checked = true
+      end
+      notification.save if notification.valid?
+    end
+  end
 end

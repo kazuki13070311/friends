@@ -4,8 +4,10 @@ class CommentsController < ApplicationController
     @friend = Friend.find(params[:friend_id])
     @comment = @friend.comments.build(comment_params)
     @comment.user_id = current_user.id
-    @comment.save
-    render :index
+    if @comment.save
+      @comment.create_notification_comment!(current_user, @comment.id)
+      render :index
+    end
   end
 
   def destroy
