@@ -161,4 +161,3 @@ https://kattyan.net/2019/06/20/destiny2-sirzun7/
 * 管理ユーザー機能（予期せぬ投稿などの削除）
 * 簡単ログイン機能
 * フォロー・いいね・コメント通知機能
-* 攻略サイト（WordPress）→https://kattyan.net/

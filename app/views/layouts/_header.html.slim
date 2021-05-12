@@ -13,7 +13,7 @@
             b.nav-link href="#"
               = link_to "自慢の一枚",posts_path,class: 'post',class: 'fas fa-camera btn'
           
-          li.nav-item
+          //li.nav-item
             b.nav-link href="#"
               = link_to "攻略サイト",'https://kattyan.net/',class: 'post',class: 'fas fa-info-circle btn'
           
@@ -31,7 +31,10 @@
                 = link_to "マイページ","/users/#{current_user.id}",class:'post',class:'fas fa-user-circle btn'
             li.nav-item
               b.nav-link href="#"
-                = link_to "ログアウト",destroy_user_session_path, method: "delete",class: "fas fa-sign-out-alt btn"
+                = link_to "ログアウト",destroy_user_session_path, method: "delete",data: { confirm: 'ログアウトしてよろしいですか？' },class: "fas fa-sign-out-alt btn"
+            li.nav-item
+              b.nav-link href="#"
+                = render 'partial/circle'
           - else
             li.nav-item
               b.nav-link href="#"
