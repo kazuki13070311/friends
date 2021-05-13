@@ -55,6 +55,6 @@ br
             .comment_create
                 = render partial: 'comments/form', locals: {comment: @comment,friend: @friend}
         - else
-            h7 この募集にコメントするには
+            h7 
             = link_to "ログイン",new_user_session_path
-            |が必要です。
+            |すると、この募集にコメントすることが出来るようになります。
