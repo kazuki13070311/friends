@@ -1,0 +1,49 @@
+- set_meta_tags title: "【Destiny2】レイド募集の詳細",
+                site: "Right Guardians"
+/ - breadcrumb :micropost_show,@user
+/ br
+/ .container
+/     = breadcrumbs separator: " &rsaquo; "
+    hr
+.title5
+    h2.text-center
+      |募集内容の詳細
+
+.col-md-10.offset-md-1
+  table.table.table-hover
+      tbody
+        tr
+          th= Micropost.human_attribute_name(:model)
+          td= @micropost.model
+        tr
+          th= Micropost.human_attribute_name(:content)
+          td= @micropost.content
+        tr
+          th= User.human_attribute_name(:name)
+          td= link_to @user.name,@user
+        tr
+          th= Micropost.human_attribute_name(:name_type)
+          td= @micropost.name_type
+        tr
+          th= Micropost.human_attribute_name(:raid_time)
+          td= @micropost.raid_time
+        tr
+          th= Micropost.human_attribute_name(:description)
+          td= simple_format(h(@micropost.description),{},sanitize: false,wrapper_tag: "div")
+        tr
+          th= Micropost.human_attribute_name(:投稿日時)
+          td= @micropost.created_at.strftime('%Y/%m/%d %H:%M')
+        tr
+          th= Micropost.human_attribute_name(:updated_at)
+          td= @micropost.updated_at.strftime('%Y/%m/%d %H:%M')
+
+.col-md-10.offset-md-1
+  - if current_user&.admin?
+    = link_to '削除',@micropost,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'
+  - if user_signed_in? && current_user.id == @user.id
+    = link_to '編集',edit_micropost_path,class: 'btn btn-primary mr-3 mb-3'
+    = link_to '削除',@micropost,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger mb-3'
+  .twitter
+    <a href="https://twitter.com/share?url=http://guardians-community.com/friends/#{@micropost.id}%0a&text=ガラスの間レイドに一緒に行きませんか？%0aぜひ一度募集の詳細を見て下さい！%0a&hashtags=Destiny2%0a,Destiny2フレンド募集" rel="nofollow" target="_blank" class="fab fa-twitter btn btn-gradient-3d-btn"> 募集内容をTwitterでシェアする</a>
+
+br

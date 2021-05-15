@@ -1,0 +1,23 @@
+- if micropost.errors.present?
+  ul#error_explanation
+    - micropost.errors.full_messages.each do |message|
+      li= message
+
+= form_with model: micropost, local: true do |f|
+  .form.group
+    = f.label :model
+    = f.select :model,[['PS5','PS5'],['PS4','PS4'],['PC','PC'],['XboxOne','XboxOne']] 
+  .form.group
+    = f.label :content
+    = f.select :content,[['ガラスの間','ガラスの間']] 
+  .form.group
+    = f.label :name_type
+    = f.select :name_type,[['お誘い待ち','お誘い待ち'],['ホストで募集','ホストで募集']] 
+  .form.group
+    = f.label :raid_time
+    = f.text_field :raid_time, placeholder: "例: 5月15(土)15:00〜", class: 'form-control' 
+  .form.group
+    = f.label :description
+    = f.text_area :description, placeholder: "募集内容の詳細を記入してください", class: 'form-control'
+  br
+  = f.submit class: 'btn btn-primary'
