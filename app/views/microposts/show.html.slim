@@ -47,3 +47,20 @@
     <a href="https://twitter.com/share?url=http://guardians-community.com/friends/#{@micropost.id}%0a&text=ガラスの間レイドに一緒に行きませんか？%0aぜひ一度募集の詳細を見て下さい！%0a&hashtags=Destiny2%0a,Destiny2フレンド募集" rel="nofollow" target="_blank" class="fab fa-twitter btn btn-gradient-3d-btn"> 募集内容をTwitterでシェアする</a>
 
 br
+.row
+  .col-md-10.offset-md-1
+    .comment-create
+      h3.text-left.title
+        i class="far fa-comment-dots"
+        |コメント一覧
+    hr
+    #comments_area
+      = render partial: 'comment_microposts/index', locals: { comment_microposts: @comment_microposts }
+    br
+    - if user_signed_in?
+      .comment_create
+        = render partial: 'comment_microposts/form', locals: { comment_micropost: @comment_micropost,micropost: @micropost }
+    - else
+      h7 
+      = link_to "ログイン",new_user_session_path
+      |すると、この募集にコメントすることが出来るようになります。

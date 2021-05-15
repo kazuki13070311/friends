@@ -22,4 +22,11 @@
 #
 class Micropost < ApplicationRecord
   belongs_to :user
+  has_many :comment_microposts, dependent: :destroy
+
+  validates :content, presence: true
+  validates :model, presence: true
+  validates :name_type, presence: true
+  validates :description, presence: true
+  validates :description, length: { maximum: 400 }
 end

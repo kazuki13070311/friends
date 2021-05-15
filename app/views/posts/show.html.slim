@@ -30,10 +30,10 @@ br
                     td= simple_format(@post.description)
                 tr
                     th= Post.human_attribute_name(:投稿日時)
-                    td= @post.created_at.strftime('%Y/%m/%d %H:%M:%S')
+                    td= @post.created_at.strftime('%Y/%m/%d %H:%M')
                 tr
                     th= Post.human_attribute_name(:更新日時)
-                    td= @post.updated_at.strftime('%Y/%m/%d %H:%M:%S')
+                    td= @post.updated_at.strftime('%Y/%m/%d %H:%M')
 
         br
         u

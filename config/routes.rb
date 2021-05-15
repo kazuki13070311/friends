@@ -58,7 +58,9 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :microposts
+  resources :microposts do
+    resources :comment_microposts, only: [:create,:destroy]
+  end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -1,0 +1,5 @@
+/= form_with(model: [ micropost, comment_micropost ],url: micropost_comment_microposts_path(@micropost)) do |f|
+= form_with(model: [ micropost, comment_micropost ],url: micropost_comment_microposts_path(micropost)) do |f|
+  = f.text_area :comment,placeholder: "コメントする", rows: 2,class: 'form-control'
+  br
+  = f.submit "投稿する" ,class: "btn btn-primary comment-submit float-right btn-block"

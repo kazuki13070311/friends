@@ -26,10 +26,10 @@ br
                 td= simple_format(h(@friend.description),{},sanitize: false,wrapper_tag: "div")
             tr
                 th= Friend.human_attribute_name(:投稿日時)
-                td= @friend.created_at.strftime('%Y/%m/%d %H:%M:%S')
+                td= @friend.created_at.strftime('%Y/%m/%d %H:%M')
             tr
                 th= Friend.human_attribute_name(:updated_at)
-                td= @friend.updated_at.strftime('%Y/%m/%d %H:%M:%S')
+                td= @friend.updated_at.strftime('%Y/%m/%d %H:%M')
 
 .col-md-10.offset-md-1
     - if current_user&.admin?
