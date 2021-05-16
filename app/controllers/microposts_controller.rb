@@ -28,12 +28,19 @@ class MicropostsController < ApplicationController
   end
 
   def edit
+    @micropost = Micropost.find(params[:id])
   end
 
   def update
+    micropost = Micropost.find(params[:id])
+    micropost.update!(micropost_params)
+    redirect_to micropost_path, notice: '募集内容の更新が完了しました。' 
   end
 
   def destroy
+    micropost = Micropost.find(params[:id])
+    micropost.destroy
+    redirect_to microposts_url, notice: '募集内容を削除しました。' 
   end
 
   private

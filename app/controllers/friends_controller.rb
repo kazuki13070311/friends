@@ -29,7 +29,7 @@ class FriendsController < ApplicationController
   def update
     friend = Friend.find(params[:id])
     friend.update!(friend_params)
-    redirect_to friends_url, notice: 'フレンド募集内容の更新が完了しました。'
+    redirect_to friends_url, notice: '募集内容の更新が完了しました。'
   end
 
   def destroy
