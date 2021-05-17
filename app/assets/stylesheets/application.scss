@@ -302,11 +302,28 @@ td{
   border-bottom: none;
 }
 
-
 /*編集ページ*/
 .h2{
     text-align:center;
     font-weight: bold;
+}
+
+/*レイド募集ページ*/
+.cord{
+    margin: auto;
+    position: relative;
+    object-fit: cover;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.2));
+}
+
+.cord-body{
+    font-size: 75%;
+    text-align: left;
+}
+
+.cord-footer{
+    font-size: 25%;
+    text-align: right;
 }
 
 /*募集投稿一覧ページ*/

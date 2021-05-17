@@ -2,22 +2,41 @@ br
 h1 ガラスの間募集一覧
 = link_to "新規登録", new_micropost_path, class: "btn btn-primary"
 
-.mb-3
-table.tbale.table.hover
-  thead.thead-default
-    tr
-      th= Micropost.human_attribute_name(:model)
-      th= Micropost.human_attribute_name(:content)
-      th= Micropost.human_attribute_name(:name_type)
-      th= Micropost.human_attribute_name(:raid_time)
-      th= Micropost.human_attribute_name(:description)
-      th= Micropost.human_attribute_name(:created_at)
-  tbody
-    - @microposts.includes(:user).each do |micropost|
-      tr
-        td= link_to micropost.model, micropost
-        td= micropost.content
-        td= micropost.name_type
-        td= micropost.raid_time
-        td= micropost.description
-        td= micropost.created_at.strftime('%Y/%m/%d %H:%M')
+.container
+  .row
+    .col-12
+      - @microposts.includes(:user).each do |micropost|
+        .cord.bg-light.mt-3.rounded
+          .card-header.bg-transparent
+            - if micropost.user.image?
+              = link_to image_tag(micropost.user.image.url,size: '25x25',class: 'mr-3 rounded-circle'),micropost.user
+            - else
+              = link_to image_tag("/assets/default.jpg",size: '25x25', class: 'mr-3 rounded-circle'),micropost.user
+            = link_to micropost.name_type, micropost,class: 'mt-2 mb-1 badge badge-pill btn-primary'
+            = link_to(micropost_path(micropost)) do
+              .cord-body.text-dark
+                .card-text
+                  .h6.text-left.mt-3
+                    = simple_format(micropost.description)
+              .cord-footer.text-dark
+                h8
+                  |投稿日：
+                  = I18n.l(micropost.updated_at, format: :long)
+/ table.tbale.table.hover
+/   thead.thead-default
+/     tr
+/       th= Micropost.human_attribute_name(:model)
+/       th= Micropost.human_attribute_name(:content)
+/       th= Micropost.human_attribute_name(:name_type)
+/       th= Micropost.human_attribute_name(:raid_time)
+/       th= Micropost.human_attribute_name(:description)
+/       th= Micropost.human_attribute_name(:created_at)
+/   tbody
+/     - @microposts.includes(:user).each do |micropost|
+/       tr
+/         td= link_to micropost.model, micropost
+/         td= micropost.content
+/         td= micropost.name_type
+/         td= micropost.raid_time
+/         td= micropost.description
+/         td= micropost.created_at.strftime('%Y/%m/%d %H:%M')

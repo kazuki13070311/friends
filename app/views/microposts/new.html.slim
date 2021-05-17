@@ -5,15 +5,16 @@
         i.fas.fa-edit
         |ガラスの間の募集投稿
 
-.nav.justify-content-end
+//.nav.justify-content-end
     = link_to '一覧', microposts_path, class: 'nav-link'
 
 //.col-md-10.offset-md-1
-    = render partial: 'form',locals: {friend: @friend,user: @user}
-
+  = render 'form', micropost: @micropost
 .container
+  .nav.justify-content-end
+    = link_to '一覧', microposts_path, class: 'nav-link'
   .row
-    .col-md-6.col-12
+    .col-6
       .card
         .card-body
           = render 'form', micropost: @micropost
