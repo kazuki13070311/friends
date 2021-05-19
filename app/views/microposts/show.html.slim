@@ -29,7 +29,8 @@
           td= @micropost.raid_time
         tr
           th= Micropost.human_attribute_name(:description)
-          td= simple_format(h(@micropost.description),{},sanitize: false,wrapper_tag: "div")
+          //td= simple_format(h(@micropost.description),{},sanitize: false,wrapper_tag: "div")
+          td= safe_join(@micropost.description.split("\n"),tag(:br))
         tr
           th= Micropost.human_attribute_name(:投稿日時)
           td= @micropost.created_at.strftime('%Y/%m/%d %H:%M')

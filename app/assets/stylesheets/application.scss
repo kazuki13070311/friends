@@ -326,6 +326,17 @@ td{
     text-align: right;
 }
 
+.jumbotron-extend8{
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    background: image-url('destiny2-30.jpg')no-repeat center center;
+    background-position: 100% 33%;
+    background-size: cover;
+    background-color:rgba(255,255,255,0);
+    background-blend-mode:lighten;
+}
+
 /*募集投稿一覧ページ*/
 .media{
     margin: auto;

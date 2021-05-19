@@ -27,7 +27,8 @@ br
                     td= @post.content
                 tr
                     th= Post.human_attribute_name(:アピールポイント)
-                    td= simple_format(@post.description)
+                    //td= simple_format(@post.description)
+                    td= safe_join(@post.description.split("\n"),tag(:br))
                 tr
                     th= Post.human_attribute_name(:投稿日時)
                     td= @post.created_at.strftime('%Y/%m/%d %H:%M')

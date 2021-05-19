@@ -3,7 +3,9 @@ class MicropostsController < ApplicationController
   before_action :currect_user, only: %i[edit update]
 
   def index
-    @microposts = Micropost.all
+    @microposts = Micropost.all.page(params[:page]).per(10).order(updated_at: :desc)
+    @q = @microposts.ransack(params[:q])
+    @microposts = @q.result(distinct: true)
   end
 
   def show
