@@ -1,0 +1,44 @@
+.jumbotron.jumbotron-extend8
+    h1.page-name1.text-center.mt-5
+        |ガラスの間募集
+
+br
+//.col-md-10.offset-md-1
+.container
+  .row
+    .col-12.col-md-8.offset-md-2
+      = search_form_for @q,class: 'mb-5' do |f|
+        .form.group.row
+          = f.label :name_type_cont,'募集タイプ', class: 'col-sm-3 col-form-label'
+          .col-sm-8
+            = f.radio_button :name_type_cont,'お誘い待ち'
+            |お誘い待ち　
+            = f.radio_button :name_type_cont,'ホストで募集'
+            |ホストで募集          
+        br
+        .form.group
+            = f.submit class: 'btn btn-primary'
+        hr
+
+.container
+  .row
+    .col-12.col-md-8.offset-md-2
+      = link_to "新規募集をする", new_micropost_path, class: "btn btn-primary"
+      - @microposts.includes(:user).each do |micropost|
+        .cord.bg-light.mt-3.rounded
+          .card-header.bg-transparent
+            - if micropost.user.image?
+              = link_to image_tag(micropost.user.image.url,size: '25x25',class: 'mr-3 rounded-circle'),micropost.user
+            - else
+              = link_to image_tag("/assets/default.jpg",size: '25x25', class: 'mr-3 rounded-circle'),micropost.user
+            = link_to micropost.name_type, micropost,class: 'mt-2 mb-1 badge badge-pill btn-primary'
+            = link_to(micropost_path(micropost)) do
+              .cord-body.text-dark
+                .card-text
+                  .h6.text-left.mt-3
+                    //= simple_format(micropost.description)
+                    = safe_join(micropost.description.split("\n"),tag(:br))
+              .cord-footer.text-dark
+                h8
+                  |投稿日：
+                  = I18n.l(micropost.updated_at, format: :long)

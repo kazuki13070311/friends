@@ -8,6 +8,7 @@ ja:
           has_many: "%{record}が存在しているので削除できません"
       models:
       friend: フレンド
+      micropost: レイド募集
     attributes:
       friend:
         id: ID
@@ -21,6 +22,15 @@ ja:
         model: 機種
         created_at: 登録日時
         updated_at: 更新日時
+      micropost:
+        id: ID
+        model: 機種
+        content: 募集レイド
+        name_type: 募集タイプ
+        raid_time: レイドへ行く日時
+        description: '詳細'
+        created_at: 登録日時
+        updated_at: 更新日時     
   date:
     abbr_day_names:
     - 日

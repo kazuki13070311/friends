@@ -1,0 +1,19 @@
+- set_meta_tags title: "【Destiny2】レイド募集投稿",
+                site: "Right Guardians"
+.title5
+    h2.text-center
+        i.fas.fa-edit
+        |ガラスの間の募集編集
+
+.nav.justify-content-end
+    = link_to '一覧', microposts_path, class: 'nav-link'
+
+//.col-md-10.offset-md-1
+    = render partial: 'form',locals: {friend: @friend,user: @user}
+
+.container
+  .row
+    .col-md-6.col-12
+      .card
+        .card-body
+          = render 'form', micropost: @micropost

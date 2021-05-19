@@ -1,0 +1,26 @@
+- if micropost.errors.present?
+  ul#error_explanation
+    - micropost.errors.full_messages.each do |message|
+      li= message
+
+= form_with model: micropost, local: true do |f|
+  .form.group
+    = f.label :model
+  .col-md-1
+    = f.select :model,[['PS5','PS5'],['PS4','PS4'],['PC','PC'],['XboxOne','XboxOne']] 
+  br
+  .form.group
+    = f.label :content
+  .col-md-1
+    = f.select :content,[['ガラスの間','ガラスの間']] 
+  br
+  .form.group
+    = f.label :name_type
+  .col-md-1
+    = f.select :name_type,[['お誘い待ち','お誘い待ち'],['ホストで募集','ホストで募集']]
+  br
+  .form.group
+    = f.label :description,"投稿内容（400字以内）"
+    = f.text_area :description, placeholder: "400文字以内で募集内容の詳細を記入してください。", rows: 10,class: 'form-control'
+  br
+  = f.submit class: 'btn btn-primary'

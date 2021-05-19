@@ -13,7 +13,7 @@ module ApplicationHelper
       title: '【Destiny2】Right Guardians',
       reverse: true,
       charset: 'utf-8',
-      description: 'Destiny2における理想のフレンド作りを目的とした完全無料のサービスです。フレンド登録後のミスマッチを防ぎ自分が求める理想のユーザーと出会えるのがこのサービスの特徴です。',
+      description: 'フレンド募集やクラン募集やクラメン募集などができるDestiny2における理想のフレンド作りを目的とした完全無料のサービスです。フレンド登録後のミスマッチを防ぎ自分が求める理想のユーザーと出会えるのがこのサービスの特徴です。',
       separator: '|',
       icon: [
         { href: image_url('destiny2-icon.jpg')},

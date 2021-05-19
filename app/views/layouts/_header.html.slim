@@ -1,46 +1,49 @@
 .app-title.navbar.navbar-expand-lg.navbar-light.bg-light
-      .navbar-brand = link_to "Right Guardians",root_path,class:"navbar-brand logo"
+  .navbar-brand = link_to "Right Guardians",root_path,class:"navbar-brand logo"
 
-      button.navbar-toggler type="button" data-toggle="collapse" data-target="#foo" aria-controls="foo" aria-expanded="false" aria-label="Toggle navigation"
-        span.navbar-toggler-icon
+  button.navbar-toggler type="button" data-toggle="collapse" data-target="#foo" aria-controls="foo" aria-expanded="false" aria-label="Toggle navigation"
+    span.navbar-toggler-icon
+
+  #foo.collapse.navbar-collapse
+    ul.navbar-nav.ml-auto.align-items-center
+      li.nav-item.active
+        b.nav-link href="#"
+          = link_to "使い方",homes_sitenav_path,class: 'post',class: 'fas fa-question-circle btn'
+      li.nav-item
+        b.nav-link href="#"
+          = link_to "自慢の一枚",posts_path,class: 'post',class: 'fas fa-camera btn'
       
-      #foo.collapse.navbar-collapse
-        ul.navbar-nav.ml-auto.align-items-center
-          li.nav-item.active
-             b.nav-link href="#"
-              = link_to "使い方",homes_sitenav_path,class: 'post',class: 'fas fa-question-circle btn'
-          li.nav-item
-            b.nav-link href="#"
-              = link_to "自慢の一枚",posts_path,class: 'post',class: 'fas fa-camera btn'
-          
-          //li.nav-item
-            b.nav-link href="#"
-              = link_to "攻略サイト",'https://kattyan.net/',class: 'post',class: 'fas fa-info-circle btn'
-          
-          li.nav-item
-            b.nav-link href="#"
-              = link_to "ユーザー一覧",users_path,class: 'post',class: 'fas fa-user btn'
+      //li.nav-item
+        b.nav-link href="#"
+          = link_to "攻略サイト",'https://kattyan.net/',class: 'post',class: 'fas fa-info-circle btn'
+      
+      li.nav-item
+        b.nav-link href="#"
+          = link_to "ユーザー一覧",users_path,class: 'post',class: 'fas fa-user btn'
 
-          li.nav-item
-            b.nav-link href="#"
-              = link_to "募集一覧",friends_path,class: 'post',class: 'fas fa-user-friends btn'
-            
-          - if user_signed_in?
-            li.nav-item
-              b.nav-link href="#"
-                = link_to "マイページ","/users/#{current_user.id}",class:'post',class:'fas fa-user-circle btn'
-            li.nav-item
-              b.nav-link href="#"
-                = link_to "ログアウト",destroy_user_session_path, method: "delete",data: { confirm: 'ログアウトしてよろしいですか？' },class: "fas fa-sign-out-alt btn"
-            li.nav-item
-              b.nav-link href="#"
-                = render 'partial/circle'
-          - else
-            li.nav-item
-              b.nav-link href="#"
-                = link_to "ログイン",new_user_session_path, class: 'post',class: 'fas fa-sign-in-alt btn'
-              
-            li.nav-item
-              b.nav-link href="#"
-                = link_to "新規登録",new_user_registration_path, class: 'post',class: 'fas fa-user-plus btn'          
-          end
+      li.nav-item
+        b.nav-link href="#"
+          = link_to "募集一覧",friends_path,class: 'post',class: 'fas fa-user-friends btn'
+      li.nav-item
+        b.nav-link href="#"
+          = link_to "ガラスの間募集",microposts_path,class: 'post',class: 'fas fa-user-friends btn'
+        
+      - if user_signed_in?
+        li.nav-item
+          b.nav-link href="#"
+            = link_to "マイページ","/users/#{current_user.id}",class:'post',class:'fas fa-user-circle btn'
+        li.nav-item
+          b.nav-link href="#"
+            = link_to "ログアウト",destroy_user_session_path, method: "delete",data: { confirm: 'ログアウトしてよろしいですか？' },class: "fas fa-sign-out-alt btn"
+        li.nav-item
+          b.nav-link href="#"
+            = render 'partial/circle'
+      - else
+        li.nav-item
+          b.nav-link href="#"
+            = link_to "ログイン",new_user_session_path, class: 'post',class: 'fas fa-sign-in-alt btn'
+          
+        li.nav-item
+          b.nav-link href="#"
+            = link_to "新規登録",new_user_registration_path, class: 'post',class: 'fas fa-user-plus btn'          
+      end

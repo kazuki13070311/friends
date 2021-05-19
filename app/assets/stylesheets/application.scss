@@ -302,11 +302,43 @@ td{
   border-bottom: none;
 }
 
-
 /*編集ページ*/
 .h2{
     text-align:center;
     font-weight: bold;
+}
+
+/*レイド募集ページ*/
+.cord{
+    margin: auto;
+    position: relative;
+    object-fit: cover;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.2));
+}
+
+.media-body{
+    font-size: 75%;
+}
+
+.cord-body{
+    font-size: 75%;
+    text-align: left;
+}
+
+.cord-footer{
+    font-size: 25%;
+    text-align: right;
+}
+
+.jumbotron-extend8{
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    background: image-url('destiny2-30.jpg')no-repeat center center;
+    background-position: 100% 33%;
+    background-size: cover;
+    background-color:rgba(255,255,255,0);
+    background-blend-mode:lighten;
 }
 
 /*募集投稿一覧ページ*/
@@ -323,6 +355,8 @@ td{
 
 .h6{
     line-height: 1.5;
+    font-size: 110%;
+    letter-spacing: 0.05em;
 }
 
 .h8{
