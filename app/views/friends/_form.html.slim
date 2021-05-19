@@ -10,12 +10,12 @@
         = f.select :model,[['PS5','PS5'],['PS4','PS4'],['PC','PC'],['XboxOne','XboxOne']] 
     br
     .form.group.row
-        = f.label :募集内容, class:'col-md-3 col-form-label'
+        = f.label :name,"募集内容", class:'col-md-3 col-form-label'
     .col-md-1
         = f.select :name,[['フレンド募集','フレンド募集'],['クランメンバー募集','クランメンバー募集'],['クラン入隊希望','クラン入隊希望'],['その他','その他']] 
     br
     .form.group
-        = f.label :詳細
+        = f.label :description,"投稿内容（400字以内）"
         = f.text_area :description,placeholder: "募集内容の詳細を記入してください", rows: 10,class: 'form-control', id: 'friend_description'
     br
     = f.submit nil, class: 'btn btn-primary'

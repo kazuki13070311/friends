@@ -1,16 +1,15 @@
 - set_meta_tags title: "【Destiny2】レイド募集投稿",
                 site: "Right Guardians"
 .title5
-    h2.text-center
-        i.fas.fa-edit
-        |ガラスの間の募集投稿
+  h2.text-center
+    |ガラスの間の募集投稿
 
-//.nav.justify-content-end
+.nav.justify-content-end
     = link_to '一覧', microposts_path, class: 'nav-link'
 
-//.col-md-10.offset-md-1
+.col-md-10.offset-md-1
   = render 'form', micropost: @micropost
-.container
+//.container
   .nav.justify-content-end
     = link_to '一覧', microposts_path, class: 'nav-link'
   .row

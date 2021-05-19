@@ -20,11 +20,7 @@
     = f.select :name_type,[['お誘い待ち','お誘い待ち'],['ホストで募集','ホストで募集']]
   br
   .form.group
-    = f.label :raid_time
-    = f.text_field :raid_time, placeholder: "例: 5月15(土)15:00〜", class: 'form-control' 
-  br
-  .form.group
-    = f.label :description
-    = f.text_area :description, placeholder: "募集内容の詳細を記入してください", rows: 10,class: 'form-control'
+    = f.label :description,"投稿内容（400字以内）"
+    = f.text_area :description, placeholder: "400文字以内で募集内容の詳細を記入してください。", rows: 10,class: 'form-control'
   br
   = f.submit class: 'btn btn-primary'

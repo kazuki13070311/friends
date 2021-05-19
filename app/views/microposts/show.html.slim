@@ -25,11 +25,7 @@
           th= Micropost.human_attribute_name(:name_type)
           td= @micropost.name_type
         tr
-          th= Micropost.human_attribute_name(:raid_time)
-          td= @micropost.raid_time
-        tr
           th= Micropost.human_attribute_name(:description)
-          //td= simple_format(h(@micropost.description),{},sanitize: false,wrapper_tag: "div")
           td= safe_join(@micropost.description.split("\n"),tag(:br))
         tr
           th= Micropost.human_attribute_name(:投稿日時)

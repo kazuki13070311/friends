@@ -316,6 +316,10 @@ td{
     filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.2));
 }
 
+.media-body{
+    font-size: 75%;
+}
+
 .cord-body{
     font-size: 75%;
     text-align: left;
@@ -351,6 +355,8 @@ td{
 
 .h6{
     line-height: 1.5;
+    font-size: 110%;
+    letter-spacing: 0.05em;
 }
 
 .h8{
