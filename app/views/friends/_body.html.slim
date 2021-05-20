@@ -5,11 +5,13 @@
                 = link_to image_tag(friend.user.image.url,size: '50x50',class: 'mx-3 my-2'),friend.user
             - else
                 = link_to image_tag("/assets/default.jpg",size: '50x50', class: 'mx-3 my-2'),friend.user
-                .media-body
-                    .h5
-                        = link_to friend.name, friend,class: 'mt-2 mb-1 badge badge-pill btn-primary'
-                    .h6.mx-1
+            .media-body
+                .h5
+                    = link_to friend.name, friend,class: 'mt-2 mb-1 badge badge-pill btn-primary'
+                = link_to(friend_path(friend)) do
+                    .h6.mx-1.text-dark
                         = safe_join(friend.description.split("\n"),tag(:br))
-                    .h8.mr-3.mb-3
-                        |投稿日：
-                        = I18n.l(friend.updated_at, format: :long)
+                        //= simple_format(friend.description)
+                .h8.mr-3.mb-3
+                    |投稿日：
+                    = I18n.l(friend.updated_at, format: :long)
