@@ -2,7 +2,7 @@ default: &default
   adapter: mysql2
   username: root
   password: Kazu0311
-  #password:
+  # password:
   #password: Kazu0311 ← 本番環境用のパスワード
   host: localhost
   encoding: utf8
