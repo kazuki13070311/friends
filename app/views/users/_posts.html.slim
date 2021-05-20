@@ -12,12 +12,14 @@
                             = link_to "新規投稿をする",new_post_path,class: "btn btn-primary dokidoki"
                 - else @user.posts
                     - @user.posts.includes(:user).each do |post|
+                        = link_to(post_path(post)) do
                             .card-group.m-2
                                 .card style="width: 19rem"
                                     = image_tag post.image.url,class: 'card-img-top',size: '300x250'
-                                    .card-body
+                                    hr
+                                    .card-body.text-dark
                                         = post.content
-                                    .card-footer
+                                    //.card-footer
                                         = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
             - elsif @user.posts.empty?
                 .posison-point
@@ -26,11 +28,13 @@
                         |さんの投稿はありません
             - else @user.posts
                 - @user.posts.includes(:user).each do |post|
+                    = link_to(post_path(post)) do
                         .card-group.m-2
                             .card style="width: 19rem"
                                 = image_tag post.image.url,class: 'card-img-top',size: '300x250'
-                                .card-body
+                                hr
+                                .card-body.text-dark
                                     = post.content
-                                .card-footer
+                                //.card-footer
                                     = link_to "詳細","/posts/#{post.id}",class: "btn btn-primary"
 

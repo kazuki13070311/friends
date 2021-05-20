@@ -19,7 +19,7 @@
                         .h5 
                             = link_to friend.name,friend,class: 'mt-2 mb-1 badge badge-pill badge-primary'
                         .h6.mr-1 
-                            = simple_format(friend.description)
+                            = safe_join(friend.description.split("\n"),tag(:br))
                         .h8.mr-2
                             |投稿日：
                             = I18n.l(friend.updated_at, format: :long)
