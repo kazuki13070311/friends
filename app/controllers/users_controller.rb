@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @friends = @user.friends
     @relationship = Relationship.new
+    @microposts = @user.microposts
   end
 
   def edit
@@ -42,6 +43,11 @@ class UsersController < ApplicationController
   def like
     @user = User.find(params[:id])
     @likes = @user.likes.page(params[:page]).per(6).order(updated_at: :desc)
+  end
+
+  def micropost
+    @user = User.find(params[:id])
+    @microposts = @user.microposts.page(params[:page]).per(6).order(updated_at: :desc)
   end
 
   def following
