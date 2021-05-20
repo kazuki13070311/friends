@@ -25,7 +25,7 @@ ja:
       micropost:
         id: ID
         model: 機種
-        content: 募集レイド
+        content: 募集概要
         name_type: 募集タイプ
         raid_time: レイドへ行く日時
         description: '詳細'

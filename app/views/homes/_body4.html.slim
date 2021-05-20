@@ -1,35 +1,6 @@
-- set_meta_tags title: "【Destiny2】レイド募集 | ガラスの間募集掲示板",
-                site: "Right Guardians"
-- breadcrumb :microposts_index
-
-.jumbotron.jumbotron-extend8
-    h1.page-name1.text-center.mt-5
-        |ガラスの間の募集
-
-.container
-    = breadcrumbs separator: " &rsaquo; "
-
-hr
 .container
   .row
     .col-12.col-md-8.offset-md-2
-      = search_form_for @q,class: 'mb-5' do |f|
-        .form.group.row
-          = f.label :name_type_cont,'募集タイプ', class: 'col-sm-3 col-form-label'
-          .col-sm-8
-            = f.radio_button :name_type_cont,'お誘い待ち'
-            |お誘い待ち　
-            = f.radio_button :name_type_cont,'ホストで募集'
-            |ホストで募集          
-        br
-        .form.group
-            = f.submit class: 'btn btn-primary'
-        hr
-
-.container
-  .row
-    .col-12.col-md-8.offset-md-2
-      = link_to "新規募集をする", new_micropost_path, class: "btn btn-primary"
       - @microposts.includes(:user).each do |micropost|
         .cord.bg-light.mt-3.rounded
           .card-header.bg-transparent

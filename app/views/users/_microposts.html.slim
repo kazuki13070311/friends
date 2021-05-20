@@ -18,8 +18,9 @@
                     .media-body
                         .h5 
                             = link_to micropost.name_type,micropost,class: 'mt-2 mb-1 badge badge-pill badge-primary'
-                        .h6.mr-1 
-                            = simple_format(micropost.description)
+                        = link_to(micropost_path(micropost)) do
+                            .h6.mr-1.text-dark
+                                = simple_format(micropost.description)
                         .h8.mr-2
                             |投稿日：
                             = I18n.l(micropost.updated_at, format: :long)
@@ -38,8 +39,9 @@
                 .media-body
                     .h5 
                         = link_to micropost.name_type,micropost,class: 'mt-2 mb-1 badge badge-pill badge-primary'
-                    .h6.mr-1 
-                        = simple_format(micropost.description)
+                    = link_to(micropost_path(micropost)) do
+                        .h6.mr-1.text-dark
+                            = simple_format(micropost.description)
                     .h8.mr-2
                         |投稿日：
                         = I18n.l(micropost.updated_at, format: :long)

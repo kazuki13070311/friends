@@ -4,5 +4,6 @@ class HomesController < ApplicationController
     @users = User.all.page(params[:page]).per(3).order(created_at: :desc)
     @friends = Friend.all.page(params[:page]).per(3).order(updated_at: :desc)
     @posts = Post.all.page(params[:page]).per(3).order(updated_at: :desc)
+    @microposts = Micropost.all.page(params[:page]).per(3).order(updated_at: :desc)
   end
 end
