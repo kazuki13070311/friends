@@ -1,9 +1,9 @@
 - set_meta_tags title: "【Destiny2】レイド募集の詳細",
                 site: "Right Guardians"
-/ - breadcrumb :micropost_show,@user
-/ br
-/ .container
-/     = breadcrumbs separator: " &rsaquo; "
+- breadcrumb :microposts_show,@user
+br
+.container
+    = breadcrumbs separator: " &rsaquo; "
     hr
 .title5
     h2.text-center
@@ -60,4 +60,4 @@ br
     - else
       h7 
       = link_to "ログイン",new_user_session_path
-      |すると、この募集にコメントすることが出来るようになります。
+      |するとこの募集にコメント出来るようになります。

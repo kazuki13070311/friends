@@ -23,7 +23,7 @@ br
                 td= @friend.name
             tr
                 th= Friend.human_attribute_name(:description)
-                td= simple_format(h(@friend.description),{},sanitize: false,wrapper_tag: "div")
+                td= safe_join(@friend.description.split("\n"),tag(:br))
             tr
                 th= Friend.human_attribute_name(:投稿日時)
                 td= @friend.created_at.strftime('%Y/%m/%d %H:%M')

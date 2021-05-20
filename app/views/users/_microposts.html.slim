@@ -1,0 +1,47 @@
+.col-md-10.offset-md-1
+    - if current_user == @user
+        - if @user.microposts.empty?
+            .posison-point
+                p
+                    |まだ募集投稿がありません
+                p
+                    |プロフィールを編集した後は、募集を投稿して仲間を探そう！
+                p
+                    = link_to "仲間を募集する",new_micropost_path,class: "btn btn-primary dokidoki"
+        - else @user.microposts
+            - @microposts.includes(:user).each do |micropost|
+                .media.bg-white.m-3.rounded
+                    - if micropost.user.image?
+                        = link_to image_tag(micropost.user.image.url,class: 'mx-3 my-2',size: '50x50'),micropost.user
+                    - else
+                        = link_to image_tag("/assets/default.jpg",class: 'mx-3 my-2',size: '50x50'),micropost.user
+                    .media-body
+                        .h5 
+                            = link_to micropost.name_type,micropost,class: 'mt-2 mb-1 badge badge-pill badge-primary'
+                        = link_to(micropost_path(micropost)) do
+                            .h6.mr-1.text-dark
+                                = simple_format(micropost.description)
+                        .h8.mr-2
+                            |投稿日：
+                            = I18n.l(micropost.updated_at, format: :long)
+    - elsif @user.microposts.empty?
+        .posison-point
+            p
+                = @user.name
+                |さんはまだ投稿していません
+    - else @user.microposts
+        - @microposts.includes(:user).each do |micropost|
+            .media.bg-white.m-3.rounded
+                - if micropost.user.image?
+                    = link_to image_tag(micropot.user.image.url,class: 'mx-3 my-2',size: '50x50'),micropost.user
+                - else
+                    = link_to image_tag("/assets/default.jpg",class: 'mx-3 my-2',size: '50x50'),micropost.user
+                .media-body
+                    .h5 
+                        = link_to micropost.name_type,micropost,class: 'mt-2 mb-1 badge badge-pill badge-primary'
+                    = link_to(micropost_path(micropost)) do
+                        .h6.mr-1.text-dark
+                            = simple_format(micropost.description)
+                    .h8.mr-2
+                        |投稿日：
+                        = I18n.l(micropost.updated_at, format: :long)

@@ -12,6 +12,16 @@ crumb :users_show do |user|
   parent :users_index
 end
 
+crumb :microposts_index do
+  link "ガラスの間の募集一覧", microposts_path
+  parent :root
+end
+
+crumb :microposts_show do |user|
+  link "募集内容の詳細", microposts_path(user)
+  parent :microposts_index
+end
+
 crumb :friends_index do
   link "募集一覧", friends_path
   parent :root

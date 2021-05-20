@@ -12,6 +12,15 @@
           .form.group.mt-3.text-center
             = link_to "簡単ログイン（閲覧用）",users_guest_sign_in_path, method: :post,class: "btn btn-primary rounded-pill btn-lg"
 hr
+.home-friend-titele1
+  h3.fas.fa-campground
+    |ガラスの間の募集
+= render 'homes/body4'
+.post-btn.text-center
+  = link_to "新着投稿をもっと見る", posts_path,class: "btn btn-primary my-5 btn-lg btn-gradient-3d-btn rounded-pill " 
+
+
+hr
 .home-friend-titele2
   h3.fas.fa-user
     |最近の登録者
