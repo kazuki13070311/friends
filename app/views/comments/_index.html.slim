@@ -2,6 +2,7 @@
 |件コメント
 
 - comments.includes(:user).each do |comment|
+    hr
     .media
         - if comment.user.image?
             = image_tag comment.user.image.url,class: "mt-1 mr-3",size: '45x45'

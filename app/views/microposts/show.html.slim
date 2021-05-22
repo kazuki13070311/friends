@@ -41,7 +41,7 @@ br
     = link_to '編集',edit_micropost_path,class: 'btn btn-primary mr-3 mb-3'
     = link_to '削除',@micropost,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger mb-3'
   .twitter
-    <a href="https://twitter.com/share?url=http://guardians-community.com/friends/#{@micropost.id}%0a&text=ガラスの間レイドに一緒に行きませんか？%0aぜひ一度募集の詳細を見て下さい！%0a&hashtags=Destiny2%0a,Destiny2フレンド募集" rel="nofollow" target="_blank" class="fab fa-twitter btn btn-gradient-3d-btn"> 募集内容をTwitterでシェアする</a>
+    <a href="https://twitter.com/share?url=http://guardians-community.com/microposts/#{@micropost.id}%0a&text=ガラスの間レイドに一緒に行きませんか？%0aぜひ一度募集の詳細を見て下さい！%0a&hashtags=Destiny2%0a,Destiny2フレンド募集" rel="nofollow" target="_blank" class="fab fa-twitter btn btn-gradient-3d-btn"> 募集内容をTwitterでシェアする</a>
 
 br
 .row

@@ -30,6 +30,15 @@ hr
   .row
     .col-12.col-md-8.offset-md-2
       = link_to "新規募集をする", new_micropost_path, class: "btn btn-primary"
+      hr
+.container
+  .row
+    .col-12.col-md-8.offset-md-2
+      = paginate @microposts
+      = page_entries_info @microposts
+.container
+  .row
+    .col-12.col-md-8.offset-md-2
       - @microposts.includes(:user).each do |micropost|
         .cord.bg-light.mt-3.rounded
           .card-header.bg-transparent
@@ -38,6 +47,7 @@ hr
             - else
               = link_to image_tag("/assets/default.jpg",size: '25x25', class: 'mr-3 rounded-circle'),micropost.user
             = link_to micropost.name_type, micropost,class: 'mt-2 mb-1 badge badge-pill btn-primary'
+            br
             = link_to(micropost_path(micropost)) do
               .cord-body.text-dark
                 .card-text
@@ -47,3 +57,8 @@ hr
                 h8
                   |投稿日：
                   = I18n.l(micropost.updated_at, format: :long)
+.container
+  .row
+    .col-12.col-md-8.offset-md-2
+      br
+      = paginate @microposts
