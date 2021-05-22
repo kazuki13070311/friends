@@ -9,7 +9,7 @@
                 p
                     = link_to "仲間を募集する",new_micropost_path,class: "btn btn-primary dokidoki"
         - else @user.microposts
-            - @microposts.includes(:user).each do |micropost|
+            - @user.microposts.includes(:user).each do |micropost|
                 .media.bg-white.m-3.rounded
                     - if micropost.user.image?
                         = link_to image_tag(micropost.user.image.url,class: 'mx-3 my-2',size: '50x50'),micropost.user
@@ -30,10 +30,10 @@
                 = @user.name
                 |さんはまだ投稿していません
     - else @user.microposts
-        - @microposts.includes(:user).each do |micropost|
+        - @user.microposts.includes(:user).each do |micropost|
             .media.bg-white.m-3.rounded
                 - if micropost.user.image?
-                    = link_to image_tag(micropot.user.image.url,class: 'mx-3 my-2',size: '50x50'),micropost.user
+                    = link_to image_tag(micropost.user.image.url,class: 'mx-3 my-2',size: '50x50'),micropost.user
                 - else
                     = link_to image_tag("/assets/default.jpg",class: 'mx-3 my-2',size: '50x50'),micropost.user
                 .media-body
