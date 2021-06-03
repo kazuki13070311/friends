@@ -52,7 +52,11 @@ gem 'meta-tags'
 # パンくずリスト
 gem 'gretel'
 
+# モデルにテーブル名表示
 gem 'annotate'
+
+# PV数表示用
+gem 'impressionist'
 
 # cron用
 gem 'whenever', require: false
