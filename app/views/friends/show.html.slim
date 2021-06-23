@@ -30,7 +30,10 @@ br
             tr
                 th= Friend.human_attribute_name(:updated_at)
                 td= @friend.updated_at.strftime('%Y/%m/%d %H:%M')
-
+.col-md-10.offset-md-1.text-right
+    h8
+        = @page_views
+        |views
 .col-md-10.offset-md-1
     - if current_user&.admin?
         = link_to '削除',@friend,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'

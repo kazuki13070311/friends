@@ -13,6 +13,8 @@ class MicropostsController < ApplicationController
     @user = @micropost.user
     @comment_micropost = CommentMicropost.new
     @comment_microposts = @micropost.comment_microposts
+    impressionist(@user, nil, :unique => [:session_hash])
+    @page_views = @user.impressionist_count
   end
 
   def new
