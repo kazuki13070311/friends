@@ -15,6 +15,8 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @user = @post.user
     @like = Like.new
+    impressionist(@user, nil, :unique => [:session_hash])
+    @page_views = @user.impressionist_count
   end
 
   def ranking

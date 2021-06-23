@@ -35,13 +35,15 @@ br
                 tr
                     th= Post.human_attribute_name(:更新日時)
                     td= @post.updated_at.strftime('%Y/%m/%d %H:%M')
-
-        br
+    .col-md-10.offset-md-1.text-right
+        h8
+            = @page_views
+            |views
+    .col-md-10.offset-md-1
         u
             h6 評価する
         #like_btn
             = render partial: 'likes/like', locals:{ post: @post,like: @like}
-        
         - if current_user.admin?
             = link_to '削除',@post,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger my-3'
         - if user_signed_in? && current_user.id == @user.id

@@ -3,6 +3,7 @@
 class FriendsController < ApplicationController
   before_action :login_check, only: %i[new edit update destroy]
   before_action :correct_user, only: %i[edit update]
+  impressionist unique: [:session_hash]
 
   def index
     @friends = Friend.all.page(params[:page]).per(10).order(updated_at: :desc)
@@ -16,6 +17,8 @@ class FriendsController < ApplicationController
     @user = @friend.user
     @comment = Comment.new
     @comments = @friend.comments.order(created_at: :asc)
+    impressionist(@user, nil, :unique => [:session_hash])
+    @page_views = @user.impressionist_count
   end
 
   def new
