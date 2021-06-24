@@ -36,6 +36,7 @@ br
                     th= Post.human_attribute_name(:更新日時)
                     td= @post.updated_at.strftime('%Y/%m/%d %H:%M')
     .col-md-10.offset-md-1.text-right
+        i.fas.fa-eye
         h8
             = @page_views
             |views
