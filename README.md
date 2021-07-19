@@ -1,6 +1,6 @@
 # :two_men_holding_hands: Right Guardians
 
-オンラインゲーム「Destiny2」で一緒に遊べる仲間を見つける場所を提供→http://guardians-community.com/
+オンラインゲーム「Destiny2」で一緒に遊べる仲間と出会えるフレンド募集サービス→http://guardians-community.com/
 
 ![localhost_3000_](https://user-images.githubusercontent.com/57397215/82018791-f5cd9680-96c0-11ea-9c3e-9040898a3f32.png)
 
@@ -10,15 +10,19 @@
 ## :closed_book: 作成したwebサービスへのアクセスURL
 http://guardians-community.com/
 
-## サービス運用状況(2021年5月9日まで)
-* サービス登録者数・・・900人
-* 累計UU数・・・10,122人
-* 累計PV数・・・57,752PV
-<img width="858" alt="スクリーンショット 2021-05-09 22 34 04" src="https://user-images.githubusercontent.com/57397215/117574210-00294180-b117-11eb-80fd-720909e28011.png">
+## サービス運用状況(2021年7月19日まで)
+* サービス登録者数・・・1,388人
+* 累計UU数・・・15,580人
+* 累計PV数・・・102,396PV
+* 募集投稿・・・500件以上
+<img width="842" alt="スクリーンショット 2021-07-19 23 15 14" src="https://user-images.githubusercontent.com/57397215/126174434-ace77b23-9e6d-46af-9fda-60452f16f307.png">
 
-## Google検索順位(2021年5月9日)
-* 「Destiny2 フレンド募集」の検索キーワードで1位を獲得
-<img width="729" alt="スクリーンショット 2021-05-09 20 15 36のコピー" src="https://user-images.githubusercontent.com/57397215/117574206-fe5f7e00-b116-11eb-832b-21ffcd077f97.png">
+## Google検索順位(2021年5月25日)
+* 「Destiny2  フレンド募集」→1位
+* 「Destiny2  フレンド」→1位
+* 「Destiny2 募集」→ 1位
+* 「Destiny2  フレンド探し」→1位
+<img width="659" alt="スクリーンショット 2021-07-19 23 19 25" src="https://user-images.githubusercontent.com/57397215/126175101-84667dc4-a9a8-47a2-ab7a-541bf4a8fe30.png">
 
 ## Destiny2とは？
 PS4やPCなどで無料で遊べるオンラインシューティングゲームです。
@@ -28,7 +32,7 @@ Destiny2公式紹介サイト→https://www.jp.playstation.com/games/destiny-2-p
 # :closed_book: サービス概要
 
 オンラインゲーム（Destiny2）のフレンド登録後のミスマッチを防ぎ  
-自分が求める理想のユーザーと出会うための場を提供するサービスです。
+自分が求める理想のユーザーと出会うためのマッチングサービスです。
 
 ## サービス名「Right Guardians」の由来
 「it's right there Guardians」という英文から  
