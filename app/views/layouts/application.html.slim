@@ -20,11 +20,12 @@ html
   body.bg-light
   .sticky-top
     = render 'layouts/header'
-      
   .container
     - if flash.notice.present?
       .alert.alert-success= flash.notice
     = yield
-
+  
   .container-fluid
+    - if user_signed_in?
+      = render 'layouts/menu_bar_bottom'
     = render 'layouts/footer'
