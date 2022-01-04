@@ -27,5 +27,7 @@ html
   
   .container-fluid
     - if user_signed_in?
-      = render 'layouts/menu_bar_bottom'
+      = render 'layouts/menu_bar_bottom_login'
+    - else
+      = render 'layouts/menu_bar_bottom_logout'
     = render 'layouts/footer'
