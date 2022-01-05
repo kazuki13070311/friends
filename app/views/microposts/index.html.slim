@@ -1,10 +1,10 @@
-- set_meta_tags title: "【Destiny2】レイド募集 | ガラスの間募集掲示板",
+- set_meta_tags title: "【Destiny2】レイドなどアクティビティ募集 | アクティビティ募集掲示板",
                 site: "Right Guardians"
 - breadcrumb :microposts_index
 
 .jumbotron.jumbotron-extend8
     h1.page-name1.text-center.mt-5
-        |ガラスの間の募集
+        |アクティビティ募集
 
 .container
     = breadcrumbs separator: " &rsaquo; "
@@ -15,12 +15,12 @@ hr
     .col-12.col-md-8.offset-md-2
       = search_form_for @q,class: 'mb-5' do |f|
         .form.group.row
-          = f.label :name_type_cont,'募集タイプ', class: 'col-sm-3 col-form-label'
+          = f.label :name_type_cont,'▼募集タイプ', class: 'col-sm-3 col-form-label'
           .col-sm-8
             = f.radio_button :name_type_cont,'お誘い待ち'
             |お誘い待ち　
             = f.radio_button :name_type_cont,'ホストで募集'
-            |ホストで募集          
+            |ホストで募集
         br
         .form.group
             = f.submit class: 'btn btn-primary'
@@ -46,7 +46,8 @@ hr
               = link_to image_tag(micropost.user.image.url,size: '25x25',class: 'mr-3 rounded-circle'),micropost.user
             - else
               = link_to image_tag("/assets/default.jpg",size: '25x25', class: 'mr-3 rounded-circle'),micropost.user
-            = link_to micropost.name_type, micropost,class: 'mt-2 mb-1 badge badge-pill btn-primary'
+            = link_to micropost.name_type, micropost,class: 'mt-2 mb-1 mr-1 badge badge-pill btn-primary'
+            = link_to micropost.content, micropost,class: 'mt-2 mb-1 badge badge-pill btn-primary'
             br
             = link_to(micropost_path(micropost)) do
               .cord-body.text-dark

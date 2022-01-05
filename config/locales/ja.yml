@@ -28,7 +28,7 @@ ja:
         content: 募集概要
         name_type: 募集タイプ
         raid_time: レイドへ行く日時
-        description: '詳細'
+        description: '詳細内容'
         created_at: 登録日時
         updated_at: 更新日時     
   date:
