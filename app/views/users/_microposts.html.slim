@@ -17,7 +17,8 @@
                         = link_to image_tag("/assets/default.jpg",class: 'mx-3 my-2',size: '50x50'),micropost.user
                     .media-body
                         .h5 
-                            = link_to micropost.name_type,micropost,class: 'mt-2 mb-1 badge badge-pill badge-primary'
+                            = link_to micropost.name_type, micropost,class: 'mt-2 mb-1 mr-1 badge badge-pill btn-primary'
+                            = link_to micropost.content, micropost,class: 'mt-2 mb-1 badge badge-pill btn-primary'
                         = link_to(micropost_path(micropost)) do
                             .h6.mr-1.text-dark
                                 = simple_format(micropost.description)
@@ -38,7 +39,8 @@
                     = link_to image_tag("/assets/default.jpg",class: 'mx-3 my-2',size: '50x50'),micropost.user
                 .media-body
                     .h5 
-                        = link_to micropost.name_type,micropost,class: 'mt-2 mb-1 badge badge-pill badge-primary'
+                        = link_to micropost.name_type, micropost,class: 'mt-2 mb-1 mr-1 badge badge-pill btn-primary'
+                        = link_to micropost.content, micropost,class: 'mt-2 mb-1 badge badge-pill btn-primary'
                     = link_to(micropost_path(micropost)) do
                         .h6.mr-1.text-dark
                             = simple_format(micropost.description)

@@ -13,7 +13,7 @@ ul.nav.nav-tabs.justify-content-center id="myTab" role="tablist"
             = link_to "いいね一覧","/users/#{@user.id}/like"
     li.nav-item
         .nav-link id="micropost-tab" data-toggle="tab" href="#micropost" role="tab" aria-controls="micropost" aria-selected="false"
-            = link_to "ガラスの間募集","/users/#{@user.id}/micropost"
+            = link_to "アクティビティ募集","/users/#{@user.id}/micropost"
 .tab-content id="myTabContent"
     .tab-pane.fade.show.active id="home" role="tabpanel" aria-labelledby="home-tab"
     .tab-pane.fade id="friend" role="tabpanel" aria-labelledby="friend-tab"
