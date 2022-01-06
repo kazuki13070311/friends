@@ -45,10 +45,10 @@ class UsersController < ApplicationController
     @likes = @user.likes.page(params[:page]).per(6).order(updated_at: :desc)
   end
 
-  def micropost
-    @user = User.find(params[:id])
-    @microposts = @user.microposts.page(params[:page]).per(6).order(updated_at: :desc)
-  end
+  #def micropost
+    #@user = User.find(params[:id])
+    #@microposts = @user.microposts.page(params[:page]).per(6).order(updated_at: :desc)
+  #end
 
   def following
     @user = User.find(params[:id])
