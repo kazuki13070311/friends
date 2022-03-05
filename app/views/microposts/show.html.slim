@@ -1,4 +1,4 @@
-- set_meta_tags title: "【Destiny2】レイド募集の詳細",
+- set_meta_tags title: "【Destiny2】レイド募集内容",
                 site: "Right Guardians"
 - breadcrumb :microposts_show,@user
 br
@@ -33,11 +33,6 @@ br
         tr
           th= Micropost.human_attribute_name(:updated_at)
           td= @micropost.updated_at.strftime('%Y/%m/%d %H:%M')
-.col-md-10.offset-md-1.text-right
-  i.fas.fa-eye
-  h8
-    = @page_views
-    |views
 .col-md-10.offset-md-1
   - if current_user&.admin?
     = link_to '削除',@micropost,method: :delete,data: {confirm: "募集内容を削除します。よろしいですか？"},class: 'btn btn-danger'
