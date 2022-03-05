@@ -320,7 +320,7 @@ td{
     margin: auto;
     position: relative;
     object-fit: cover;
-    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.2));
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.2));
 }
 
 .media-body{
@@ -341,8 +341,8 @@ td{
     position: relative;
     width: 100%;
     min-height: 200px;
-    background: image-url('destiny2-35.jpg')no-repeat center center;
-    background-position: 100% 33%;
+    background: image-url('destiny2-36.jpg')no-repeat center center;
+    background-position: 50% 85%;
     background-size: cover;
     background-color:rgba(255,255,255,0);
     background-blend-mode:lighten;
