@@ -13,7 +13,7 @@ crumb :users_show do |user|
 end
 
 crumb :microposts_index do
-  link "アクティビティ募集一覧", microposts_path
+  link "レイド募集一覧", microposts_path
   parent :root
 end
 
