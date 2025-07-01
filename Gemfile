@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.5'
+ruby '2.6.9'
 
 # slim導入
 gem 'html2slim'
@@ -62,7 +62,7 @@ gem 'impressionist'
 gem 'whenever', require: false
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.1'
+gem 'rails', '~> 6.1.3.1'
 
 # Use qlite3 as the database for Active Record
 # gem 'sqlite3', '~> 1.4'
